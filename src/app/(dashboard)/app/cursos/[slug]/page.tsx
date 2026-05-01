@@ -11,10 +11,12 @@ import {
   ChevronRight,
   BarChart3,
   Clock,
+  Award,
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { NeonButton } from "@/components/common/neon-button";
+import { CertificateCTA } from "./certificate-cta";
 import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
@@ -86,6 +88,17 @@ export default async function CourseViewPage({ params }: PageProps) {
   const completedCount = completedLessons.size;
   const progressPercent =
     totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
+  const isFullyCompleted = totalLessons > 0 && completedCount === totalLessons;
+
+  // Check if certificate already exists
+  const { data: existingCert } = isFullyCompleted
+    ? await supabase
+        .from("certificates")
+        .select("id, verification_hash")
+        .eq("user_id", user.id)
+        .eq("course_id", course.id)
+        .single()
+    : { data: null };
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
@@ -128,6 +141,15 @@ export default async function CourseViewPage({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      {/* Certificate CTA */}
+      {isFullyCompleted && (
+        <CertificateCTA
+          courseId={course.id}
+          courseTitle={course.title}
+          existingHash={existingCert?.verification_hash || null}
+        />
+      )}
 
       {/* Modulos y lecciones */}
       <div className="mt-8 space-y-4">
