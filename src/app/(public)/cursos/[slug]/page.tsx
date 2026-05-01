@@ -236,6 +236,26 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 </GlassCard>
               ))}
             </div>
+
+            {/* Banner guia de empleabilidad */}
+            <Link href="/registro">
+              <div className="mt-6 group flex items-center gap-4 rounded-xl border border-neon-cyan/20 bg-neon-cyan/5 p-5 transition-all hover:border-neon-cyan/40 hover:bg-neon-cyan/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-neon-cyan/20">
+                  <ArrowUpRight className="h-5 w-5 text-neon-cyan" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-semibold text-white group-hover:text-neon-cyan-bright transition-colors">
+                    Aprende a conseguir estos trabajos
+                  </p>
+                  <p className="mt-1 text-sm text-foreground-secondary">
+                    Tenemos una guia completa y gratuita con plataformas,
+                    estrategias de postulacion y como armar tu perfil
+                    profesional. Registrate para acceder.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 shrink-0 text-foreground-muted group-hover:text-neon-cyan transition-colors" />
+              </div>
+            </Link>
           </section>
 
           {/* ============================================ */}

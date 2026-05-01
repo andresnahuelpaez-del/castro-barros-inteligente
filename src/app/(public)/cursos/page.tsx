@@ -73,6 +73,30 @@ export default function CursosPage() {
           );
         })}
       </div>
+
+      {/* Banner de empleabilidad */}
+      <div className="mt-12">
+        <Link href="/registro">
+          <div className="group flex flex-col items-center gap-4 rounded-2xl border border-neon-cyan/20 bg-neon-cyan/5 p-8 text-center transition-all hover:border-neon-cyan/40 hover:bg-neon-cyan/10 sm:flex-row sm:text-left">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-neon-cyan/20">
+              <Briefcase className="h-7 w-7 text-neon-cyan" />
+            </div>
+            <div className="flex-1">
+              <p className="text-lg font-semibold text-white group-hover:text-neon-cyan-bright transition-colors">
+                No sabes por donde empezar a buscar trabajo online?
+              </p>
+              <p className="mt-1 text-sm text-foreground-secondary">
+                Tenemos una guia completa y gratuita: plataformas donde buscar,
+                como postularte, como armar tu perfil y cuanto cobrar.
+                Registrate para acceder.
+              </p>
+            </div>
+            <span className="text-sm font-medium text-neon-cyan whitespace-nowrap">
+              Ver guia &rarr;
+            </span>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
