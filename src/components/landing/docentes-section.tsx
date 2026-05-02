@@ -3,13 +3,21 @@
 import { motion } from "framer-motion";
 
 const docentes = [
-  { name: "Docente 1", role: "Especialista en IA", course: "IA para tu Trabajo" },
-  { name: "Docente 2", role: "Content Creator", course: "Creacion de Contenido con IA" },
-  { name: "Docente 3", role: "Marketing Digital", course: "Marketing Digital con IA" },
-  { name: "Docente 4", role: "Desarrollador Full Stack", course: "Vibe Coding" },
-  { name: "Docente 5", role: "Analista de Datos", course: "Analisis de Datos con IA" },
-  { name: "Docente 6", role: "Disenador Web", course: "Diseno Web con IA" },
+  { name: "Docente 1", role: "Especialista en IA", course: "IA para tu Trabajo", color: "from-neon-green/30 to-neon-green/5" },
+  { name: "Docente 2", role: "Content Creator", course: "Creacion de Contenido con IA", color: "from-secondary/30 to-secondary/5" },
+  { name: "Docente 3", role: "Marketing Digital", course: "Marketing Digital con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
+  { name: "Docente 4", role: "Desarrollador Full Stack", course: "Vibe Coding", color: "from-neon-green/30 to-neon-green/5" },
+  { name: "Docente 5", role: "Analista de Datos", course: "Analisis de Datos con IA", color: "from-secondary/30 to-secondary/5" },
+  { name: "Docente 6", role: "Disenador Web", course: "Diseno Web con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
 ];
+
+function getInitials(name: string) {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2);
+}
 
 export function DocentesSection() {
   return (
@@ -24,7 +32,7 @@ export function DocentesSection() {
           <h2 className="text-3xl font-bold sm:text-4xl">
             Conoce a tus docentes
           </h2>
-          <p className="mt-4 text-foreground-secondary">
+          <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
             Profesionales con experiencia real en la industria, comprometidos con
             tu aprendizaje.
           </p>
@@ -34,14 +42,17 @@ export function DocentesSection() {
           {docentes.map((docente, i) => (
             <motion.div
               key={docente.name}
-              className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:-translate-y-1 hover:border-border-bright"
+              className="group flex items-center gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-border-bright"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
             >
-              {/* TODO: Reemplazar con fotos reales */}
-              <div className="h-16 w-16 shrink-0 rounded-full bg-background-tertiary border border-border transition-transform group-hover:scale-105" />
+              <div className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${docente.color} border border-border transition-transform group-hover:scale-105`}>
+                <span className="text-lg font-bold text-white">
+                  {getInitials(docente.name)}
+                </span>
+              </div>
               <div>
                 <h3 className="font-semibold text-white">{docente.name}</h3>
                 <p className="text-sm text-foreground-secondary">

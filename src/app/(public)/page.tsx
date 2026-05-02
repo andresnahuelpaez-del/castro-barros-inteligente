@@ -12,6 +12,7 @@ import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { CertificateSection } from "@/components/landing/certificate-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
+import { SectionDivider } from "@/components/common/section-divider";
 
 export default function Home() {
   return (
@@ -19,14 +20,18 @@ export default function Home() {
       <HeroSection />
       <LogosCarousel />
       <DiputadoSection />
+      <SectionDivider color="green" />
       <WhySection />
       <CoursesSection />
+      <SectionDivider color="mixed" />
+      <HowItWorksSection />
+      <AudienceSection />
+      <SectionDivider color="violet" />
       <ToolsSection />
       <DocentesSection />
-      <HowItWorksSection />
       <MetricsSection />
-      <AudienceSection />
       <TestimonialsSection />
+      <SectionDivider color="cyan" />
       <CertificateSection />
       <FaqSection />
       <CtaSection />

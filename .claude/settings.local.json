@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Skill(update-config)",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --eslint --no-turbopack --use-npm)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --eslint --no-turbopack --use-npm)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest init -d --force)",
+      "Bash(npx shadcn@latest add accordion card input label select textarea tabs badge separator avatar dialog dropdown-menu sheet scroll-area progress tooltip checkbox slider --yes)",
+      "Bash(npx next:*)"
     ]
   }
 }

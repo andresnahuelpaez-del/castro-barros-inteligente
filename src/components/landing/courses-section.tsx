@@ -11,10 +11,12 @@ import {
   ShoppingCart,
   BarChart3,
   Code,
+  ArrowRight,
 } from "lucide-react";
 import { COURSES, LEVEL_LABELS, LEVEL_COLORS } from "@/lib/constants";
 import { GlassCard } from "@/components/common/glass-card";
 import { Badge } from "@/components/ui/badge";
+import { NeonButton } from "@/components/common/neon-button";
 import { cn } from "@/lib/utils";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -38,10 +40,13 @@ export function CoursesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          <p className="text-xs font-medium uppercase tracking-widest text-neon-green mb-4">
+            Catalogo completo
+          </p>
           <h2 className="text-3xl font-bold sm:text-4xl">Nuestros cursos</h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
             Ocho programas profesionales disenados para construir tu futuro
-            digital
+            digital. Elegi el que mas se adapte a tus objetivos.
           </p>
         </motion.div>
 
@@ -57,10 +62,12 @@ export function CoursesSection() {
                 transition={{ delay: i * 0.05 }}
               >
                 <Link href={`/cursos/${course.slug}`}>
-                  <GlassCard neonBorder="green" className="group h-full">
+                  <GlassCard neonBorder="green" className="group h-full flex flex-col">
                     <div className="mb-4 flex items-center justify-between">
                       {Icon && (
-                        <Icon className="h-8 w-8 text-neon-green" />
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neon-green/10">
+                          <Icon className="h-5 w-5 text-neon-green" />
+                        </div>
                       )}
                       <Badge
                         className={cn(
@@ -75,23 +82,37 @@ export function CoursesSection() {
                     <h3 className="text-lg font-semibold text-white group-hover:text-neon-green transition-colors">
                       {course.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-foreground-secondary">
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground-secondary">
                       {course.shortDescription}
                     </p>
-                    <div className="mt-4 flex items-center gap-3 text-xs text-foreground-muted">
-                      <span>{course.durationMonths} meses</span>
-                      <span className="text-border-bright">|</span>
-                      <span>{course.hoursPerWeek} hs/semana</span>
+                    <div className="mt-4 flex items-center justify-between pt-4 border-t border-border">
+                      <div className="flex items-center gap-3 text-xs text-foreground-muted">
+                        <span>{course.durationMonths} meses</span>
+                        <span className="text-border-bright">|</span>
+                        <span>{course.hoursPerWeek} hs/semana</span>
+                      </div>
+                      <ArrowRight className="h-4 w-4 text-foreground-muted group-hover:text-neon-green transition-colors" />
                     </div>
-                    <p className="mt-4 text-sm font-medium text-neon-green opacity-0 transition-opacity group-hover:opacity-100">
-                      Ver curso &rarr;
-                    </p>
                   </GlassCard>
                 </Link>
               </motion.div>
             );
           })}
         </div>
+
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/cursos">
+            <NeonButton variant="outline" size="lg">
+              Ver todos los cursos
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </NeonButton>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

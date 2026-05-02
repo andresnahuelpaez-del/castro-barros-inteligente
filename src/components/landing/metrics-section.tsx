@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Users, Award, MapPin, ThumbsUp } from "lucide-react";
 
 function AnimatedCounter({
   target,
@@ -53,10 +54,10 @@ function AnimatedCounter({
 }
 
 const metrics = [
-  { target: 1000, prefix: "+", suffix: "", label: "Estudiantes inscritos" },
-  { target: 200, prefix: "+", suffix: "", label: "Certificados emitidos" },
-  { target: 8, prefix: "", suffix: "", label: "Localidades alcanzadas" },
-  { target: 92, prefix: "", suffix: "%", label: "Satisfaccion de alumnos" },
+  { target: 1000, prefix: "+", suffix: "", label: "Estudiantes inscritos", icon: Users },
+  { target: 200, prefix: "+", suffix: "", label: "Certificados emitidos", icon: Award },
+  { target: 8, prefix: "", suffix: "", label: "Localidades alcanzadas", icon: MapPin },
+  { target: 92, prefix: "", suffix: "%", label: "Satisfaccion de alumnos", icon: ThumbsUp },
 ];
 
 export function MetricsSection() {
@@ -73,6 +74,7 @@ export function MetricsSection() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {metrics.map((metric) => (
               <div key={metric.label} className="text-center">
+                <metric.icon className="mx-auto h-6 w-6 text-neon-green/60 mb-3" />
                 <div className="text-4xl font-bold text-neon-green sm:text-5xl">
                   <AnimatedCounter
                     target={metric.target}

@@ -49,6 +49,23 @@ export function Navbar() {
     getUser();
   }, [supabase, pathname]);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   async function handleLogout() {
     await supabase.auth.signOut();
     setUser(null);
@@ -60,15 +77,15 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
           href={user ? "/app" : "/"}
-          className="flex items-center gap-1 text-lg font-bold"
+          className="flex items-center gap-1 text-base font-bold sm:text-lg"
         >
-          <span className="text-white">Castro Barros</span>
+          <span className="text-white">CB</span>
           <span className="text-neon-green text-glow-green">
-            Inteligente<sup className="text-xs">&reg;</sup>
+            Inteligente<sup className="text-[8px] sm:text-xs">&reg;</sup>
           </span>
         </Link>
 
@@ -139,7 +156,7 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="flex items-center justify-center md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Cerrar menu" : "Abrir menu"}
         >
@@ -158,24 +175,25 @@ export function Navbar() {
           mobileOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex h-16 items-center justify-end px-4">
+        <div className="flex h-14 items-center justify-end px-4">
           <button
             onClick={() => setMobileOpen(false)}
             aria-label="Cerrar menu"
+            className="flex h-10 w-10 items-center justify-center rounded-lg"
           >
             <X className="h-6 w-6 text-white" />
           </button>
         </div>
-        <div className="flex flex-col gap-4 px-6 pt-4">
+        <div className="flex flex-col gap-1 px-4 pt-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-lg transition-colors hover:text-white",
+                "rounded-lg px-4 py-3 text-base transition-colors",
                 pathname === link.href
-                  ? "text-white font-medium"
-                  : "text-foreground-secondary"
+                  ? "bg-neon-green/10 text-neon-green font-medium"
+                  : "text-foreground-secondary hover:bg-background-tertiary hover:text-white"
               )}
               onClick={() => setMobileOpen(false)}
             >
@@ -184,19 +202,19 @@ export function Navbar() {
           ))}
 
           {!loading && (
-            <>
+            <div className="mt-4 border-t border-border pt-4 space-y-1">
               {user ? (
                 <>
                   <Link
                     href="/app/perfil"
-                    className="text-lg text-foreground-secondary hover:text-white"
+                    className="block rounded-lg px-4 py-3 text-base text-foreground-secondary hover:bg-background-tertiary hover:text-white"
                     onClick={() => setMobileOpen(false)}
                   >
                     Mi perfil
                   </Link>
                   <Link
                     href="/app/certificados"
-                    className="text-lg text-foreground-secondary hover:text-white"
+                    className="block rounded-lg px-4 py-3 text-base text-foreground-secondary hover:bg-background-tertiary hover:text-white"
                     onClick={() => setMobileOpen(false)}
                   >
                     Certificados
@@ -206,17 +224,17 @@ export function Navbar() {
                       setMobileOpen(false);
                       handleLogout();
                     }}
-                    className="mt-4 text-left text-lg text-destructive"
+                    className="w-full rounded-lg px-4 py-3 text-left text-base text-destructive hover:bg-destructive/10"
                   >
                     Cerrar sesion
                   </button>
                 </>
               ) : (
                 <Link href="/registro" onClick={() => setMobileOpen(false)}>
-                  <NeonButton className="mt-4 w-full">Inscribite</NeonButton>
+                  <NeonButton className="mt-2 w-full">Inscribite gratis</NeonButton>
                 </Link>
               )}
-            </>
+            </div>
           )}
         </div>
       </div>

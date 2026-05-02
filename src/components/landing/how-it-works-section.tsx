@@ -13,42 +13,48 @@ const steps = [
     icon: BookOpen,
     title: "Elegi tu curso",
     description:
-      "Explora los 8 programas disponibles y elegi el que mas se adapte a tus objetivos.",
+      "Explora los 8 programas y elegi el que mas se adapte a tus objetivos.",
   },
   {
     icon: Lightbulb,
     title: "Aprende a tu medida",
     description:
-      "Videos cortos, lecturas y ejercicios practicos. Organizas tus horarios.",
+      "Videos, lecturas y ejercicios practicos. Organizas tus horarios.",
   },
   {
     icon: Trophy,
-    title: "Aproba tu proyecto final",
+    title: "Aproba tu proyecto",
     description:
-      "Aplica todo lo aprendido en un proyecto real que demuestre tus habilidades.",
+      "Aplica lo aprendido en un proyecto real que demuestre tus habilidades.",
   },
   {
     icon: Award,
     title: "Recibi tu certificado",
     description:
-      "Certificado oficial con codigo de verificacion publica, listo para empleadores.",
+      "Certificado oficial con codigo de verificacion publica.",
   },
 ];
 
 export function HowItWorksSection() {
   return (
-    <section className="py-20">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          className="text-center text-3xl font-bold sm:text-4xl"
+        <motion.div
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Como funciona?
-        </motion.h2>
+          <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
+            Como funciona?
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-foreground-secondary sm:mt-4 sm:text-base">
+            En 5 pasos simples pasas de cero a profesional certificado.
+          </p>
+        </motion.div>
 
-        <div className="relative mt-16">
+        {/* Mobile: vertical timeline */}
+        <div className="relative mt-10 sm:mt-16">
           {/* Connecting line (desktop) */}
           <div
             className="absolute left-0 right-0 top-8 hidden h-0.5 bg-gradient-to-r from-neon-green via-secondary to-neon-cyan md:block"
@@ -57,11 +63,11 @@ export function HowItWorksSection() {
 
           {/* Connecting line (mobile) */}
           <div
-            className="absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-neon-green via-secondary to-neon-cyan md:hidden"
+            className="absolute bottom-0 left-[27px] top-0 w-0.5 bg-gradient-to-b from-neon-green via-secondary to-neon-cyan md:hidden"
             aria-hidden="true"
           />
 
-          <div className="grid gap-8 md:grid-cols-5">
+          <div className="grid gap-6 md:grid-cols-5 md:gap-8">
             {steps.map((step, i) => (
               <motion.div
                 key={step.title}
@@ -71,12 +77,16 @@ export function HowItWorksSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-neon-green bg-background glow-green">
-                  <step.icon className="h-7 w-7 text-neon-green" />
+                {/* Step circle */}
+                <div className="relative z-10 flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-full border-2 border-neon-green bg-background glow-green md:h-16 md:w-16">
+                  <span className="text-[9px] font-bold text-neon-green md:text-[10px]">
+                    {i + 1}
+                  </span>
+                  <step.icon className="h-4 w-4 text-neon-green md:h-5 md:w-5" />
                 </div>
-                <div className="pt-1 md:pt-4">
-                  <h3 className="font-semibold text-white">{step.title}</h3>
-                  <p className="mt-1 text-sm text-foreground-secondary">
+                <div className="pt-0.5 md:pt-4">
+                  <h3 className="text-sm font-semibold text-white sm:text-base">{step.title}</h3>
+                  <p className="mt-1 text-xs text-foreground-secondary leading-relaxed sm:text-sm">
                     {step.description}
                   </p>
                 </div>
