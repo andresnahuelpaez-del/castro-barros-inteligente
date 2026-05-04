@@ -23,8 +23,8 @@ const GENDERS = [
 ];
 
 const LOCALIDADES = [
-  "Aminga", "Anillaco", "Anjullon", "Chuquis",
-  "Las Penas", "Pinchas", "San Pedro", "Otra",
+  "Aminga", "Anillaco", "Anjullón", "Chuquis",
+  "Las Peñas", "Pinchas", "San Pedro", "Otra",
 ];
 
 const NIVELES = [

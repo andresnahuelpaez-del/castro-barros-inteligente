@@ -14,23 +14,23 @@ const profiles = [
   },
   {
     icon: Search,
-    title: "Personas en busqueda laboral",
+    title: "Personas en búsqueda laboral",
     description:
-      "Reinventa tu carrera con oficios digitales de alta demanda.",
+      "Reinventá tu carrera con oficios digitales de alta demanda.",
     tag: "Nueva oportunidad",
   },
   {
     icon: ShoppingBag,
     title: "Comerciantes y emprendedores",
     description:
-      "Digitaliza tu negocio y aumenta tus ventas con Inteligencia Artificial.",
-    tag: "Mas ventas",
+      "Digitalizá tu negocio y aumentá tus ventas con Inteligencia Artificial.",
+    tag: "Más ventas",
   },
   {
     icon: Building2,
-    title: "Empleados publicos y privados",
+    title: "Empleados públicos y privados",
     description:
-      "Moderniza tu trabajo y posicionate mejor profesionalmente.",
+      "Modernizá tu trabajo y posicionate mejor profesionalmente.",
     tag: "Crecimiento",
   },
 ];
@@ -49,11 +49,11 @@ export function AudienceSection() {
             Para todos los perfiles
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Disenado para vos
+            Diseñado para vos
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
-            No importa tu edad, tu experiencia o tu ocupacion. Hay un curso
-            pensado para lo que necesitas.
+            No importa tu edad, tu experiencia o tu ocupación. Hay un curso
+            pensado para lo que necesitás.
           </p>
         </motion.div>
 

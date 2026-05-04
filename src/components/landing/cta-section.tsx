@@ -9,7 +9,7 @@ import { ArrowRight, Clock, Wallet, Award } from "lucide-react";
 const highlights = [
   { icon: Wallet, text: "100% gratuito" },
   { icon: Clock, text: "Modalidad flexible" },
-  { icon: Award, text: "Certificacion oficial" },
+  { icon: Award, text: "Certificación oficial" },
 ];
 
 export function CtaSection() {
@@ -41,7 +41,7 @@ export function CtaSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          Sumate a los habitantes de Castro Barros que ya estan construyendo su
+          Sumate a los habitantes de Castro Barros que ya están construyendo su
           futuro con Inteligencia Artificial.
         </motion.p>
 
@@ -67,7 +67,7 @@ export function CtaSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <Link href="/registro">
+          <Link href="/cursos">
             <NeonButton size="xl" className="w-full sm:w-auto">
               Inscribite gratis
               <ArrowRight className="ml-2 h-5 w-5" />

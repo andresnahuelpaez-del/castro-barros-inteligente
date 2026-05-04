@@ -4,13 +4,13 @@ import { Settings, Shield, Bell, Database } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Admin - Configuracion",
+  title: "Admin - Configuración",
 };
 
 export default function AdminConfigPage() {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-white">Configuracion</h1>
+      <h1 className="text-3xl font-bold text-white">Configuración</h1>
       <p className="mt-1 text-foreground-secondary">
         Ajustes generales de la plataforma.
       </p>
@@ -21,25 +21,25 @@ export default function AdminConfigPage() {
             icon: Settings,
             title: "General",
             desc: "Nombre del sitio, logo, colores.",
-            status: "Proximamente",
+            status: "Próximamente",
           },
           {
             icon: Shield,
             title: "Seguridad",
             desc: "Roles, permisos, sesiones activas.",
-            status: "Proximamente",
+            status: "Próximamente",
           },
           {
             icon: Bell,
             title: "Notificaciones",
-            desc: "Emails automaticos, plantillas.",
-            status: "Proximamente",
+            desc: "Emails automáticos, plantillas.",
+            status: "Próximamente",
           },
           {
             icon: Database,
             title: "Datos",
             desc: "Exportar datos, backup, limpieza.",
-            status: "Proximamente",
+            status: "Próximamente",
           },
         ].map((item) => (
           <div

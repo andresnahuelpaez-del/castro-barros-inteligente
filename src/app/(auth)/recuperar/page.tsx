@@ -38,14 +38,14 @@ export default function RecuperarPage() {
       <div className="rounded-xl border border-border bg-card p-8 text-center">
         <h1 className="mb-4 text-2xl font-bold text-white">Revisa tu email</h1>
         <p className="text-foreground-secondary">
-          Te enviamos un enlace para restablecer tu contrasena a{" "}
+          Te enviamos un enlace para restablecer tu contraseña a{" "}
           <span className="text-white">{email}</span>.
         </p>
         <Link
           href="/login"
           className="mt-6 inline-block text-sm text-neon-green hover:text-neon-green-soft"
         >
-          Volver al inicio de sesion
+          Volver al inicio de sesión
         </Link>
       </div>
     );
@@ -53,10 +53,10 @@ export default function RecuperarPage() {
 
   return (
     <div className="rounded-xl border border-border bg-card p-8">
-      <h1 className="mb-2 text-2xl font-bold text-white">Recuperar contrasena</h1>
+      <h1 className="mb-2 text-2xl font-bold text-white">Recuperar contraseña</h1>
       <p className="mb-6 text-sm text-foreground-secondary">
-        Ingresa tu email y te enviaremos un enlace para restablecer tu
-        contrasena.
+        Ingresá tu email y te enviaremos un enlace para restablecer tu
+        contraseña.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -78,7 +78,7 @@ export default function RecuperarPage() {
       </form>
       <p className="mt-6 text-center text-sm text-foreground-secondary">
         <Link href="/login" className="text-neon-green hover:text-neon-green-soft">
-          Volver al inicio de sesion
+          Volver al inicio de sesión
         </Link>
       </p>
     </div>

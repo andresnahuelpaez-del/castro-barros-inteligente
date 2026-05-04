@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  { name: "Ministerio de Educacion", abbr: "ME" },
+  { name: "Ministerio de Educación", abbr: "ME" },
   { name: "Gobierno de La Rioja", abbr: "GLR" },
   { name: "Departamento Castro Barros", abbr: "CB" },
   { name: "Dip. Marcelo Del Moral", abbr: "MDM" },

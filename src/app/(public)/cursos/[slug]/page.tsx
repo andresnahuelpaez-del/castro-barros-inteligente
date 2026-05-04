@@ -142,9 +142,9 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
         {/* CTA */}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link href="/registro">
+          <Link href={`/app/cursos/${slug}`}>
             <NeonButton size="lg" className="w-full sm:w-auto">
-              Inscribite gratis <ArrowRight className="ml-2 h-5 w-5" />
+              Empezar curso gratis <ArrowRight className="ml-2 h-5 w-5" />
             </NeonButton>
           </Link>
         </div>
@@ -238,7 +238,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
             </div>
 
             {/* Banner guia de empleabilidad */}
-            <Link href="/registro">
+            <Link href="/cursos">
               <div className="mt-6 group flex items-center gap-4 rounded-xl border border-neon-cyan/20 bg-neon-cyan/5 p-5 transition-all hover:border-neon-cyan/40 hover:bg-neon-cyan/10">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-neon-cyan/20">
                   <ArrowUpRight className="h-5 w-5 text-neon-cyan" />
@@ -419,7 +419,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           del Departamento Castro Barros con codigo de verificacion publica.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Link href="/registro">
+          <Link href="/cursos">
             <NeonButton size="lg">
               Inscribite gratis <ArrowRight className="ml-2 h-5 w-5" />
             </NeonButton>

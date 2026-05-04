@@ -57,14 +57,14 @@ const metrics = [
   { target: 1000, prefix: "+", suffix: "", label: "Estudiantes inscritos", icon: Users },
   { target: 200, prefix: "+", suffix: "", label: "Certificados emitidos", icon: Award },
   { target: 8, prefix: "", suffix: "", label: "Localidades alcanzadas", icon: MapPin },
-  { target: 92, prefix: "", suffix: "%", label: "Satisfaccion de alumnos", icon: ThumbsUp },
+  { target: 92, prefix: "", suffix: "%", label: "Satisfacción de alumnos", icon: ThumbsUp },
 ];
 
 export function MetricsSection() {
   return (
-    <section className="relative py-20">
+    <section className="relative overflow-hidden py-20">
       {/* Aurora background */}
-      <div className="pointer-events-none absolute inset-0 opacity-20" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
         <div className="absolute left-1/4 top-0 h-[400px] w-[400px] rounded-full bg-neon-violet blur-[120px]" />
         <div className="absolute right-1/4 bottom-0 h-[300px] w-[300px] rounded-full bg-neon-green blur-[120px]" />
       </div>

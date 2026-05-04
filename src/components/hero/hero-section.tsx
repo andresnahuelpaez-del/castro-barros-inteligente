@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const metrics = [
   { value: "8", label: "cursos" },
   { value: "100%", label: "gratuito" },
-  { value: "Oficial", label: "certificacion" },
+  { value: "Oficial", label: "certificación" },
   { value: "Online", label: "flexible" },
 ];
 
@@ -17,7 +17,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden">
       {/* Aurora background */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-1/2 -left-1/4 h-[600px] w-[600px] rounded-full bg-neon-violet opacity-15 blur-[120px] sm:h-[800px] sm:w-[800px] sm:blur-[150px]" />
         <div className="absolute -right-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-neon-cyan opacity-10 blur-[120px] sm:h-[600px] sm:w-[600px] sm:blur-[150px]" />
         <div className="absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-neon-green opacity-10 blur-[120px] sm:h-[500px] sm:w-[500px] sm:blur-[150px]" />
@@ -60,9 +60,9 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          8 cursos intensivos con Inteligencia Artificial: Programacion, Marketing digital, Diseno web, Creacion de contenido y mas.
+          8 cursos intensivos con Inteligencia Artificial: Programación, Marketing digital, Diseño web, Creación de contenido y más.
           <span className="block mt-2 text-neon-green font-medium text-glow-green">
-            Inscribite gratis y obtene tu certificacion oficial.
+            Inscribite gratis y obtené tu certificación oficial.
           </span>
         </motion.p>
 
@@ -72,7 +72,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <Link href="/registro" className="w-full sm:w-auto">
+          <Link href="/cursos" className="w-full sm:w-auto">
             <NeonButton size="lg" className="w-full sm:w-auto">Inscribite gratis &rarr;</NeonButton>
           </Link>
           <Link href="/cursos" className="w-full sm:w-auto">

@@ -12,7 +12,7 @@ export default function PerfilPage() {
     <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold text-white">Mi perfil</h1>
       <p className="mt-2 text-foreground-secondary">
-        Edita tus datos personales. Esta informacion aparece en tu certificado.
+        Editá tus datos personales. Esta información aparece en tu certificado.
       </p>
       <div className="mt-8">
         <ProfileForm />

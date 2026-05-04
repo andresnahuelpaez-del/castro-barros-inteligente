@@ -94,11 +94,11 @@ export function NewCourseForm() {
       </div>
 
       <div>
-        <Label>Descripcion corta</Label>
+        <Label>Descripción corta</Label>
         <Textarea
           value={shortDesc}
           onChange={(e) => setShortDesc(e.target.value)}
-          placeholder="Una breve descripcion del curso..."
+          placeholder="Una breve descripción del curso..."
           className="mt-1"
           rows={3}
         />

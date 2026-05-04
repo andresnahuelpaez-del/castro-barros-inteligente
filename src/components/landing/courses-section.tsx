@@ -41,12 +41,12 @@ export function CoursesSection() {
           viewport={{ once: true }}
         >
           <p className="text-xs font-medium uppercase tracking-widest text-neon-green mb-4">
-            Catalogo completo
+            Catálogo completo
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">Nuestros cursos</h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
-            Ocho programas profesionales disenados para construir tu futuro
-            digital. Elegi el que mas se adapte a tus objetivos.
+            Ocho programas profesionales diseñados para construir tu futuro
+            digital. Elegí el que más se adapte a tus objetivos.
           </p>
         </motion.div>
 

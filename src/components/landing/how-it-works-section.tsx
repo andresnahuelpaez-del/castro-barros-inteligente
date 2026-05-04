@@ -7,31 +7,31 @@ const steps = [
   {
     icon: UserPlus,
     title: "Inscribite gratis",
-    description: "Crea tu cuenta en menos de 2 minutos con tu email o Google.",
+    description: "Creá tu cuenta en menos de 2 minutos con tu email o Google.",
   },
   {
     icon: BookOpen,
-    title: "Elegi tu curso",
+    title: "Elegí tu curso",
     description:
-      "Explora los 8 programas y elegi el que mas se adapte a tus objetivos.",
+      "Explorá los 8 programas y elegí el que más se adapte a tus objetivos.",
   },
   {
     icon: Lightbulb,
-    title: "Aprende a tu medida",
+    title: "Aprendé a tu ritmo",
     description:
-      "Videos, lecturas y ejercicios practicos. Organizas tus horarios.",
+      "Videos, lecturas y ejercicios prácticos. Vos organizás tus horarios.",
   },
   {
     icon: Trophy,
-    title: "Aproba tu proyecto",
+    title: "Aprobá tu proyecto",
     description:
-      "Aplica lo aprendido en un proyecto real que demuestre tus habilidades.",
+      "Aplicá lo aprendido en un proyecto real que demuestre tus habilidades.",
   },
   {
     icon: Award,
-    title: "Recibi tu certificado",
+    title: "Recibí tu certificado",
     description:
-      "Certificado oficial con codigo de verificacion publica.",
+      "Certificado oficial con código de verificación pública.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function HowItWorksSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
-            Como funciona?
+            ¿Cómo funciona?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-foreground-secondary sm:mt-4 sm:text-base">
             En 5 pasos simples pasas de cero a profesional certificado.

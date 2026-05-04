@@ -27,7 +27,7 @@ export function LoginForm() {
     });
 
     if (error) {
-      setError("Email o contrasena incorrectos. Intenta de nuevo.");
+      setError("Email o contraseña incorrectos. Intentá de nuevo.");
       setLoading(false);
       return;
     }
@@ -47,9 +47,9 @@ export function LoginForm() {
 
   return (
     <div className="rounded-xl border border-border bg-card p-8">
-      <h1 className="mb-2 text-2xl font-bold text-white">Iniciar sesion</h1>
+      <h1 className="mb-2 text-2xl font-bold text-white">Iniciar sesión</h1>
       <p className="mb-6 text-sm text-foreground-secondary">
-        Ingresa a tu cuenta para continuar aprendiendo.
+        Ingresá a tu cuenta para seguir aprendiendo.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -66,13 +66,13 @@ export function LoginForm() {
           />
         </div>
         <div>
-          <Label htmlFor="password">Contrasena</Label>
+          <Label htmlFor="password">Contraseña</Label>
           <Input
             id="password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Tu contrasena"
+            placeholder="Tu contraseña"
             required
             minLength={8}
             className="mt-1"
@@ -106,10 +106,10 @@ export function LoginForm() {
           href="/recuperar"
           className="text-foreground-secondary hover:text-white"
         >
-          Olvidaste tu contrasena?
+          ¿Olvidaste tu contraseña?
         </Link>
         <Link href="/registro" className="text-neon-green hover:text-neon-green-soft">
-          No tenes cuenta? Registrate
+          ¿No tenés cuenta? Registrate
         </Link>
       </div>
     </div>

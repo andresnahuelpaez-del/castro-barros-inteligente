@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const docentes = [
   { name: "Docente 1", role: "Especialista en IA", course: "IA para tu Trabajo", color: "from-neon-green/30 to-neon-green/5" },
-  { name: "Docente 2", role: "Content Creator", course: "Creacion de Contenido con IA", color: "from-secondary/30 to-secondary/5" },
+  { name: "Docente 2", role: "Content Creator", course: "Creación de Contenido con IA", color: "from-secondary/30 to-secondary/5" },
   { name: "Docente 3", role: "Marketing Digital", course: "Marketing Digital con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
   { name: "Docente 4", role: "Desarrollador Full Stack", course: "Vibe Coding", color: "from-neon-green/30 to-neon-green/5" },
-  { name: "Docente 5", role: "Analista de Datos", course: "Analisis de Datos con IA", color: "from-secondary/30 to-secondary/5" },
-  { name: "Docente 6", role: "Disenador Web", course: "Diseno Web con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
+  { name: "Docente 5", role: "Analista de Datos", course: "Análisis de Datos con IA", color: "from-secondary/30 to-secondary/5" },
+  { name: "Docente 6", role: "Diseñador Web", course: "Diseño Web con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
 ];
 
 function getInitials(name: string) {
@@ -30,7 +30,7 @@ export function DocentesSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Conoce a tus docentes
+            Conocé a tus docentes
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
             Profesionales con experiencia real en la industria, comprometidos con

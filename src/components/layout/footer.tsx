@@ -8,14 +8,14 @@ const platformLinks = [
 ];
 
 const legalLinks = [
-  { href: "/terminos", label: "Terminos y condiciones" },
+  { href: "/terminos", label: "Términos y condiciones" },
   { href: "/privacidad", label: "Privacidad" },
   { href: "/accesibilidad", label: "Accesibilidad" },
 ];
 
 const institucionalLinks = [
   { href: "#", label: "Gobierno de La Rioja" },
-  { href: "#", label: "Ministerio de Educacion" },
+  { href: "#", label: "Ministerio de Educación" },
   { href: "#", label: "Dip. Marcelo Daniel Del Moral" },
   { href: "#", label: "LINE" },
 ];
@@ -34,7 +34,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-3 text-xs text-foreground-secondary sm:text-sm">
-              Capacitacion digital profesional, gratuita y certificada por el
+              Capacitación digital profesional, gratuita y certificada por el
               Departamento Castro Barros.
             </p>
             <p className="mt-3 text-xs text-foreground-muted">
@@ -104,7 +104,7 @@ export function Footer() {
               reservados.
             </p>
             <p className="text-[10px] text-foreground-muted sm:text-xs">
-              Hecho con dedicacion en Castro Barros, La Rioja
+              Hecho con dedicación en Castro Barros, La Rioja
             </p>
           </div>
         </div>

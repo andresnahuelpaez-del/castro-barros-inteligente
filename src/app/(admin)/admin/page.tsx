@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
 import {
   Users,
   BookOpen,
@@ -10,69 +9,26 @@ import {
   Activity,
 } from "lucide-react";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Admin - Dashboard",
 };
 
+// TODO: Reactivar queries Supabase cuando se conecte
 export default async function AdminDashboardPage() {
-  const supabase = await createClient();
-
-  // Fetch real metrics
-  const [
-    { count: totalStudents },
-    { count: totalEnrollments },
-    { count: totalCertificates },
-    { count: totalCourses },
-    { data: recentEnrollments },
-  ] = await Promise.all([
-    supabase.from("profiles").select("*", { count: "exact", head: true }).eq("role", "student"),
-    supabase.from("enrollments").select("*", { count: "exact", head: true }),
-    supabase.from("certificates").select("*", { count: "exact", head: true }),
-    supabase.from("courses").select("*", { count: "exact", head: true }).eq("published", true),
-    supabase
-      .from("enrollments")
-      .select("id, created_at, courses(title), profiles!enrollments_user_id_fkey(full_name, email)")
-      .order("created_at", { ascending: false })
-      .limit(10),
-  ]);
-
   const metrics = [
-    {
-      label: "Alumnos registrados",
-      value: totalStudents ?? 0,
-      icon: Users,
-      href: "/admin/alumnos",
-    },
-    {
-      label: "Inscripciones activas",
-      value: totalEnrollments ?? 0,
-      icon: TrendingUp,
-      href: "/admin/alumnos",
-    },
-    {
-      label: "Cursos publicados",
-      value: totalCourses ?? 0,
-      icon: BookOpen,
-      href: "/admin/cursos",
-    },
-    {
-      label: "Certificados emitidos",
-      value: totalCertificates ?? 0,
-      icon: Award,
-      href: "/admin/certificados",
-    },
+    { label: "Alumnos registrados", value: 0, icon: Users, href: "/admin/alumnos" },
+    { label: "Inscripciones activas", value: 0, icon: TrendingUp, href: "/admin/alumnos" },
+    { label: "Cursos publicados", value: 8, icon: BookOpen, href: "/admin/cursos" },
+    { label: "Certificados emitidos", value: 0, icon: Award, href: "/admin/certificados" },
   ];
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-white">Panel de administracion</h1>
+      <h1 className="text-3xl font-bold text-white">Panel de administración</h1>
       <p className="mt-2 text-foreground-secondary">
-        Metricas y gestion de la plataforma.
+        Métricas y gestión de la plataforma.
       </p>
 
-      {/* Metrics grid */}
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {metrics.map((metric) => (
           <Link
@@ -93,7 +49,6 @@ export default async function AdminDashboardPage() {
         ))}
       </div>
 
-      {/* Recent enrollments */}
       <div className="mt-10">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -109,58 +64,9 @@ export default async function AdminDashboardPage() {
           </Link>
         </div>
         <div className="mt-4 rounded-xl border border-border bg-card overflow-hidden">
-          {recentEnrollments && recentEnrollments.length > 0 ? (
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-border text-left text-xs text-foreground-muted">
-                  <th className="px-4 py-3 font-medium">Alumno</th>
-                  <th className="px-4 py-3 font-medium hidden sm:table-cell">Curso</th>
-                  <th className="px-4 py-3 font-medium hidden md:table-cell">Fecha</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {recentEnrollments.map((enrollment) => {
-                  const profile = enrollment.profiles as unknown as {
-                    full_name: string | null;
-                    email: string;
-                  } | null;
-                  const course = enrollment.courses as unknown as {
-                    title: string;
-                  } | null;
-
-                  return (
-                    <tr key={enrollment.id} className="text-sm">
-                      <td className="px-4 py-3">
-                        <p className="text-white">
-                          {profile?.full_name || "Sin nombre"}
-                        </p>
-                        <p className="text-xs text-foreground-muted">
-                          {profile?.email}
-                        </p>
-                      </td>
-                      <td className="px-4 py-3 text-foreground-secondary hidden sm:table-cell">
-                        {course?.title || "—"}
-                      </td>
-                      <td className="px-4 py-3 text-foreground-muted hidden md:table-cell">
-                        {new Date(enrollment.created_at).toLocaleDateString(
-                          "es-AR",
-                          {
-                            day: "2-digit",
-                            month: "short",
-                            year: "numeric",
-                          }
-                        )}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          ) : (
-            <div className="p-8 text-center text-foreground-muted">
-              No hay inscripciones aun.
-            </div>
-          )}
+          <div className="p-8 text-center text-foreground-muted">
+            No hay inscripciones aún. Conectá Supabase para ver datos reales.
+          </div>
         </div>
       </div>
     </div>

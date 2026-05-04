@@ -6,31 +6,31 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria Gonzalez",
+    name: "María González",
     localidad: "Anillaco",
     course: "IA para tu Trabajo",
-    text: "Nunca pense que a mis 45 anos iba a aprender a usar herramientas de IA. Hoy las uso todos los dias en mi trabajo y mis companeros me piden ayuda.",
+    text: "Nunca pensé que a mis 45 años iba a aprender a usar herramientas de IA. Hoy las uso todos los días en mi trabajo y mis compañeros me piden ayuda.",
     color: "bg-neon-green/20 text-neon-green",
   },
   {
     name: "Lucas Herrera",
     localidad: "Aminga",
     course: "Vibe Coding",
-    text: "Gracias al curso de desarrollo pude construir mi primera app y ya tengo dos clientes. El certificado me abrio puertas que no imaginaba.",
+    text: "Gracias al curso de desarrollo pude construir mi primera app y ya tengo dos clientes. El certificado me abrió puertas que no imaginaba.",
     color: "bg-secondary/20 text-secondary",
   },
   {
-    name: "Ana Belen Torres",
+    name: "Ana Belén Torres",
     localidad: "Chuquis",
     course: "Marketing Digital con IA",
-    text: "Tenia un kiosco y no sabia como promocionarlo online. Ahora manejo las redes con IA y las ventas crecieron un 40% en tres meses.",
+    text: "Tenía un kiosco y no sabía cómo promocionarlo online. Ahora manejo las redes con IA y las ventas crecieron un 40% en tres meses.",
     color: "bg-neon-cyan/20 text-neon-cyan",
   },
   {
     name: "Carlos Medina",
     localidad: "San Pedro",
     course: "E-commerce con IA",
-    text: "Monte mi tienda online desde cero siguiendo el curso. Ya llevo mas de 50 ventas y estoy expandiendo a otras provincias.",
+    text: "Monté mi tienda online desde cero siguiendo el curso. Ya llevo más de 50 ventas y estoy expandiendo a otras provincias.",
     color: "bg-neon-green/20 text-neon-green",
   },
 ];
@@ -57,7 +57,7 @@ export function TestimonialsSection() {
             Historias reales de Castro Barros
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
-            Personas de nuestro departamento que ya estan transformando su vida
+            Personas de nuestro departamento que ya están transformando su vida
             con habilidades digitales.
           </p>
         </motion.div>

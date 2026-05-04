@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
 import {
   BookOpen,
   CheckCircle2,
@@ -9,11 +7,14 @@ import {
   Briefcase,
   ArrowRight,
   Compass,
-  Clock,
   TrendingUp,
+  PlayCircle,
+  Clock,
 } from "lucide-react";
-import { GlassCard } from "@/components/common/glass-card";
 import { Progress } from "@/components/ui/progress";
+import { GlassCard } from "@/components/common/glass-card";
+import { COURSES } from "@/lib/constants";
+import { MOCK_MODULES } from "@/lib/mock-course-data";
 
 export const dynamic = "force-dynamic";
 
@@ -22,158 +23,171 @@ export const metadata: Metadata = {
 };
 
 export default async function DashboardPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // Mock data for visual demo
+  const userName = "Estudiante";
+  const enrolledCourses = COURSES.slice(0, 3);
+  const totalLessons = MOCK_MODULES.reduce(
+    (acc, m) => acc + m.lessons.length,
+    0
+  );
+  const completedLessons = MOCK_MODULES.reduce(
+    (acc, m) => acc + m.lessons.filter((l) => l.completed).length,
+    0
+  );
 
-  if (!user) redirect("/login");
-
-  const [
-    { data: profile },
-    { data: enrollments },
-    { count: completedLessonsCount },
-    { count: certificatesCount },
-  ] = await Promise.all([
-    supabase.from("profiles").select("*").eq("id", user.id).single(),
-    supabase
-      .from("enrollments")
-      .select("id, status, last_activity_at, courses(id, title, slug, short_description)")
-      .eq("user_id", user.id)
-      .order("last_activity_at", { ascending: false }),
-    supabase
-      .from("lesson_progress")
-      .select("*", { count: "exact", head: true })
-      .eq("user_id", user.id)
-      .not("completed_at", "is", null),
-    supabase
-      .from("certificates")
-      .select("*", { count: "exact", head: true })
-      .eq("user_id", user.id),
-  ]);
-
-  if (profile && !profile.onboarding_completed) {
-    redirect("/app/onboarding");
-  }
-
-  const activeEnrollments = enrollments?.filter((e) => e.status === "active") || [];
-  const totalEnrollments = enrollments?.length || 0;
+  // Find the next uncompleted lesson
+  const nextLesson = MOCK_MODULES.flatMap((m) => m.lessons).find(
+    (l) => !l.completed
+  );
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-white">
-        Hola{profile?.full_name ? `, ${profile.full_name}` : ""}
+      <h1 className="text-2xl font-bold text-white sm:text-3xl">
+        Hola, {userName}
       </h1>
       <p className="mt-2 text-foreground-secondary">
         Bienvenido a tu panel de aprendizaje.
       </p>
 
-      {/* Metricas */}
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl border border-border bg-card p-6">
-          <div className="flex items-center gap-3">
-            <BookOpen className="h-5 w-5 text-neon-green" />
-            <h3 className="text-sm font-medium text-foreground-secondary">
+      {/* Métricas */}
+      <div className="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-4">
+        <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <BookOpen className="h-4 w-4 text-neon-green sm:h-5 sm:w-5" />
+            <h3 className="text-xs font-medium text-foreground-secondary sm:text-sm">
               Cursos activos
             </h3>
           </div>
-          <p className="mt-2 text-3xl font-bold text-neon-green">
-            {activeEnrollments.length}
+          <p className="mt-2 text-2xl font-bold text-neon-green sm:text-3xl">
+            {enrolledCourses.length}
           </p>
         </div>
-        <div className="rounded-xl border border-border bg-card p-6">
-          <div className="flex items-center gap-3">
-            <TrendingUp className="h-5 w-5 text-secondary" />
-            <h3 className="text-sm font-medium text-foreground-secondary">
-              Total inscripciones
+        <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <TrendingUp className="h-4 w-4 text-secondary sm:h-5 sm:w-5" />
+            <h3 className="text-xs font-medium text-foreground-secondary sm:text-sm">
+              Inscripciones
             </h3>
           </div>
-          <p className="mt-2 text-3xl font-bold text-white">
-            {totalEnrollments}
+          <p className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            {enrolledCourses.length}
           </p>
         </div>
-        <div className="rounded-xl border border-border bg-card p-6">
-          <div className="flex items-center gap-3">
-            <CheckCircle2 className="h-5 w-5 text-neon-cyan" />
-            <h3 className="text-sm font-medium text-foreground-secondary">
-              Lecciones completadas
+        <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <CheckCircle2 className="h-4 w-4 text-neon-cyan sm:h-5 sm:w-5" />
+            <h3 className="text-xs font-medium text-foreground-secondary sm:text-sm">
+              Lecciones
             </h3>
           </div>
-          <p className="mt-2 text-3xl font-bold text-white">
-            {completedLessonsCount ?? 0}
+          <p className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            {completedLessons}
+            <span className="text-sm font-normal text-foreground-muted">
+              /{totalLessons}
+            </span>
           </p>
         </div>
-        <div className="rounded-xl border border-border bg-card p-6">
-          <div className="flex items-center gap-3">
-            <Award className="h-5 w-5 text-secondary" />
-            <h3 className="text-sm font-medium text-foreground-secondary">
+        <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Award className="h-4 w-4 text-secondary sm:h-5 sm:w-5" />
+            <h3 className="text-xs font-medium text-foreground-secondary sm:text-sm">
               Certificados
             </h3>
           </div>
-          <p className="mt-2 text-3xl font-bold text-white">
-            {certificatesCount ?? 0}
-          </p>
+          <p className="mt-2 text-2xl font-bold text-white sm:text-3xl">0</p>
         </div>
       </div>
 
-      {/* Active courses */}
-      {activeEnrollments.length > 0 && (
-        <div className="mt-10">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-white">
-              Continua aprendiendo
-            </h2>
-            <Link
-              href="/app/cursos"
-              className="flex items-center gap-1 text-sm text-foreground-secondary hover:text-white transition-colors"
-            >
-              Ver todos
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {activeEnrollments.slice(0, 4).map((enrollment) => {
-              const course = enrollment.courses as unknown as {
-                id: string;
-                title: string;
-                slug: string;
-                short_description: string | null;
-              } | null;
-              if (!course) return null;
-
-              return (
-                <Link
-                  key={enrollment.id}
-                  href={`/app/cursos/${course.slug}`}
-                  className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-neon-green/50"
-                >
-                  <h3 className="font-semibold text-white group-hover:text-neon-green transition-colors">
-                    {course.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-foreground-muted line-clamp-2">
-                    {course.short_description}
+      {/* Continue learning */}
+      {nextLesson && (
+        <div className="mt-8">
+          <h2 className="text-lg font-semibold text-white mb-4">
+            Continuá aprendiendo
+          </h2>
+          <Link href={`/app/cursos/${enrolledCourses[0].slug}/leccion/${nextLesson.slug}`}>
+            <div className="group rounded-2xl border border-neon-green/20 bg-card p-4 sm:p-5 hover:border-neon-green/40 transition-colors">
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-green/10 sm:h-14 sm:w-14">
+                  <PlayCircle className="h-6 w-6 text-neon-green sm:h-7 sm:w-7" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-foreground-muted mb-0.5">
+                    {enrolledCourses[0].title}
                   </p>
-                  {enrollment.last_activity_at && (
-                    <p className="mt-3 flex items-center gap-1 text-xs text-foreground-muted">
+                  <p className="text-sm font-semibold text-white group-hover:text-neon-green transition-colors truncate sm:text-base">
+                    {nextLesson.title}
+                  </p>
+                  <div className="flex items-center gap-3 mt-1">
+                    <span className="flex items-center gap-1 text-xs text-foreground-muted">
                       <Clock className="h-3 w-3" />
-                      Ultima actividad:{" "}
-                      {new Date(enrollment.last_activity_at).toLocaleDateString(
-                        "es-AR",
-                        { day: "2-digit", month: "short" }
-                      )}
-                    </p>
-                  )}
-                </Link>
-              );
-            })}
-          </div>
+                      {nextLesson.durationMin} min
+                    </span>
+                    <span className="text-xs text-foreground-muted">
+                      {completedLessons}/{totalLessons} completadas
+                    </span>
+                  </div>
+                </div>
+                <ArrowRight className="h-5 w-5 shrink-0 text-foreground-muted group-hover:text-neon-green transition-colors" />
+              </div>
+              <Progress
+                value={Math.round((completedLessons / totalLessons) * 100)}
+                className="mt-3 h-1.5"
+              />
+            </div>
+          </Link>
         </div>
       )}
 
-      {/* Accesos rapidos */}
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
+      {/* Enrolled courses */}
+      <div className="mt-8">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-white">Mis cursos</h2>
+          <Link
+            href="/app/cursos"
+            className="text-sm text-neon-green hover:underline"
+          >
+            Ver todos
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {enrolledCourses.map((course, i) => {
+            const progress = i === 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
+            return (
+              <Link key={course.slug} href={`/app/cursos/${course.slug}`}>
+                <div className="group rounded-2xl border border-border bg-card p-4 sm:p-5 hover:border-foreground-muted/30 transition-colors h-full">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-block h-2 w-2 rounded-full bg-neon-green" />
+                    <span className="text-xs text-foreground-muted">
+                      En progreso
+                    </span>
+                  </div>
+                  <h3 className="text-sm font-semibold text-white group-hover:text-neon-green transition-colors sm:text-base">
+                    {course.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-foreground-secondary line-clamp-2">
+                    {course.shortDescription}
+                  </p>
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between text-xs text-foreground-muted mb-1.5">
+                      <span>{progress}% completado</span>
+                      <span>{course.durationMonths} meses</span>
+                    </div>
+                    <Progress value={progress} className="h-1.5" />
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Quick actions */}
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
         <Link href="/cursos">
-          <GlassCard neonBorder="green" className="group flex items-center gap-4">
+          <GlassCard
+            neonBorder="green"
+            className="group flex items-center gap-4"
+          >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-green/10">
               <Compass className="h-6 w-6 text-neon-green" />
             </div>
@@ -190,16 +204,19 @@ export default async function DashboardPage() {
         </Link>
 
         <Link href="/app/empleabilidad">
-          <GlassCard neonBorder="cyan" className="group flex items-center gap-4">
+          <GlassCard
+            neonBorder="cyan"
+            className="group flex items-center gap-4"
+          >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-cyan/10">
               <Briefcase className="h-6 w-6 text-neon-cyan" />
             </div>
             <div className="flex-1">
               <p className="font-semibold text-white group-hover:text-neon-cyan-bright transition-colors">
-                Guia de empleabilidad
+                Guía de empleabilidad
               </p>
               <p className="mt-1 text-sm text-foreground-secondary">
-                Como encontrar trabajo online, donde postularte y cuanto cobrar.
+                Cómo encontrar trabajo online, dónde postularte y cuánto cobrar.
               </p>
             </div>
             <ArrowRight className="h-5 w-5 text-foreground-muted group-hover:text-neon-cyan transition-colors" />

@@ -5,7 +5,7 @@ import { GlassCard } from "@/components/common/glass-card";
 export const metadata: Metadata = {
   title: "Sobre nosotros",
   description:
-    "Conoce la mision, vision y equipo detras de Castro Barros Inteligente.",
+    "Conocé la misión, visión y equipo detrás de Castro Barros Inteligente.",
 };
 
 export default function SobrePage() {
@@ -16,7 +16,7 @@ export default function SobrePage() {
           Sobre Castro Barros Inteligente<sup>&reg;</sup>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground-secondary">
-          Una iniciativa estatal para democratizar la educacion digital en el
+          Una iniciativa estatal para democratizar la educación digital en el
           Departamento Castro Barros, La Rioja.
         </p>
       </div>
@@ -24,24 +24,24 @@ export default function SobrePage() {
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
         <GlassCard neonBorder="green">
           <Target className="h-10 w-10 text-neon-green" />
-          <h2 className="mt-4 text-xl font-bold">Mision</h2>
+          <h2 className="mt-4 text-xl font-bold">Misión</h2>
           <p className="mt-2 text-foreground-secondary leading-relaxed">
-            Brindar capacitacion digital profesional, gratuita y certificada a
+            Brindar capacitación digital profesional, gratuita y certificada a
             cada habitante del Departamento Castro Barros, utilizando
             Inteligencia Artificial como herramienta central de aprendizaje,
             para que puedan acceder a nuevas oportunidades laborales y
-            productivas en la economia digital.
+            productivas en la economía digital.
           </p>
         </GlassCard>
 
         <GlassCard neonBorder="violet">
           <Eye className="h-10 w-10 text-neon-violet-bright" />
-          <h2 className="mt-4 text-xl font-bold">Vision</h2>
+          <h2 className="mt-4 text-xl font-bold">Visión</h2>
           <p className="mt-2 text-foreground-secondary leading-relaxed">
             Convertir al Departamento Castro Barros en un referente nacional de
-            transformacion digital comunitaria, donde cada ciudadano tenga las
+            transformación digital comunitaria, donde cada ciudadano tenga las
             herramientas para competir profesionalmente en el mercado global,
-            sin importar su ubicacion geografica ni su punto de partida
+            sin importar su ubicación geográfica ni su punto de partida
             educativo.
           </p>
         </GlassCard>
@@ -52,11 +52,11 @@ export default function SobrePage() {
           <Users className="h-10 w-10 text-neon-cyan" />
           <h2 className="mt-4 text-xl font-bold">El equipo</h2>
           <p className="mt-2 text-foreground-secondary leading-relaxed">
-            Un equipo interdisciplinario de educadores, tecnologos y
+            Un equipo interdisciplinario de educadores, tecnólogos y
             profesionales comprometidos con el desarrollo de Castro Barros.
             Cada docente fue seleccionado por su experiencia real en la
             industria y su capacidad de transmitir conocimientos de forma
-            clara y practica.
+            clara y práctica.
           </p>
         </GlassCard>
 
@@ -65,7 +65,7 @@ export default function SobrePage() {
           <h2 className="mt-4 text-xl font-bold">Alianzas institucionales</h2>
           <ul className="mt-2 space-y-2 text-foreground-secondary">
             <li>Gobierno de la Provincia de La Rioja</li>
-            <li>Ministerio de Educacion de La Rioja</li>
+            <li>Ministerio de Educación de La Rioja</li>
             <li>Diputado Marcelo Daniel Del Moral</li>
             <li>LINE (Lucid Intelligence New Era)</li>
           </ul>

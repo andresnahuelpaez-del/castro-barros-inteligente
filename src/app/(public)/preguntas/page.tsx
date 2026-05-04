@@ -4,7 +4,7 @@ import { FaqSection } from "@/components/landing/faq-section";
 export const metadata: Metadata = {
   title: "Preguntas frecuentes",
   description:
-    "Respuestas a las preguntas mas comunes sobre Castro Barros Inteligente, la plataforma de capacitacion digital gratuita con IA.",
+    "Respuestas a las preguntas más comunes sobre Castro Barros Inteligente, la plataforma de capacitación digital gratuita con IA.",
 };
 
 export default function PreguntasPage() {

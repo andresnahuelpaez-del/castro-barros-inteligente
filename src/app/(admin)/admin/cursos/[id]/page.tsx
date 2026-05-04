@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { createClient } from "@/lib/supabase/server";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { CourseEditor } from "./course-editor";
-
-export const dynamic = "force-dynamic";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -16,29 +11,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return { title: `Admin - Editar curso ${id}` };
 }
 
+// TODO: Reactivar queries Supabase cuando se conecte
 export default async function AdminCourseEditPage({ params }: PageProps) {
-  const { id } = await params;
-  const supabase = await createClient();
-
-  const { data: course } = await supabase
-    .from("courses")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  if (!course) notFound();
-
-  const { data: modules } = await supabase
-    .from("modules")
-    .select("*, lessons(id, title, slug, order, video_url, video_duration_sec)")
-    .eq("course_id", id)
-    .order("order", { ascending: true });
-
-  const { data: categories } = await supabase
-    .from("categories")
-    .select("id, name")
-    .order("name");
-
   return (
     <div>
       <Link
@@ -49,11 +23,11 @@ export default async function AdminCourseEditPage({ params }: PageProps) {
         Volver a cursos
       </Link>
 
-      <CourseEditor
-        course={course}
-        modules={modules || []}
-        categories={categories || []}
-      />
+      <div className="rounded-xl border border-border bg-card p-8 text-center">
+        <p className="text-foreground-secondary">
+          Conectá Supabase para poder editar cursos.
+        </p>
+      </div>
     </div>
   );
 }

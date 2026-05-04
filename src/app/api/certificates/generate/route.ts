@@ -1,8 +1,10 @@
 import { createClient } from "@/lib/supabase/server";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
+import { generateCertificatePDF } from "@/lib/certificate-pdf";
+import { COURSE_COMPETENCIES } from "@/lib/constants";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const supabase = await createClient();
 
   const {
@@ -33,7 +35,7 @@ export async function POST(request: Request) {
 
   if (!enrollment) {
     return NextResponse.json(
-      { error: "No estas inscrito en este curso" },
+      { error: "No estás inscripto en este curso" },
       { status: 403 }
     );
   }
@@ -71,7 +73,8 @@ export async function POST(request: Request) {
   if (!allCompleted) {
     return NextResponse.json(
       {
-        error: "Tenes que completar todas las lecciones para obtener el certificado",
+        error:
+          "Tenés que completar todas las lecciones para obtener el certificado",
         completed: completedIds.size,
         total: allLessonIds.length,
       },
@@ -82,34 +85,88 @@ export async function POST(request: Request) {
   // Check if certificate already exists
   const { data: existing } = await supabase
     .from("certificates")
-    .select("id, verification_hash")
+    .select("id, hash, pdf_url")
     .eq("user_id", user.id)
     .eq("course_id", courseId)
     .single();
 
   if (existing) {
     return NextResponse.json({
-      message: "Ya tenes el certificado de este curso",
+      message: "Ya tenés el certificado de este curso",
       certificateId: existing.id,
-      verificationHash: existing.verification_hash,
+      verificationHash: existing.hash,
+      pdfUrl: existing.pdf_url,
     });
   }
 
-  // Generate certificate
+  // Get course and profile data
+  const { data: course } = await supabase
+    .from("courses")
+    .select("title, slug")
+    .eq("id", courseId)
+    .single();
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("full_name")
+    .eq("id", user.id)
+    .single();
+
   const verificationHash = crypto
     .createHash("sha256")
     .update(`${user.id}-${courseId}-${Date.now()}`)
     .digest("hex");
 
+  const courseSlug = course?.slug || "";
+  const baseUrl = request.nextUrl.origin;
+  const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
+
+  // Generate the PDF
+  const pdfBytes = await generateCertificatePDF({
+    studentName: profile?.full_name || "Estudiante",
+    courseTitle: course?.title || "Curso",
+    competencyDescription:
+      COURSE_COMPETENCIES[courseSlug] ||
+      "aplicación de herramientas de Inteligencia Artificial en el ámbito profesional",
+    issuedDate: new Date().toLocaleDateString("es-AR", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    }),
+    verificationHash,
+    verificationUrl,
+    certificateCode: `CERT-CB-${new Date().getFullYear()}-${String(Math.floor(Math.random() * 99999)).padStart(5, "0")}`,
+  });
+
+  // Upload PDF to Supabase Storage
+  const fileName = `${user.id}/${courseSlug}-${verificationHash.slice(0, 8)}.pdf`;
+  const { error: uploadError } = await supabase.storage
+    .from("certificates")
+    .upload(fileName, pdfBytes, {
+      contentType: "application/pdf",
+      upsert: false,
+    });
+
+  let pdfUrl = "";
+  if (!uploadError) {
+    const { data: publicUrl } = supabase.storage
+      .from("certificates")
+      .getPublicUrl(fileName);
+    pdfUrl = publicUrl.publicUrl;
+  }
+
+  // Insert certificate record
   const { data: certificate, error: insertError } = await supabase
     .from("certificates")
     .insert({
       user_id: user.id,
       course_id: courseId,
-      verification_hash: verificationHash,
+      enrollment_id: enrollment.id,
+      hash: verificationHash,
+      pdf_url: pdfUrl,
       issued_at: new Date().toISOString(),
     })
-    .select("id, verification_hash")
+    .select("id, hash")
     .single();
 
   if (insertError) {
@@ -128,6 +185,7 @@ export async function POST(request: Request) {
   return NextResponse.json({
     message: "Certificado generado exitosamente",
     certificateId: certificate.id,
-    verificationHash: certificate.verification_hash,
+    verificationHash: certificate.hash,
+    pdfUrl,
   });
 }

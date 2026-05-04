@@ -21,7 +21,7 @@ const sidebarLinks = [
   { href: "/admin/proyectos", label: "Proyectos", icon: FileText },
   { href: "/admin/certificados", label: "Certificados", icon: Award },
   { href: "/admin/reportes", label: "Reportes", icon: BarChart3 },
-  { href: "/admin/configuracion", label: "Configuracion", icon: Settings },
+  { href: "/admin/configuracion", label: "Configuración", icon: Settings },
 ];
 
 export function AdminSidebar() {

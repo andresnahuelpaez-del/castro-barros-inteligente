@@ -8,7 +8,7 @@ import { NeonButton } from "@/components/common/neon-button";
 const features = [
   {
     icon: Shield,
-    text: "Verificacion publica en linea (link permanente)",
+    text: "Verificación pública en línea (link permanente)",
   },
   {
     icon: QrCode,
@@ -31,7 +31,7 @@ export function CertificateSection() {
             viewport={{ once: true }}
           >
             <p className="text-xs font-medium uppercase tracking-widest text-neon-green mb-4">
-              Certificacion oficial
+              Certificación oficial
             </p>
             <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
               Un certificado que{" "}
@@ -39,8 +39,8 @@ export function CertificateSection() {
             </h2>
             <p className="mt-4 text-sm text-foreground-secondary leading-relaxed sm:text-base">
               Cada certificado emitido por Castro Barros Inteligente&reg; incluye
-              un codigo unico de verificacion que cualquier empleador puede
-              consultar en linea. Es valido, oficial y esta respaldado por el
+              un código único de verificación que cualquier empleador puede
+              consultar en línea. Es válido, oficial y está respaldado por el
               Departamento Castro Barros.
             </p>
             <ul className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
@@ -56,8 +56,8 @@ export function CertificateSection() {
               ))}
             </ul>
             <div className="mt-6 sm:mt-8">
-              <Link href="/registro">
-                <NeonButton className="w-full sm:w-auto">Inscribite y obtene el tuyo</NeonButton>
+              <Link href="/cursos">
+                <NeonButton className="w-full sm:w-auto">Inscribite y obtené el tuyo</NeonButton>
               </Link>
             </div>
           </motion.div>

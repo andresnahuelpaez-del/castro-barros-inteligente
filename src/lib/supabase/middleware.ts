@@ -41,18 +41,19 @@ export async function updateSession(request: NextRequest) {
     request.nextUrl.pathname === "/registro" ||
     request.nextUrl.pathname === "/recuperar";
 
-  if (!user && (isAppRoute || isAdminRoute)) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/login";
-    url.searchParams.set("redirect", request.nextUrl.pathname);
-    return NextResponse.redirect(url);
-  }
+  // TODO: Reactivar protección de rutas cuando se conecte Supabase
+  // if (!user && (isAppRoute || isAdminRoute)) {
+  //   const url = request.nextUrl.clone();
+  //   url.pathname = "/login";
+  //   url.searchParams.set("redirect", request.nextUrl.pathname);
+  //   return NextResponse.redirect(url);
+  // }
 
-  if (user && isAuthRoute) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/app";
-    return NextResponse.redirect(url);
-  }
+  // if (user && isAuthRoute) {
+  //   const url = request.nextUrl.clone();
+  //   url.pathname = "/app";
+  //   return NextResponse.redirect(url);
+  // }
 
   return supabaseResponse;
 }

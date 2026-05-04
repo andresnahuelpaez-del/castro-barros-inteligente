@@ -76,16 +76,16 @@ export function Navbar() {
   const navLinks = isDashboard ? dashboardLinks : publicLinks;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
       <nav className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
           href={user ? "/app" : "/"}
-          className="flex items-center gap-1 text-base font-bold sm:text-lg"
+          className="flex items-center gap-1.5"
         >
-          <span className="text-white">CB</span>
-          <span className="text-neon-green text-glow-green">
-            Inteligente<sup className="text-[8px] sm:text-xs">&reg;</sup>
+          <span className="text-sm font-bold tracking-tight text-white sm:text-base">Castro Barros</span>
+          <span className="text-sm font-bold tracking-tight text-neon-green text-glow-green sm:text-base">
+            Inteligente<sup className="text-[6px] sm:text-[8px]">&reg;</sup>
           </span>
         </Link>
 
@@ -143,7 +143,7 @@ export function Navbar() {
                   className="cursor-pointer text-destructive"
                 >
                   <LogOut className="mr-2 h-4 w-4" />
-                  Cerrar sesion
+                  Cerrar sesión
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -171,7 +171,7 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-50 w-[280px] transform bg-background-secondary border-l border-border transition-transform duration-300 md:hidden",
+          "fixed inset-y-0 right-0 z-50 w-[280px] transform border-l border-border bg-[#111111] transition-transform duration-300 md:hidden",
           mobileOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -226,7 +226,7 @@ export function Navbar() {
                     }}
                     className="w-full rounded-lg px-4 py-3 text-left text-base text-destructive hover:bg-destructive/10"
                   >
-                    Cerrar sesion
+                    Cerrar sesión
                   </button>
                 </>
               ) : (

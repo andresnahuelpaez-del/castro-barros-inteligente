@@ -22,7 +22,7 @@ export function RegistroForm() {
     setError(null);
 
     if (password !== confirmPassword) {
-      setError("Las contrasenas no coinciden.");
+      setError("Las contraseñas no coinciden.");
       return;
     }
 
@@ -59,7 +59,7 @@ export function RegistroForm() {
     <div className="rounded-xl border border-border bg-card p-8">
       <h1 className="mb-2 text-2xl font-bold text-white">Crear cuenta</h1>
       <p className="mb-6 text-sm text-foreground-secondary">
-        Registrate gratis y empeza a capacitarte con IA.
+        Registrate gratis y empezá a capacitarte con IA.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -76,26 +76,26 @@ export function RegistroForm() {
           />
         </div>
         <div>
-          <Label htmlFor="password">Contrasena</Label>
+          <Label htmlFor="password">Contraseña</Label>
           <Input
             id="password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Minimo 8 caracteres"
+            placeholder="Mínimo 8 caracteres"
             required
             minLength={8}
             className="mt-1"
           />
         </div>
         <div>
-          <Label htmlFor="confirmPassword">Confirmar contrasena</Label>
+          <Label htmlFor="confirmPassword">Confirmar contraseña</Label>
           <Input
             id="confirmPassword"
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Repeti tu contrasena"
+            placeholder="Repetí tu contraseña"
             required
             minLength={8}
             className="mt-1"
@@ -125,9 +125,9 @@ export function RegistroForm() {
       </button>
 
       <p className="mt-6 text-center text-sm text-foreground-secondary">
-        Ya tenes cuenta?{" "}
+        ¿Ya tenés cuenta?{" "}
         <Link href="/login" className="text-neon-green hover:text-neon-green-soft">
-          Inicia sesion
+          Iniciá sesión
         </Link>
       </p>
     </div>

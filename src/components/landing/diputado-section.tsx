@@ -16,8 +16,8 @@ export function DiputadoSection() {
           >
             <Quote className="h-8 w-8 text-neon-green/40 mb-3 sm:h-10 sm:w-10 sm:mb-4" />
             <blockquote className="text-base leading-relaxed text-foreground-secondary sm:text-lg md:text-xl">
-              Mi mision es acompanar a cada habitante del Departamento
-              Castro Barros en este proceso de transformacion, acercando
+              Mi misión es acompañar a cada habitante del Departamento
+              Castro Barros en este proceso de transformación, acercando
               herramientas educativas que permitan crecer, adaptarse y construir
               un futuro mejor. Con conocimiento y oportunidades, nuestra
               comunidad puede desarrollar todo su potencial.

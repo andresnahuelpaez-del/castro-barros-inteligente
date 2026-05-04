@@ -1,9 +1,9 @@
 export const COURSES = [
   {
     slug: "creacion-de-contenido-con-ia",
-    title: "Creacion de Contenido con IA",
+    title: "Creación de Contenido con IA",
     shortDescription:
-      "Aprende a producir reels, videos para YouTube, podcasts, posts y carruseles usando IA de punta a punta.",
+      "Aprendé a producir reels, videos para YouTube, podcasts, posts y carruseles usando IA de punta a punta.",
     level: "inicial" as const,
     durationMonths: 4,
     hoursPerWeek: "6-8",
@@ -14,7 +14,7 @@ export const COURSES = [
     slug: "ia-para-tu-trabajo",
     title: "IA para tu Trabajo",
     shortDescription:
-      "Domina tu trabajo diario con IA: Excel, documentos, presentaciones, email, investigacion y organizacion personal.",
+      "Dominá tu trabajo diario con IA: Excel, documentos, presentaciones, email, investigación y organización personal.",
     level: "inicial" as const,
     durationMonths: 4,
     hoursPerWeek: "6",
@@ -26,7 +26,7 @@ export const COURSES = [
     slug: "marketing-digital-con-ia",
     title: "Marketing Digital con IA",
     shortDescription:
-      "Vende online con campanas pagas, embudos automatizados y creativos generados por Inteligencia Artificial.",
+      "Vendé online con campañas pagas, embudos automatizados y creativos generados por Inteligencia Artificial.",
     level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8",
@@ -35,9 +35,9 @@ export const COURSES = [
   },
   {
     slug: "gestion-de-negocios-con-ia",
-    title: "Gestion de Negocios con IA",
+    title: "Gestión de Negocios con IA",
     shortDescription:
-      "Ordena y digitaliza tu negocio completo: facturacion ARCA, stock, finanzas, atencion al cliente y automatizacion.",
+      "Ordená y digitalizá tu negocio completo: facturación, stock, finanzas, atención al cliente y automatización.",
     level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8",
@@ -46,9 +46,9 @@ export const COURSES = [
   },
   {
     slug: "diseno-web-con-ia",
-    title: "Diseno Web con IA",
+    title: "Diseño Web con IA",
     shortDescription:
-      "Crea sitios web profesionales para PyMEs y emprendedores en dias, no meses, usando herramientas de IA.",
+      "Creá sitios web profesionales para PyMEs y emprendedores en días, no meses, usando herramientas de IA.",
     level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8-10",
@@ -68,9 +68,9 @@ export const COURSES = [
   },
   {
     slug: "analisis-de-datos-con-ia",
-    title: "Analisis de Datos con IA",
+    title: "Análisis de Datos con IA",
     shortDescription:
-      "Convierte datos crudos en insights accionables y dashboards profesionales con herramientas de IA.",
+      "Convertí datos crudos en insights accionables y dashboards profesionales con herramientas de IA.",
     level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8",
@@ -81,7 +81,7 @@ export const COURSES = [
     slug: "vibe-coding-desarrollo-apps-ia",
     title: "Vibe Coding: Desarrollo de Apps con IA",
     shortDescription:
-      "Construi aplicaciones web reales (SaaS, marketplaces, plataformas) usando IA como copiloto principal.",
+      "Construí aplicaciones web reales (SaaS, marketplaces, plataformas) usando IA como copiloto principal.",
     level: "avanzado" as const,
     durationMonths: 6,
     hoursPerWeek: "10-12",
@@ -89,6 +89,25 @@ export const COURSES = [
     icon: "Code",
   },
 ];
+
+export const COURSE_COMPETENCIES: Record<string, string> = {
+  "creacion-de-contenido-con-ia":
+    "producción de contenido digital profesional (reels, videos, podcasts, posts y carruseles) utilizando herramientas de Inteligencia Artificial de última generación",
+  "ia-para-tu-trabajo":
+    "aplicación de Inteligencia Artificial en el entorno laboral: automatización de documentos, presentaciones, email, investigación y organización personal con IA",
+  "marketing-digital-con-ia":
+    "marketing digital con IA: diseño de campañas pagas, embudos automatizados y creativos generados por Inteligencia Artificial",
+  "gestion-de-negocios-con-ia":
+    "gestión y digitalización integral de negocios: facturación, stock, finanzas, atención al cliente y automatización con herramientas de IA",
+  "diseno-web-con-ia":
+    "diseño y desarrollo de sitios web profesionales utilizando herramientas de Inteligencia Artificial para PyMEs y emprendedores",
+  "ecommerce-con-ia":
+    "implementación y operación de tiendas online con IA: catálogos, pagos, logística y optimización en el ecosistema de e-commerce argentino",
+  "analisis-de-datos-con-ia":
+    "análisis de datos con IA: transformación de datos crudos en insights accionables y dashboards profesionales",
+  "vibe-coding-desarrollo-apps-ia":
+    "desarrollo de aplicaciones web reales (SaaS, marketplaces, plataformas) utilizando IA como copiloto de programación",
+};
 
 export const LEVEL_LABELS = {
   inicial: "Inicial",
@@ -104,54 +123,54 @@ export const LEVEL_COLORS = {
 
 export const FAQ_ITEMS = [
   {
-    question: "Realmente es 100% gratis?",
+    question: "¿Realmente es 100% gratis?",
     answer:
-      "Si, completamente. Castro Barros Inteligente es una iniciativa del Estado provincial. No hay costos de inscripcion, mensualidades ni cargos ocultos. Lo unico que necesitas es un dispositivo con conexion a internet.",
+      "¡Sí, totalmente! Castro Barros Inteligente es una iniciativa del Estado provincial. No hay costos de inscripción, mensualidades ni cargos ocultos. Lo único que necesitás es un dispositivo con conexión a internet.",
   },
   {
-    question: "El certificado tiene validez oficial?",
+    question: "¿El certificado tiene validez oficial?",
     answer:
-      "Si. Cada certificado es emitido oficialmente por el Departamento Castro Barros con un codigo unico de verificacion publica. Cualquier empleador puede verificar su autenticidad en linea escaneando el codigo QR o ingresando a la pagina de verificacion.",
+      "Sí. Cada certificado es emitido oficialmente por el Departamento Castro Barros con un código único de verificación pública. Cualquier empleador puede verificar su autenticidad en línea escaneando el código QR o ingresando a la página de verificación.",
   },
   {
-    question: "Necesito conocimientos previos?",
+    question: "¿Necesito conocimientos previos?",
     answer:
-      "Depende del curso. Los cursos de nivel Inicial (como Creacion de Contenido con IA o IA para tu Trabajo) no requieren conocimientos previos. Los de nivel Intermedio y Avanzado recomiendan cierta familiaridad con las herramientas basicas que se indican en cada programa.",
+      "Depende del curso. Los de nivel Inicial (como Creación de Contenido con IA o IA para tu Trabajo) no requieren conocimientos previos. Los de nivel Intermedio y Avanzado recomiendan cierta familiaridad con las herramientas básicas que se indican en cada programa.",
   },
   {
-    question: "Puedo estudiar trabajando o estudiando otra cosa en paralelo?",
+    question: "¿Puedo estudiar mientras trabajo o estudio otra cosa?",
     answer:
-      "Absolutamente. La modalidad es 100% online y flexible. Vos organizas tus horarios de estudio. Cada curso indica las horas semanales recomendadas para que puedas planificar tu ritmo.",
+      "¡Por supuesto! La modalidad es 100% online y flexible. Vos organizás tus horarios de estudio. Cada curso indica las horas semanales recomendadas para que puedas planificar tu ritmo.",
   },
   {
-    question: "Cuanto tiempo tengo para terminar el curso?",
+    question: "¿Cuánto tiempo tengo para terminar el curso?",
     answer:
-      "Cada curso tiene una duracion estimada (entre 4 y 6 meses), pero no hay un plazo maximo estricto. Te recomendamos mantener un ritmo constante para aprovechar al maximo el contenido y llegar a la certificacion.",
+      "Cada curso tiene una duración estimada (entre 4 y 6 meses), pero no hay un plazo máximo estricto. Te recomendamos mantener un ritmo constante para aprovechar al máximo el contenido y llegar a la certificación.",
   },
   {
-    question: "Que pasa si no apruebo un quiz?",
+    question: "¿Qué pasa si no apruebo un quiz?",
     answer:
-      "Podes volver a intentarlo las veces que necesites. No hay limite de intentos. Cada quiz te muestra las respuestas correctas y explicaciones para que aprendas de los errores antes de reintentar.",
+      "Podés volver a intentarlo las veces que necesites. No hay límite de intentos. Cada quiz te muestra las respuestas correctas y explicaciones para que aprendas de los errores antes de reintentar.",
   },
   {
-    question: "Necesito una computadora potente?",
+    question: "¿Necesito una computadora potente?",
     answer:
-      "No. La mayoria de los cursos se pueden seguir desde cualquier computadora con navegador web o incluso desde tu celular. Las herramientas que usamos son en su mayoria basadas en la nube y no requieren hardware especial.",
+      "No. La mayoría de los cursos se pueden seguir desde cualquier computadora con navegador web o incluso desde tu celular. Las herramientas que usamos son en su mayoría basadas en la nube y no requieren hardware especial.",
   },
   {
-    question: "Puedo hacer los cursos desde el celular?",
+    question: "¿Puedo hacer los cursos desde el celular?",
     answer:
-      "Si. La plataforma esta disenada para funcionar perfectamente en celulares y tablets. Podes ver las clases, hacer los quizzes y entregar proyectos desde cualquier dispositivo movil.",
+      "Sí. La plataforma está diseñada para funcionar perfecto en celulares y tablets. Podés ver las clases, hacer los quizzes y entregar proyectos desde cualquier dispositivo.",
   },
   {
-    question: "Quien puede inscribirse?",
+    question: "¿Quién puede inscribirse?",
     answer:
-      "Cualquier persona mayor de 16 anos puede inscribirse. Si bien la iniciativa esta dirigida especialmente a habitantes del Departamento Castro Barros, la inscripcion esta abierta a toda persona interesada.",
+      "Cualquier persona mayor de 16 años. Si bien la iniciativa está pensada especialmente para habitantes del Departamento Castro Barros, la inscripción está abierta a toda persona interesada.",
   },
   {
-    question: "Como me inscribo?",
+    question: "¿Cómo me inscribo?",
     answer:
-      "Hace clic en el boton Inscribite, crea tu cuenta con tu email (o usa tu cuenta de Google), completa tus datos personales en el formulario de onboarding, y luego elegis el curso que mas te interese. En menos de 5 minutos estas listo para empezar.",
+      "Hacé clic en el botón Inscribite, creá tu cuenta con tu email (o usá tu cuenta de Google), completá tus datos en el formulario de bienvenida, y elegí el curso que más te interese. En menos de 5 minutos ya estás aprendiendo.",
   },
 ];
 
@@ -163,9 +182,9 @@ export const TOOLS_LOGOS = [
   "v0",
   "Lovable",
   "Figma",
+  "Canva",
   "Tienda Nube",
   "MercadoPago",
-  "ARCA",
   "Vercel",
   "Supabase",
   "CapCut",
@@ -179,7 +198,7 @@ export const LOCALIDADES = [
   "Anillaco",
   "Anjullon",
   "Chuquis",
-  "Las Penas",
+  "Las Peñas",
   "Pinchas",
   "San Pedro",
   "Otra",

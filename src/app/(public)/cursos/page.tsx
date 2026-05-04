@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Cursos",
   description:
-    "Explora los 8 cursos de capacitacion digital gratuita con IA del Departamento Castro Barros.",
+    "Explorá los 8 cursos de capacitación digital gratuita con IA del Departamento Castro Barros.",
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -31,8 +31,8 @@ export default function CursosPage() {
       <div className="text-center">
         <h1 className="text-4xl font-bold sm:text-5xl">Nuestros cursos</h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground-secondary">
-          Ocho programas profesionales disenados para construir tu futuro
-          digital. Todos 100% gratuitos y con certificacion oficial.
+          Ocho programas profesionales diseñados para construir tu futuro
+          digital. Todos 100% gratuitos y con certificación oficial.
         </p>
       </div>
 

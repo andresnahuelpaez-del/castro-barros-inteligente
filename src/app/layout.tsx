@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
@@ -13,36 +13,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   title: {
-    default: "Castro Barros Inteligente | Capacitacion Digital Gratuita con IA",
+    default: "Castro Barros Inteligente | Capacitación Digital Gratuita con IA",
     template: "%s | Castro Barros Inteligente",
   },
   description:
-    "Capacitacion digital profesional, gratuita y certificada por el Departamento Castro Barros, La Rioja. Cursos intensivos con Inteligencia Artificial: Programacion, Marketing Digital, Diseno Web, E-commerce y mas.",
+    "Capacitación digital profesional, gratuita y certificada por el Departamento Castro Barros, La Rioja. Cursos intensivos con Inteligencia Artificial: Programación, Marketing Digital, Diseño Web, E-commerce y más.",
   keywords: [
     "Castro Barros",
-    "capacitacion digital",
+    "capacitación digital",
     "cursos gratuitos",
     "inteligencia artificial",
     "La Rioja",
     "Argentina",
-    "certificacion oficial",
+    "certificación oficial",
   ],
   authors: [{ name: "Departamento Castro Barros" }],
   openGraph: {
     type: "website",
     locale: "es_AR",
     siteName: "Castro Barros Inteligente",
-    title: "Castro Barros Inteligente | Capacitacion Digital Gratuita con IA",
+    title: "Castro Barros Inteligente | Capacitación Digital Gratuita con IA",
     description:
-      "Capacitacion digital profesional, gratuita y certificada. Cursos intensivos con IA para construir tu futuro digital.",
+      "Capacitación digital profesional, gratuita y certificada. Cursos intensivos con IA para construir tu futuro digital.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Castro Barros Inteligente",
     description:
-      "Capacitacion digital profesional, gratuita y certificada con IA.",
+      "Capacitación digital profesional, gratuita y certificada con IA.",
   },
   robots: {
     index: true,
@@ -62,7 +69,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased" suppressHydrationWarning>
-        <TooltipProvider>{children}</TooltipProvider>
+        <div className="relative w-full overflow-x-hidden">
+          <TooltipProvider>{children}</TooltipProvider>
+        </div>
       </body>
     </html>
   );

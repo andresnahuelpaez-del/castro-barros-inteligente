@@ -7,9 +7,9 @@ import { GlassCard } from "@/components/common/glass-card";
 const features = [
   {
     icon: GraduationCap,
-    title: "Certificacion oficial",
+    title: "Certificación oficial",
     description:
-      "Cada curso completado te otorga un certificado oficial del Departamento con codigo de verificacion publica en linea, valido para presentar a empleadores.",
+      "Cada curso que completás te da un certificado oficial del Departamento con código de verificación pública en línea, válido para presentar a empleadores.",
     color: "text-neon-green",
     bg: "bg-neon-green/10",
   },
@@ -17,7 +17,7 @@ const features = [
     icon: Wallet,
     title: "100% gratuito",
     description:
-      "Sin costos de inscripcion ni mensualidades. Una iniciativa del Estado provincial para garantizar acceso universal a la educacion digital.",
+      "Sin costos de inscripción ni mensualidades. Una iniciativa del Estado provincial para garantizar acceso universal a la educación digital.",
     color: "text-secondary",
     bg: "bg-secondary/10",
   },
@@ -25,15 +25,15 @@ const features = [
     icon: Briefcase,
     title: "Salida laboral real",
     description:
-      "Cada curso esta disenado con foco en empleabilidad: empleo, freelance o emprendimiento propio en la economia digital.",
+      "Cada curso está diseñado con foco en empleabilidad: empleo, freelance o emprendimiento propio en la economía digital.",
     color: "text-neon-cyan",
     bg: "bg-neon-cyan/10",
   },
   {
     icon: Sparkles,
-    title: "Tecnologia de punta",
+    title: "Tecnología de punta",
     description:
-      "Aprendes con las mismas herramientas de IA que usan profesionales y empresas lideres en 2026: Claude, ChatGPT, Gemini, Cursor, Figma y mas.",
+      "Aprendés con las mismas herramientas de IA que usan profesionales y empresas líderes en 2026: Claude, ChatGPT, Gemini, Cursor, Figma y más.",
     color: "text-neon-green",
     bg: "bg-neon-green/10",
   },
@@ -53,7 +53,7 @@ export function WhySection() {
             Ventajas del programa
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Por que elegir Castro Barros Inteligente<sup>&reg;</sup>?
+            ¿Por qué elegir Castro Barros Inteligente<sup>&reg;</sup>?
           </h2>
         </motion.div>
 
