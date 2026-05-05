@@ -16,7 +16,7 @@ export default function ContactoPage() {
       <div className="text-center">
         <h1 className="text-4xl font-bold sm:text-5xl">Contacto</h1>
         <p className="mt-4 text-lg text-foreground-secondary">
-          Tenes alguna consulta? Escribinos y te respondemos a la brevedad.
+          ¿Tenés alguna consulta? Escribinos y te respondemos a la brevedad.
         </p>
       </div>
 
@@ -43,7 +43,7 @@ export default function ContactoPage() {
               <Label htmlFor="subject">Asunto</Label>
               <Input
                 id="subject"
-                placeholder="Sobre que queres consultar?"
+                placeholder="¿Sobre qué querés consultar?"
                 className="mt-1"
               />
             </div>
@@ -51,7 +51,7 @@ export default function ContactoPage() {
               <Label htmlFor="message">Mensaje</Label>
               <Textarea
                 id="message"
-                placeholder="Escribi tu mensaje..."
+                placeholder="Escribí tu mensaje..."
                 rows={5}
                 className="mt-1"
               />
@@ -69,7 +69,7 @@ export default function ContactoPage() {
               <MapPin className="h-6 w-6 text-neon-green" />
             </div>
             <div>
-              <h3 className="font-semibold text-white">Direccion</h3>
+              <h3 className="font-semibold text-white">Dirección</h3>
               <p className="mt-1 text-sm text-foreground-secondary">
                 Departamento Castro Barros
                 <br />
@@ -95,7 +95,7 @@ export default function ContactoPage() {
               <Phone className="h-6 w-6 text-neon-green" />
             </div>
             <div>
-              <h3 className="font-semibold text-white">Telefono</h3>
+              <h3 className="font-semibold text-white">Teléfono</h3>
               <p className="mt-1 text-sm text-foreground-secondary">
                 A definir
               </p>

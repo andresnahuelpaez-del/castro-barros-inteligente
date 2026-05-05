@@ -47,9 +47,9 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          Aprende las habilidades digitales que{" "}
+          Aprendé las habilidades digitales que{" "}
           <span className="text-neon-green text-glow-green">
-            estan transformando
+            están transformando
           </span>{" "}
           el mundo
         </motion.h1>

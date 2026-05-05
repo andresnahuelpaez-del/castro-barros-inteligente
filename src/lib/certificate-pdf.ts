@@ -108,7 +108,7 @@ export async function generateCertificatePDF(
 
   // Subtitle
   y -= 22;
-  drawCentered(page, "DE FORMACION PROFESIONAL", regular, 11, C.mid, cx, y);
+  drawCentered(page, "DE FORMACIÓN PROFESIONAL", regular, 11, C.mid, cx, y);
 
   // ── BODY ZONE (centered between header and footer) ──
   const bodyTop = y - 20;
@@ -152,7 +152,7 @@ export async function generateCertificatePDF(
 
   // Completion text
   y -= 26;
-  drawCentered(page, "ha completado satisfactoriamente el programa de formacion profesional", regular, 10.5, C.light, cx, y);
+  drawCentered(page, "ha completado satisfactoriamente el programa de formación profesional", regular, 10.5, C.light, cx, y);
 
   // Course title
   y -= 28;
@@ -176,7 +176,7 @@ export async function generateCertificatePDF(
   const fRow4 = fRow3 - 12;
 
   // Left column: date & issuer
-  page.drawText("Fecha de emision", { x: 70, y: fRow1, size: 7.5, font: regular, color: C.mid });
+  page.drawText("Fecha de emisión", { x: 70, y: fRow1, size: 7.5, font: regular, color: C.mid });
   page.drawText(data.issuedDate, { x: 70, y: fRow2, size: 11, font: bold, color: C.white });
   page.drawText("Departamento Castro Barros", { x: 70, y: fRow3, size: 7.5, font: regular, color: C.mid });
   page.drawText("La Rioja, Argentina", { x: 70, y: fRow4, size: 7.5, font: regular, color: C.mid });

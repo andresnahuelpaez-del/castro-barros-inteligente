@@ -1,4 +1,4 @@
-// Guia de Empleabilidad Digital
+// Guía de Empleabilidad Digital
 // Contenido informativo accesible para cualquier usuario registrado
 
 export interface JobPlatform {
@@ -30,39 +30,39 @@ export const JOB_PLATFORMS: JobPlatform[] = [
     url: "https://fiverr.com",
     type: "freelance",
     description:
-      "La plataforma freelance mas grande del mundo. Vos publicas tus servicios (llamados 'gigs') y los clientes te encuentran. Ideal para empezar porque no necesitas buscar clientes: ellos te buscan a vos.",
+      "La plataforma freelance más grande del mundo. Vos publicás tus servicios (llamados 'gigs') y los clientes te encuentran. Ideal para empezar porque no necesitás buscar clientes: ellos te buscan a vos.",
     bestFor:
-      "Diseno web, edicion de video, marketing digital, redaccion, analisis de datos",
-    tip: "Empeza con precios accesibles para conseguir tus primeras resenas. Las resenas son tu moneda de confianza en Fiverr.",
+      "Diseño web, edición de video, marketing digital, redacción, análisis de datos",
+    tip: "Empezá con precios accesibles para conseguir tus primeras reseñas. Las reseñas son tu moneda de confianza en Fiverr.",
   },
   {
     name: "Upwork",
     url: "https://upwork.com",
     type: "freelance",
     description:
-      "La plataforma mas profesional para freelancers. Aca aplicas a proyectos publicados por empresas de todo el mundo. Los proyectos suelen ser mas grandes y mejor pagos que en Fiverr.",
+      "La plataforma más profesional para freelancers. Acá aplicás a proyectos publicados por empresas de todo el mundo. Los proyectos suelen ser más grandes y mejor pagos que en Fiverr.",
     bestFor:
-      "Desarrollo web, analisis de datos, marketing, asistencia virtual, consultoria",
-    tip: "Tu propuesta es clave. No copies y pegues: leé bien lo que pide el cliente y explica por que vos sos la persona indicada para ese proyecto.",
+      "Desarrollo web, análisis de datos, marketing, asistencia virtual, consultoría",
+    tip: "Tu propuesta es clave. No copies y pegues: leé bien lo que pide el cliente y explicá por qué vos sos la persona indicada para ese proyecto.",
   },
   {
     name: "Freelancer.com",
     url: "https://freelancer.com",
     type: "freelance",
     description:
-      "Similar a Upwork pero con sistema de concursos donde podes demostrar tu trabajo antes de ser contratado. Tiene mucha presencia en Latinoamerica.",
-    bestFor: "Diseno, programacion, redaccion, traduccion, data entry",
-    tip: "Los concursos son una buena forma de construir portfolio aunque no ganes. Mostra tu trabajo y los clientes te contactan despues.",
+      "Similar a Upwork pero con sistema de concursos donde podés demostrar tu trabajo antes de ser contratado. Tiene mucha presencia en Latinoamérica.",
+    bestFor: "Diseño, programación, redacción, traducción, data entry",
+    tip: "Los concursos son una buena forma de construir portfolio aunque no ganes. Mostrá tu trabajo y los clientes te contactan después.",
   },
   {
     name: "Workana",
     url: "https://workana.com",
     type: "freelance",
     description:
-      "La plataforma freelance lider en Latinoamerica. Los clientes son mayormente de habla hispana, lo cual es una ventaja si tu ingles todavia no es fuerte.",
+      "La plataforma freelance líder en Latinoamérica. Los clientes son mayormente de habla hispana, lo cual es una ventaja si tu inglés todavía no es fuerte.",
     bestFor:
       "Todos los rubros digitales, especialmente para el mercado hispanohablante",
-    tip: "Completa tu perfil al 100%. Los clientes filtran por perfiles completos y con foto profesional.",
+    tip: "Completá tu perfil al 100%. Los clientes filtran por perfiles completos y con foto profesional.",
   },
 
   // Trabajo remoto
@@ -71,29 +71,29 @@ export const JOB_PLATFORMS: JobPlatform[] = [
     url: "https://linkedin.com",
     type: "red_profesional",
     description:
-      "La red profesional mas importante del mundo. No es solo para buscar trabajo: es para construir tu marca profesional, conectar con personas de tu industria y que los reclutadores te encuentren.",
+      "La red profesional más importante del mundo. No es solo para buscar trabajo: es para construir tu marca profesional, conectar con personas de tu industria y que los reclutadores te encuentren.",
     bestFor: "Todos los rubros. Es obligatorio tener perfil activo.",
-    tip: "Publica contenido sobre lo que aprendes y haces. Un perfil activo recibe 10 veces mas visitas que uno silencioso.",
+    tip: "Publicá contenido sobre lo que aprendés y hacés. Un perfil activo recibe 10 veces más visitas que uno silencioso.",
   },
   {
     name: "Remote OK",
     url: "https://remoteok.com",
     type: "remoto",
     description:
-      "Uno de los tableros de empleo remoto mas populares del mundo. Publica ofertas de empresas que contratan 100% remoto, muchas abiertas a Latinoamerica.",
+      "Uno de los tableros de empleo remoto más populares del mundo. Publica ofertas de empresas que contratan 100% remoto, muchas abiertas a Latinoamérica.",
     bestFor:
-      "Desarrollo, diseno, marketing, customer support, analisis de datos",
-    tip: "Filtra por 'Worldwide' o 'LATAM' para ver las ofertas que aceptan personas de Argentina.",
+      "Desarrollo, diseño, marketing, customer support, análisis de datos",
+    tip: "Filtrá por 'Worldwide' o 'LATAM' para ver las ofertas que aceptan personas de Argentina.",
   },
   {
     name: "We Work Remotely",
     url: "https://weworkremotely.com",
     type: "remoto",
     description:
-      "Tablero de empleo remoto con ofertas de empresas tecnologicas de primer nivel. Las ofertas suelen ser de mayor seniority pero tambien hay junior.",
+      "Tablero de empleo remoto con ofertas de empresas tecnológicas de primer nivel. Las ofertas suelen ser de mayor seniority pero también hay junior.",
     bestFor:
-      "Desarrollo, diseno, producto, marketing, operaciones",
-    tip: "Configura alertas por email para tu area. Las buenas ofertas se llenan rapido.",
+      "Desarrollo, diseño, producto, marketing, operaciones",
+    tip: "Configurá alertas por email para tu área. Las buenas ofertas se llenan rápido.",
   },
   {
     name: "Contra",
@@ -102,8 +102,8 @@ export const JOB_PLATFORMS: JobPlatform[] = [
     description:
       "Plataforma moderna de freelancing sin comisiones. Ideal para creativos y profesionales digitales que quieren mostrar su portfolio y conectar con clientes directamente.",
     bestFor:
-      "Diseno, desarrollo web, creacion de contenido, consultoria",
-    tip: "La plataforma es visualmente muy linda. Invertí tiempo en armar un portfolio atractivo ahi.",
+      "Diseño, desarrollo web, creación de contenido, consultoría",
+    tip: "La plataforma es visualmente muy linda. Invertí tiempo en armar un portfolio atractivo ahí.",
   },
 
   // Argentina / Local
@@ -112,27 +112,27 @@ export const JOB_PLATFORMS: JobPlatform[] = [
     url: "https://bumeran.com.ar",
     type: "local",
     description:
-      "El portal de empleo mas grande de Argentina. Tiene tanto ofertas presenciales como remotas. Ideal para buscar empleo formal en empresas argentinas.",
+      "El portal de empleo más grande de Argentina. Tiene tanto ofertas presenciales como remotas. Ideal para buscar empleo formal en empresas argentinas.",
     bestFor: "Empleo formal en Argentina, todos los rubros",
-    tip: "Actualiza tu CV cada semana. Los algoritmos priorizan perfiles activos.",
+    tip: "Actualizá tu CV cada semana. Los algoritmos priorizan perfiles activos.",
   },
   {
     name: "ZonaJobs",
     url: "https://zonajobs.com.ar",
     type: "local",
     description:
-      "Otro portal importante de empleo en Argentina. Tiene un buen buscador por area y ubicacion.",
+      "Otro portal importante de empleo en Argentina. Tiene un buen buscador por área y ubicación.",
     bestFor: "Empleo formal en Argentina",
-    tip: "Activa las alertas para tu rubro y revisa el email todos los dias.",
+    tip: "Activá las alertas para tu rubro y revisá el email todos los días.",
   },
   {
     name: "CompuTrabajo",
     url: "https://computrabajo.com.ar",
     type: "local",
     description:
-      "Portal de empleo con fuerte presencia en toda Latinoamerica. Muchas ofertas de empresas medianas y grandes.",
-    bestFor: "Empleo formal, especialmente administrativo y tecnologico",
-    tip: "Aplica rapido. Las ofertas con muchos postulantes pierden atencion del reclutador.",
+      "Portal de empleo con fuerte presencia en toda Latinoamérica. Muchas ofertas de empresas medianas y grandes.",
+    bestFor: "Empleo formal, especialmente administrativo y tecnológico",
+    tip: "Aplicá rápido. Las ofertas con muchos postulantes pierden atención del reclutador.",
   },
 
   // Portfolio
@@ -141,96 +141,96 @@ export const JOB_PLATFORMS: JobPlatform[] = [
     url: "https://behance.net",
     type: "portfolio",
     description:
-      "La plataforma de portfolio de Adobe. Ideal para mostrar trabajos de diseno, web, contenido visual. Los reclutadores buscan talento activamente aca.",
-    bestFor: "Diseno web, contenido visual, UI/UX",
-    tip: "Subi proyectos con proceso: mostra no solo el resultado final sino como llegaste a el.",
+      "La plataforma de portfolio de Adobe. Ideal para mostrar trabajos de diseño, web, contenido visual. Los reclutadores buscan talento activamente acá.",
+    bestFor: "Diseño web, contenido visual, UI/UX",
+    tip: "Subí proyectos con proceso: mostrá no solo el resultado final sino cómo llegaste a él.",
   },
   {
     name: "GitHub",
     url: "https://github.com",
     type: "portfolio",
     description:
-      "La plataforma donde vive el codigo del mundo. Si haces desarrollo web, tu perfil de GitHub es tu curriculum tecnico. Los empleadores lo revisan antes de entrevistarte.",
-    bestFor: "Desarrollo web, vibe coding, proyectos tecnicos",
-    tip: "Mantene tu perfil activo con contribuciones regulares. Un perfil con actividad constante dice mas que un CV.",
+      "La plataforma donde vive el código del mundo. Si hacés desarrollo web, tu perfil de GitHub es tu currículum técnico. Los empleadores lo revisan antes de entrevistarte.",
+    bestFor: "Desarrollo web, vibe coding, proyectos técnicos",
+    tip: "Mantené tu perfil activo con contribuciones regulares. Un perfil con actividad constante dice más que un CV.",
   },
 ];
 
 export const APPLICATION_METHODS: ApplicationMethod[] = [
   {
-    title: "Postulacion directa en plataformas freelance",
+    title: "Postulación directa en plataformas freelance",
     description:
-      "Aplicas a proyectos publicados por clientes. Es la forma mas directa de empezar a generar ingresos. No necesitas experiencia previa: tu portfolio y tu propuesta hablan por vos.",
+      "Aplicás a proyectos publicados por clientes. Es la forma más directa de empezar a generar ingresos. No necesitás experiencia previa: tu portfolio y tu propuesta hablan por vos.",
     steps: [
-      "Crea tu perfil completo en 2-3 plataformas (Fiverr + Upwork + Workana es una buena combinacion)",
-      "Arma un portfolio con los proyectos que hiciste durante el curso (cuentan como experiencia real)",
-      "Lee las ofertas con atencion y aplica solo a las que realmente podes hacer bien",
-      "Escriñi una propuesta personalizada para cada proyecto: nada de copiar y pegar",
-      "Ofrece un precio competitivo al principio para conseguir tus primeras resenas",
-      "Entrega antes del plazo y con calidad. Las primeras 5 resenas definen tu carrera freelance",
+      "Creá tu perfil completo en 2-3 plataformas (Fiverr + Upwork + Workana es una buena combinación)",
+      "Armá un portfolio con los proyectos que hiciste durante el curso (cuentan como experiencia real)",
+      "Leé las ofertas con atención y aplicá solo a las que realmente podés hacer bien",
+      "Escribí una propuesta personalizada para cada proyecto: nada de copiar y pegar",
+      "Ofrecé un precio competitivo al principio para conseguir tus primeras reseñas",
+      "Entregá antes del plazo y con calidad. Las primeras 5 reseñas definen tu carrera freelance",
     ],
     proTip:
-      "No apliques a todo. Es mejor mandar 5 propuestas excelentes que 50 genericas. Los clientes notan cuando alguien leyo de verdad su proyecto.",
+      "No apliques a todo. Es mejor mandar 5 propuestas excelentes que 50 genéricas. Los clientes notan cuando alguien leyó de verdad su proyecto.",
   },
   {
-    title: "Busqueda de empleo remoto",
+    title: "Búsqueda de empleo remoto",
     description:
-      "Aplicar a puestos de trabajo remoto en empresas de todo el mundo. Puede ser full-time o part-time. Generalmente pagan en dolares y ofrecen estabilidad.",
+      "Aplicar a puestos de trabajo remoto en empresas de todo el mundo. Puede ser full-time o part-time. Generalmente pagan en dólares y ofrecen estabilidad.",
     steps: [
-      "Optimiza tu perfil de LinkedIn (foto profesional, titulo claro, resumen que cuente tu historia)",
-      "Configura alertas en Remote OK, We Work Remotely y LinkedIn Jobs",
-      "Adapta tu CV para cada postulacion (no uses el mismo para todo)",
-      "Practica tu presentacion en ingles si aplicas a empresas internacionales",
-      "Prepara un portfolio online (puede ser un simple sitio web con tus mejores trabajos)",
-      "Aplica consistentemente: al menos 5 postulaciones por semana",
+      "Optimizá tu perfil de LinkedIn (foto profesional, título claro, resumen que cuente tu historia)",
+      "Configurá alertas en Remote OK, We Work Remotely y LinkedIn Jobs",
+      "Adaptá tu CV para cada postulación (no uses el mismo para todo)",
+      "Practicá tu presentación en inglés si aplicás a empresas internacionales",
+      "Prepará un portfolio online (puede ser un simple sitio web con tus mejores trabajos)",
+      "Aplicá consistentemente: al menos 5 postulaciones por semana",
     ],
     proTip:
-      "El 70% de los empleos no se publican. Conecta con personas de tu industria en LinkedIn, comenta sus publicaciones, comparte tu aprendizaje. Muchas oportunidades llegan por recomendacion.",
+      "El 70% de los empleos no se publican. Conectá con personas de tu industria en LinkedIn, comentá sus publicaciones, compartí tu aprendizaje. Muchas oportunidades llegan por recomendación.",
   },
   {
     title: "Contacto directo con negocios locales",
     description:
-      "Ofrecer tus servicios directamente a comercios y emprendedores de tu zona. Es la forma mas rapida de conseguir clientes si sos de Castro Barros o alrededores.",
+      "Ofrecer tus servicios directamente a comercios y emprendedores de tu zona. Es la forma más rápida de conseguir clientes si sos de Castro Barros o alrededores.",
     steps: [
-      "Hace una lista de 20 negocios locales que podrian necesitar tus servicios",
-      "Prepara una presentacion simple: que haces, como los ayuda, cuanto cuesta",
+      "Hacé una lista de 20 negocios locales que podrían necesitar tus servicios",
+      "Prepará una presentación simple: qué hacés, cómo los ayuda, cuánto cuesta",
       "Visitalos en persona o contactalos por WhatsApp con un mensaje profesional",
-      "Ofrece hacer un primer trabajo pequeno gratis o a precio reducido como muestra",
-      "Pedi testimonios y referidos a cada cliente satisfecho",
-      "Arma un portfolio con los trabajos locales para mostrar a futuros clientes",
+      "Ofrecé hacer un primer trabajo pequeño gratis o a precio reducido como muestra",
+      "Pedí testimonios y referidos a cada cliente satisfecho",
+      "Armá un portfolio con los trabajos locales para mostrar a futuros clientes",
     ],
     proTip:
-      "Un negocio local que confia en vos te recomienda a 5 mas. El boca a boca sigue siendo la mejor publicidad, especialmente en comunidades chicas.",
+      "Un negocio local que confía en vos te recomienda a 5 más. El boca a boca sigue siendo la mejor publicidad, especialmente en comunidades chicas.",
   },
   {
     title: "Redes sociales como canal de trabajo",
     description:
-      "Usar tu presencia en redes sociales para atraer clientes y oportunidades. No es postularte a un empleo: es construir una reputacion que haga que el trabajo te busque a vos.",
+      "Usar tu presencia en redes sociales para atraer clientes y oportunidades. No es postularte a un empleo: es construir una reputación que haga que el trabajo te busque a vos.",
     steps: [
-      "Elegi 1-2 redes donde este tu publico (LinkedIn para B2B, Instagram/TikTok para consumidor final)",
-      "Publica contenido sobre tu area: tips, procesos, resultados, aprendizajes",
-      "Mostra tu trabajo: antes y despues, procesos, resultados de clientes",
-      "Interactua genuinamente con otros profesionales de tu rubro",
-      "Pone en tu bio que haces y como pueden contactarte",
-      "Se constante: 3-5 publicaciones por semana es un buen ritmo para empezar",
+      "Elegí 1-2 redes donde esté tu público (LinkedIn para B2B, Instagram/TikTok para consumidor final)",
+      "Publicá contenido sobre tu área: tips, procesos, resultados, aprendizajes",
+      "Mostrá tu trabajo: antes y después, procesos, resultados de clientes",
+      "Interactuá genuinamente con otros profesionales de tu rubro",
+      "Poné en tu bio qué hacés y cómo pueden contactarte",
+      "Sé constante: 3-5 publicaciones por semana es un buen ritmo para empezar",
     ],
     proTip:
-      "No necesitas miles de seguidores. Con 500 seguidores del rubro correcto podes tener mas trabajo del que podes manejar. La calidad del publico importa mas que la cantidad.",
+      "No necesitás miles de seguidores. Con 500 seguidores del rubro correcto podés tener más trabajo del que podés manejar. La calidad del público importa más que la cantidad.",
   },
   {
-    title: "Creacion de tu propio emprendimiento digital",
+    title: "Creación de tu propio emprendimiento digital",
     description:
       "En lugar de buscar que alguien te contrate, crear tu propio negocio digital. Puede ser una agencia, un producto digital, una tienda online o un servicio recurrente.",
     steps: [
-      "Identifica un problema que puedas resolver con las habilidades del curso",
-      "Valida la idea: hablá con al menos 10 personas que tengan ese problema",
-      "Arma una oferta simple y clara (que vendes, a quien, a que precio)",
-      "Crea presencia online minima: un sitio web simple + redes sociales",
-      "Consegui tus primeros 3 clientes (aunque sea a precio reducido)",
-      "Iterar: escucha el feedback, mejora tu servicio, subi los precios gradualmente",
+      "Identificá un problema que puedas resolver con las habilidades del curso",
+      "Validá la idea: hablá con al menos 10 personas que tengan ese problema",
+      "Armá una oferta simple y clara (qué vendés, a quién, a qué precio)",
+      "Creá presencia online mínima: un sitio web simple + redes sociales",
+      "Conseguí tus primeros 3 clientes (aunque sea a precio reducido)",
+      "Iterá: escuchá el feedback, mejorá tu servicio, subí los precios gradualmente",
     ],
     proTip:
-      "El mejor negocio es el que resuelve un problema real. No busques la idea perfecta: busca un problema concreto que puedas resolver hoy con lo que sabes.",
+      "El mejor negocio es el que resuelve un problema real. No busques la idea perfecta: buscá un problema concreto que puedas resolver hoy con lo que sabés.",
   },
 ];
 
@@ -238,12 +238,12 @@ export const PROFILE_TIPS: ProfileSection[] = [
   {
     title: "Tu CV digital",
     description:
-      "El CV tradicional sigue siendo importante, pero en el mundo digital necesitas mas. Aca te contamos como armar un perfil completo que te abra puertas.",
+      "El CV tradicional sigue siendo importante, pero en el mundo digital necesitás más. Acá te contamos cómo armar un perfil completo que te abra puertas.",
     items: [
       "Foto profesional (no selfie, no foto de fiesta): fondo limpio, buena luz, tu cara visible",
-      "Titulo claro: en lugar de 'Busco trabajo' pone 'Disenador web especializado en sitios para PyMEs con IA'",
-      "Resumen de 3-4 lineas: quien sos, que haces, que resultado das",
-      "Incluir el certificado de Castro Barros Inteligente (con el link de verificacion)",
+      "Título claro: en lugar de 'Busco trabajo' poné 'Diseñador web especializado en sitios para PyMEs con IA'",
+      "Resumen de 3-4 líneas: quién sos, qué hacés, qué resultado dás",
+      "Incluir el certificado de Castro Barros Inteligente (con el link de verificación)",
       "Portfolio con 3-5 de tus mejores trabajos (los del curso cuentan)",
       "Datos de contacto claros: email profesional (nada de gatitolindo@hotmail.com)",
     ],
@@ -251,40 +251,40 @@ export const PROFILE_TIPS: ProfileSection[] = [
   {
     title: "La propuesta que gana",
     description:
-      "Cuando aplicas a un trabajo o proyecto, tu propuesta es lo primero que leen. Tiene que ser corta, clara y mostrar que entendiste lo que necesitan.",
+      "Cuando aplicás a un trabajo o proyecto, tu propuesta es lo primero que leen. Tiene que ser corta, clara y mostrar que entendiste lo que necesitan.",
     items: [
-      "Empeza mencionando algo especifico del proyecto (demuestra que lo leiste)",
-      "Explica brevemente como resolverias el problema",
-      "Mostra 1-2 trabajos similares que hayas hecho",
-      "Se honesto con los plazos: mejor prometer menos y entregar mas",
-      "Cerrá con una pregunta o proximo paso claro",
-      "Revisa ortografia y gramatica antes de enviar (la IA te ayuda con esto)",
+      "Empezá mencionando algo específico del proyecto (demuestra que lo leíste)",
+      "Explicá brevemente cómo resolverías el problema",
+      "Mostrá 1-2 trabajos similares que hayas hecho",
+      "Sé honesto con los plazos: mejor prometer menos y entregar más",
+      "Cerrá con una pregunta o próximo paso claro",
+      "Revisá ortografía y gramática antes de enviar (la IA te ayuda con esto)",
     ],
   },
   {
     title: "La entrevista online",
     description:
-      "Cada vez mas entrevistas son por videollamada. No es lo mismo que en persona, pero los principios son parecidos. Aca van los basicos.",
+      "Cada vez más entrevistas son por videollamada. No es lo mismo que en persona, pero los principios son parecidos. Acá van los básicos.",
     items: [
-      "Probá tu camara, microfono e internet antes de la llamada",
-      "Fondo limpio y ordenado (o usa un fondo virtual neutro)",
-      "Vestite como si fueras en persona: no hace falta traje, pero si prolijo",
-      "Mirá a la camara cuando hablas (no a la pantalla, a la camara)",
+      "Probá tu cámara, micrófono e internet antes de la llamada",
+      "Fondo limpio y ordenado (o usá un fondo virtual neutro)",
+      "Vestite como si fueras en persona: no hace falta traje, pero sí prolijo",
+      "Mirá a la cámara cuando hablás (no a la pantalla, a la cámara)",
       "Tené a mano tu portfolio y ejemplos de trabajo para compartir pantalla",
-      "Prepara 3 preguntas para hacerle al entrevistador (muestra interes genuino)",
+      "Prepará 3 preguntas para hacerle al entrevistador (muestra interés genuino)",
     ],
   },
   {
-    title: "Precio: cuanto cobrar",
+    title: "Precio: cuánto cobrar",
     description:
-      "Una de las preguntas mas dificiles cuando empezas. No hay una respuesta unica, pero hay criterios que te ayudan a decidir.",
+      "Una de las preguntas más difíciles cuando empezás. No hay una respuesta única, pero hay criterios que te ayudan a decidir.",
     items: [
-      "Investiga cuanto cobran otros profesionales de tu nivel en las plataformas",
-      "Al principio, cobrar un poco menos para construir portfolio y resenas esta bien",
-      "Nunca trabajes gratis 'por la exposicion' (salvo que sea estrategico y tu decision)",
-      "Subi tus precios gradualmente a medida que tenes mas experiencia y resenas",
-      "Cobra por proyecto, no por hora, cuando puedas (te beneficia si sos eficiente con IA)",
-      "Tené una tarifa minima: debajo de ese numero, no aceptes (cuidá tu valor profesional)",
+      "Investigá cuánto cobran otros profesionales de tu nivel en las plataformas",
+      "Al principio, cobrar un poco menos para construir portfolio y reseñas está bien",
+      "Nunca trabajes gratis 'por la exposición' (salvo que sea estratégico y tu decisión)",
+      "Subí tus precios gradualmente a medida que tenés más experiencia y reseñas",
+      "Cobrá por proyecto, no por hora, cuando puedas (te beneficia si sos eficiente con IA)",
+      "Tené una tarifa mínima: debajo de ese número, no aceptes (cuidá tu valor profesional)",
     ],
   },
 ];
@@ -292,11 +292,11 @@ export const PROFILE_TIPS: ProfileSection[] = [
 export const EMPLOYABILITY_STATS = [
   {
     value: "87%",
-    label: "de los freelancers exitosos tardaron menos de 30 dias en conseguir su primer cliente",
+    label: "de los freelancers exitosos tardaron menos de 30 días en conseguir su primer cliente",
   },
   {
     value: "3x",
-    label: "mas oportunidades para quienes tienen portfolio online vs. solo CV",
+    label: "más oportunidades para quienes tienen portfolio online vs. solo CV",
   },
   {
     value: "65%",
@@ -304,6 +304,6 @@ export const EMPLOYABILITY_STATS = [
   },
   {
     value: "2-3",
-    label: "habilidades combinadas (ej: diseno + marketing) aumentan significativamente la empleabilidad",
+    label: "habilidades combinadas (ej: diseño + marketing) aumentan significativamente la empleabilidad",
   },
 ];

@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
   const courseTitle = course?.title || "IA para tu Trabajo";
   const competency =
     COURSE_COMPETENCIES[courseSlug] ||
-    "aplicacion de herramientas de Inteligencia Artificial en el ambito profesional";
+    "aplicación de herramientas de Inteligencia Artificial en el ámbito profesional";
 
   const verificationHash = "a1b2c3d4e5f6789012345678abcdef90";
   const baseUrl = request.nextUrl.origin;

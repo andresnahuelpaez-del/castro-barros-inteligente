@@ -83,16 +83,16 @@ export default function CursosPage() {
             </div>
             <div className="flex-1">
               <p className="text-lg font-semibold text-white group-hover:text-neon-cyan-bright transition-colors">
-                No sabes por donde empezar a buscar trabajo online?
+                ¿Querés saber cómo conseguir trabajo online?
               </p>
               <p className="mt-1 text-sm text-foreground-secondary">
-                Tenemos una guia completa y gratuita: plataformas donde buscar,
-                como postularte, como armar tu perfil y cuanto cobrar.
+                Tenemos una guía completa y gratuita: plataformas dónde buscar,
+                cómo postularte, cómo armar tu perfil y cuánto cobrar.
                 Registrate para acceder.
               </p>
             </div>
             <span className="text-sm font-medium text-neon-cyan whitespace-nowrap">
-              Ver guia &rarr;
+              Ver guía &rarr;
             </span>
           </div>
         </Link>

@@ -49,7 +49,7 @@ export function HowItWorksSection() {
             ¿Cómo funciona?
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-foreground-secondary sm:mt-4 sm:text-base">
-            En 5 pasos simples pasas de cero a profesional certificado.
+            En 5 pasos simples pasás de cero a profesional certificado.
           </p>
         </motion.div>
 

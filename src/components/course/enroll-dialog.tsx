@@ -64,9 +64,9 @@ export function EnrollDialog({
 
     if (enrollError) {
       if (enrollError.code === "23505") {
-        setError("Ya estas inscrito en este curso.");
+        setError("Ya estás inscripto en este curso.");
       } else {
-        setError("Error al inscribirte. Intenta de nuevo.");
+        setError("Error al inscribirte. Intentá de nuevo.");
       }
       setLoading(false);
       return;
@@ -93,8 +93,8 @@ export function EnrollDialog({
             <p className="text-sm text-foreground-secondary">
               <span className="font-medium text-white">{courseTitle}</span>
               <br />
-              Duracion estimada: {courseDuration} &middot; 100% gratuito &middot;
-              Certificacion oficial
+              Duración estimada: {courseDuration} &middot; 100% gratuito &middot;
+              Certificación oficial
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export function EnrollDialog({
           <div>
             <Label className="flex items-center gap-2">
               <Clock className="h-4 w-4 text-neon-green" />
-              Cuantas horas por semana podes dedicarle?
+              ¿Cuántas horas por semana podés dedicarle?
             </Label>
             <div className="mt-3 px-1">
               <Slider
@@ -159,7 +159,7 @@ export function EnrollDialog({
               htmlFor="terms"
               className="text-sm text-foreground-secondary leading-relaxed cursor-pointer"
             >
-              Acepto los terminos del programa de capacitacion gratuita del
+              Acepto los términos del programa de capacitación gratuita del
               Departamento Castro Barros y me comprometo a mantener un ritmo de
               estudio constante.
             </label>
@@ -172,7 +172,7 @@ export function EnrollDialog({
             onClick={handleEnroll}
             disabled={!accepted || loading}
           >
-            {loading ? "Inscribiendo..." : "Confirmar inscripcion"}
+            {loading ? "Inscribiendo..." : "Confirmar inscripción"}
             {!loading && <ArrowRight className="ml-2 h-5 w-5" />}
           </NeonButton>
         </div>

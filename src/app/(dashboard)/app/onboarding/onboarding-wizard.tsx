@@ -87,7 +87,7 @@ export function OnboardingWizard() {
     } = await supabase.auth.getUser();
 
     if (!user) {
-      setError("No se pudo verificar tu sesion. Intenta recargar la pagina.");
+      setError("No se pudo verificar tu sesión. Intentá recargar la página.");
       setLoading(false);
       return;
     }
@@ -108,7 +108,7 @@ export function OnboardingWizard() {
       .eq("id", user.id);
 
     if (updateError) {
-      setError("Error al guardar tus datos. Intenta de nuevo.");
+      setError("Error al guardar tus datos. Intentá de nuevo.");
       setLoading(false);
       return;
     }
@@ -164,10 +164,10 @@ export function OnboardingWizard() {
             />
           </div>
           <div>
-            <Label>Genero</Label>
+            <Label>Género</Label>
             <Select value={gender} onValueChange={(v) => v && setGender(v)}>
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona" />
+                <SelectValue placeholder="Seleccioná" />
               </SelectTrigger>
               <SelectContent>
                 {GENDERS.map((g) => (
@@ -192,13 +192,13 @@ export function OnboardingWizard() {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-white">Tu localidad</h2>
           <p className="text-sm text-foreground-secondary">
-            En que localidad del Departamento Castro Barros vivis?
+            ¿En qué localidad del Departamento Castro Barros vivís?
           </p>
           <div>
             <Label>Localidad</Label>
             <Select value={localidad} onValueChange={(v) => v && setLocalidad(v)}>
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona tu localidad" />
+                <SelectValue placeholder="Seleccioná tu localidad" />
               </SelectTrigger>
               <SelectContent>
                 {LOCALIDADES.map((loc) => (
@@ -234,10 +234,10 @@ export function OnboardingWizard() {
             Contexto educativo y laboral
           </h2>
           <div>
-            <Label>Nivel educativo mas alto alcanzado</Label>
+            <Label>Nivel educativo más alto alcanzado</Label>
             <Select value={nivelEducativo} onValueChange={(v) => v && setNivelEducativo(v)}>
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona" />
+                <SelectValue placeholder="Seleccioná" />
               </SelectTrigger>
               <SelectContent>
                 {NIVELES_EDUCATIVOS.map((n) => (
@@ -249,13 +249,13 @@ export function OnboardingWizard() {
             </Select>
           </div>
           <div>
-            <Label>Situacion laboral actual</Label>
+            <Label>Situación laboral actual</Label>
             <Select
               value={situacionLaboral}
               onValueChange={(v) => v && setSituacionLaboral(v)}
             >
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona" />
+                <SelectValue placeholder="Seleccioná" />
               </SelectTrigger>
               <SelectContent>
                 {SITUACIONES_LABORALES.map((s) => (
@@ -283,13 +283,13 @@ export function OnboardingWizard() {
 
       {step === 4 && (
         <div className="space-y-4">
-          <h2 className="text-xl font-bold text-white">Motivacion</h2>
+          <h2 className="text-xl font-bold text-white">Motivación</h2>
           <p className="text-sm text-foreground-secondary">
             Opcional pero nos ayuda a mejorar la plataforma.
           </p>
           <div>
             <Label htmlFor="motivacion">
-              Que te motivo a inscribirte? (opcional)
+              ¿Qué te motivó a inscribirte? (opcional)
             </Label>
             <Textarea
               id="motivacion"

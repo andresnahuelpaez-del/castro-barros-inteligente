@@ -109,7 +109,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           <div className="flex items-center gap-3 rounded-xl border border-border bg-background-tertiary p-4">
             <Calendar className="h-5 w-5 shrink-0 text-neon-green" />
             <div>
-              <p className="text-xs text-foreground-muted">Duracion</p>
+              <p className="text-xs text-foreground-muted">Duración</p>
               <p className="font-semibold text-sm">
                 {course.durationMonths} meses
               </p>
@@ -118,7 +118,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           <div className="flex items-center gap-3 rounded-xl border border-border bg-background-tertiary p-4">
             <Clock className="h-5 w-5 shrink-0 text-neon-green" />
             <div>
-              <p className="text-xs text-foreground-muted">Dedicacion</p>
+              <p className="text-xs text-foreground-muted">Dedicación</p>
               <p className="font-semibold text-sm">
                 {course.hoursPerWeek} hs/semana
               </p>
@@ -158,7 +158,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           <section className="mt-10">
             <h2 className="flex items-center gap-3 text-2xl font-bold">
               <GraduationCap className="h-6 w-6 text-neon-green" />
-              Que vas a aprender
+              Qué vas a aprender
             </h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {detail.whatYouLearn.map((item) => (
@@ -181,7 +181,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           <section className="mt-10 grid gap-6 sm:grid-cols-2">
             <GlassCard hover={false}>
               <Target className="h-6 w-6 text-neon-green" />
-              <h3 className="mt-3 text-lg font-semibold">Para quien es</h3>
+              <h3 className="mt-3 text-lg font-semibold">Para quién es</h3>
               <p className="mt-2 text-sm leading-relaxed text-foreground-secondary">
                 {detail.whoIsItFor}
               </p>
@@ -189,7 +189,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
             <GlassCard hover={false}>
               <Lightbulb className="h-6 w-6 text-secondary" />
               <h3 className="mt-3 text-lg font-semibold">
-                Que necesitas antes
+                Qué necesitás antes
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-foreground-secondary">
                 {detail.prerequisites}
@@ -203,10 +203,10 @@ export default async function CourseDetailPage({ params }: PageProps) {
           <section className="mt-10">
             <h2 className="flex items-center gap-3 text-2xl font-bold">
               <Briefcase className="h-6 w-6 text-neon-green" />
-              En que podes trabajar al terminar
+              En qué podés trabajar al terminar
             </h2>
             <p className="mt-2 text-sm text-foreground-muted">
-              Oportunidades reales a las que podes aplicar con las habilidades de
+              Oportunidades reales a las que podés aplicar con las habilidades de
               este curso.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -245,11 +245,11 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-white group-hover:text-neon-cyan-bright transition-colors">
-                    Aprende a conseguir estos trabajos
+                    Aprendé a conseguir estos trabajos
                   </p>
                   <p className="mt-1 text-sm text-foreground-secondary">
-                    Tenemos una guia completa y gratuita con plataformas,
-                    estrategias de postulacion y como armar tu perfil
+                    Tenemos una guía completa y gratuita con plataformas,
+                    estrategias de postulación y cómo armar tu perfil
                     profesional. Registrate para acceder.
                   </p>
                 </div>
@@ -265,10 +265,10 @@ export default async function CourseDetailPage({ params }: PageProps) {
             <div className="rounded-2xl border border-secondary/30 bg-secondary/5 p-6 sm:p-8">
               <h2 className="flex items-center gap-3 text-2xl font-bold">
                 <Heart className="h-6 w-6 text-secondary" />
-                Lo que mas valoran quienes contratan
+                Lo que más valoran quienes contratan
               </h2>
               <p className="mt-2 text-sm text-foreground-muted">
-                Mas alla de las herramientas, estas son las cualidades que hacen
+                Más allá de las herramientas, estas son las cualidades que hacen
                 que alguien destaque profesionalmente. La buena noticia: todas se
                 pueden desarrollar.
               </p>
@@ -299,8 +299,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
               Potencia tu perfil: combina con estos cursos
             </h2>
             <p className="mt-2 text-sm text-foreground-muted">
-              Hacer mas de un curso multiplica tus oportunidades. Estas son las
-              combinaciones que mas te convienen.
+              Hacer más de un curso multiplica tus oportunidades. Estas son las
+              combinaciones que más te convienen.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {detail.complementaryCourses.map((comp) => {
@@ -397,8 +397,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 {detail.finalProject}
               </p>
               <p className="mt-4 text-sm text-foreground-muted">
-                Al aprobar el proyecto final y todos los quizzes, recibis tu
-                certificado oficial con codigo de verificacion publica.
+                Al aprobar el proyecto final y todos los quizzes, recibís tu
+                certificado oficial con código de verificación pública.
               </p>
             </div>
           </section>
@@ -410,13 +410,13 @@ export default async function CourseDetailPage({ params }: PageProps) {
       {/* ============================================ */}
       <section className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-10 text-center">
         <h2 className="text-2xl font-bold sm:text-3xl">
-          Tu futuro empieza con una decision
+          Tu futuro empieza con una decisión
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary leading-relaxed">
-          Capacitacion digital profesional, gratuita y certificada. Estudias
-          desde tu celular o computadora, organizas tus horarios segun tu
-          disponibilidad, y al completar el curso obtenes un certificado oficial
-          del Departamento Castro Barros con codigo de verificacion publica.
+          Capacitación digital profesional, gratuita y certificada. Estudiás
+          desde tu celular o computadora, organizás tus horarios según tu
+          disponibilidad, y al completar el curso obtenés un certificado oficial
+          del Departamento Castro Barros con código de verificación pública.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link href="/cursos">

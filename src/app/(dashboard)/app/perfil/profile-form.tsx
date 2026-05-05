@@ -97,7 +97,7 @@ export function ProfileForm() {
 
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
-      setError("No se pudo verificar tu sesion.");
+      setError("No se pudo verificar tu sesión.");
       setSaving(false);
       return;
     }
@@ -118,7 +118,7 @@ export function ProfileForm() {
       .eq("id", user.id);
 
     if (updateError) {
-      setError("Error al guardar. Intenta de nuevo.");
+      setError("Error al guardar. Intentá de nuevo.");
     } else {
       setSaved(true);
       setTimeout(() => setSaved(false), 3000);
@@ -173,10 +173,10 @@ export function ProfileForm() {
             />
           </div>
           <div>
-            <Label>Genero</Label>
+            <Label>Género</Label>
             <Select value={gender} onValueChange={(v) => v && setGender(v)}>
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona" />
+                <SelectValue placeholder="Seleccioná" />
               </SelectTrigger>
               <SelectContent>
                 {GENDERS.map((g) => (
@@ -188,7 +188,7 @@ export function ProfileForm() {
             </Select>
           </div>
           <div>
-            <Label htmlFor="phone">Telefono (opcional)</Label>
+            <Label htmlFor="phone">Teléfono (opcional)</Label>
             <Input
               id="phone"
               value={phone}
@@ -200,14 +200,14 @@ export function ProfileForm() {
         </div>
       </div>
 
-      {/* Ubicacion */}
+      {/* Ubicación */}
       <div>
-        <h2 className="text-lg font-semibold text-white">Ubicacion</h2>
+        <h2 className="text-lg font-semibold text-white">Ubicación</h2>
         <div className="mt-4">
           <Label>Localidad</Label>
           <Select value={localidad} onValueChange={(v) => v && setLocalidad(v)}>
             <SelectTrigger className="mt-1 max-w-sm">
-              <SelectValue placeholder="Selecciona tu localidad" />
+              <SelectValue placeholder="Seleccioná tu localidad" />
             </SelectTrigger>
             <SelectContent>
               {LOCALIDADES.map((loc) => (
@@ -233,7 +233,7 @@ export function ProfileForm() {
               onValueChange={(v) => v && setNivelEducativo(v)}
             >
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona" />
+                <SelectValue placeholder="Seleccioná" />
               </SelectTrigger>
               <SelectContent>
                 {NIVELES.map((n) => (
@@ -245,13 +245,13 @@ export function ProfileForm() {
             </Select>
           </div>
           <div>
-            <Label>Situacion laboral</Label>
+            <Label>Situación laboral</Label>
             <Select
               value={situacionLaboral}
               onValueChange={(v) => v && setSituacionLaboral(v)}
             >
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder="Selecciona" />
+                <SelectValue placeholder="Seleccioná" />
               </SelectTrigger>
               <SelectContent>
                 {SITUACIONES.map((s) => (
@@ -267,12 +267,12 @@ export function ProfileForm() {
 
       {/* Motivacion */}
       <div>
-        <Label htmlFor="motivacion">Motivacion (opcional)</Label>
+        <Label htmlFor="motivacion">Motivación (opcional)</Label>
         <Textarea
           id="motivacion"
           value={motivacion}
           onChange={(e) => setMotivacion(e.target.value)}
-          placeholder="Que te motivo a inscribirte?"
+          placeholder="¿Qué te motivó a inscribirte?"
           rows={3}
           className="mt-1"
         />
