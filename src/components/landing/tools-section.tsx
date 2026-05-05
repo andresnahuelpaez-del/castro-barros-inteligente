@@ -245,35 +245,36 @@ export function ToolsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-10 space-y-8 sm:mt-14 sm:space-y-10">
+        <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((cat, catIdx) => (
             <motion.div
               key={cat.label}
+              className="rounded-2xl border border-border bg-card/50 p-5 sm:p-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: catIdx * 0.05 }}
+              transition={{ delay: catIdx * 0.08 }}
             >
-              <p className="mb-3 text-xs font-medium uppercase tracking-wider text-foreground-muted sm:mb-4 sm:text-sm">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-neon-green">
                 {cat.label}
               </p>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              <div className="space-y-3">
                 {cat.items.map((name, i) => {
                   const tool = tools.find((t) => t.name === name);
                   if (!tool) return null;
                   return (
                     <motion.div
                       key={tool.name}
-                      className={`group flex items-center gap-3 rounded-xl border p-3 transition-all duration-200 hover:scale-[1.03] sm:p-4 ${tool.bg} ${tool.border}`}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      className={`flex items-center gap-3 rounded-xl border p-3 transition-all duration-200 hover:scale-[1.02] ${tool.bg} ${tool.border}`}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: i * 0.04 }}
+                      transition={{ delay: i * 0.05 }}
                     >
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-background/50 sm:h-11 sm:w-11">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background/50">
                         {tool.logo}
                       </div>
-                      <span className={`text-xs font-semibold leading-tight sm:text-sm ${tool.color}`}>
+                      <span className={`text-sm font-semibold ${tool.color}`}>
                         {tool.name}
                       </span>
                     </motion.div>
