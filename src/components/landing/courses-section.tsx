@@ -11,13 +11,12 @@ import {
   ShoppingCart,
   BarChart3,
   Code,
+  ShieldCheck,
+  Workflow,
   ArrowRight,
 } from "lucide-react";
-import { COURSES, LEVEL_LABELS, LEVEL_COLORS } from "@/lib/constants";
-import { GlassCard } from "@/components/common/glass-card";
-import { Badge } from "@/components/ui/badge";
+import { COURSES } from "@/lib/constants";
 import { NeonButton } from "@/components/common/neon-button";
-import { cn } from "@/lib/utils";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Video,
@@ -28,6 +27,82 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   ShoppingCart,
   BarChart3,
   Code,
+  ShieldCheck,
+  Workflow,
+};
+
+// Cada curso tiene su color accent para diferenciarse visualmente
+const courseAccents: Record<
+  string,
+  { accent: string; bg: string; border: string; glow: string }
+> = {
+  "creacion-de-contenido-con-ia": {
+    accent: "text-[#FF6B6B]",
+    bg: "bg-[#FF6B6B]/10",
+    border: "border-[#FF6B6B]/20 hover:border-[#FF6B6B]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(255,107,107,0.15)]",
+  },
+  "ia-para-tu-trabajo": {
+    accent: "text-neon-green",
+    bg: "bg-neon-green/10",
+    border: "border-neon-green/20 hover:border-neon-green/50",
+    glow: "hover:shadow-[0_0_20px_rgba(57,255,20,0.15)]",
+  },
+  "marketing-digital-con-ia": {
+    accent: "text-[#F59E0B]",
+    bg: "bg-[#F59E0B]/10",
+    border: "border-[#F59E0B]/20 hover:border-[#F59E0B]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]",
+  },
+  "gestion-de-negocios-con-ia": {
+    accent: "text-[#A855F7]",
+    bg: "bg-[#A855F7]/10",
+    border: "border-[#A855F7]/20 hover:border-[#A855F7]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(168,85,247,0.15)]",
+  },
+  "diseno-web-con-ia": {
+    accent: "text-[#06B6D4]",
+    bg: "bg-[#06B6D4]/10",
+    border: "border-[#06B6D4]/20 hover:border-[#06B6D4]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]",
+  },
+  "ecommerce-con-ia": {
+    accent: "text-[#10B981]",
+    bg: "bg-[#10B981]/10",
+    border: "border-[#10B981]/20 hover:border-[#10B981]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]",
+  },
+  "analisis-de-datos-con-ia": {
+    accent: "text-[#3B82F6]",
+    bg: "bg-[#3B82F6]/10",
+    border: "border-[#3B82F6]/20 hover:border-[#3B82F6]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(59,130,246,0.15)]",
+  },
+  "vibe-coding-desarrollo-apps-ia": {
+    accent: "text-[#EC4899]",
+    bg: "bg-[#EC4899]/10",
+    border: "border-[#EC4899]/20 hover:border-[#EC4899]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(236,72,153,0.15)]",
+  },
+  "qa-testing-con-ia": {
+    accent: "text-[#8B5CF6]",
+    bg: "bg-[#8B5CF6]/10",
+    border: "border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]",
+  },
+  "automatizaciones-con-ia-y-no-code": {
+    accent: "text-[#F97316]",
+    bg: "bg-[#F97316]/10",
+    border: "border-[#F97316]/20 hover:border-[#F97316]/50",
+    glow: "hover:shadow-[0_0_20px_rgba(249,115,22,0.15)]",
+  },
+};
+
+const defaultAccent = {
+  accent: "text-neon-green",
+  bg: "bg-neon-green/10",
+  border: "border-border hover:border-border-bright",
+  glow: "",
 };
 
 export function CoursesSection() {
@@ -45,55 +120,74 @@ export function CoursesSection() {
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">Nuestros cursos</h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
-            Ocho programas profesionales diseñados para construir tu futuro
+            Diez programas profesionales diseñados para construir tu futuro
             digital. Elegí el que más se adapte a tus objetivos.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Grid: 2 columnas en mobile, 5 en la primera fila de desktop para simetría con 10 cursos */}
+        <div className="mt-12 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {COURSES.map((course, i) => {
             const Icon = iconMap[course.icon];
+            const colors = courseAccents[course.slug] || defaultAccent;
             return (
               <motion.div
                 key={course.slug}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: i * 0.04, duration: 0.5 }}
               >
                 <Link href={`/cursos/${course.slug}`}>
-                  <GlassCard neonBorder="green" className="group h-full flex flex-col">
-                    <div className="mb-4 flex items-center justify-between">
-                      {Icon && (
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neon-green/10">
-                          <Icon className="h-5 w-5 text-neon-green" />
-                        </div>
-                      )}
-                      <Badge
-                        className={cn(
-                          "text-xs font-medium",
-                          LEVEL_COLORS[course.level]
-                        )}
-                        variant="secondary"
-                      >
-                        {LEVEL_LABELS[course.level]}
-                      </Badge>
+                  <div
+                    className={`group relative flex h-full flex-col rounded-xl border bg-card p-5 transition-all duration-300 hover:-translate-y-1.5 ${colors.border} ${colors.glow}`}
+                  >
+                    {/* Accent line top */}
+                    <div
+                      className={`absolute top-0 left-4 right-4 h-[2px] rounded-full opacity-40 group-hover:opacity-100 transition-opacity ${colors.bg.replace('/10', '')}`}
+                      style={{
+                        background: `linear-gradient(90deg, transparent, ${getAccentHex(colors.accent)}, transparent)`,
+                      }}
+                    />
+
+                    {/* Icon */}
+                    <div
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${colors.bg}`}
+                    >
+                      {Icon && <Icon className={`h-5 w-5 ${colors.accent}`} />}
                     </div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-neon-green transition-colors">
-                      {course.title}
+
+                    {/* Title */}
+                    <h3
+                      className={`text-[15px] font-semibold leading-snug text-white transition-colors group-hover:${colors.accent.replace('text-', 'text-')}`}
+                      style={{
+                        // Use inline for dynamic hover color
+                      }}
+                    >
+                      <span className="group-hover:hidden">{course.title}</span>
+                      <span
+                        className="hidden group-hover:inline"
+                        style={{ color: getAccentHex(colors.accent) }}
+                      >
+                        {course.title}
+                      </span>
                     </h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground-secondary">
+
+                    {/* Description */}
+                    <p className="mt-2 flex-1 text-xs leading-relaxed text-foreground-secondary">
                       {course.shortDescription}
                     </p>
-                    <div className="mt-4 flex items-center justify-between pt-4 border-t border-border">
-                      <div className="flex items-center gap-3 text-xs text-foreground-muted">
-                        <span>{course.durationMonths} meses</span>
-                        <span className="text-border-bright">|</span>
-                        <span>{course.hoursPerWeek} hs/semana</span>
-                      </div>
-                      <ArrowRight className="h-4 w-4 text-foreground-muted group-hover:text-neon-green transition-colors" />
+
+                    {/* Footer */}
+                    <div className="mt-4 flex items-center justify-between border-t border-border/50 pt-3">
+                      <span className="text-[11px] text-foreground-muted">
+                        {course.durationMonths} meses · {course.hoursPerWeek} hs/sem
+                      </span>
+                      <ArrowRight
+                        className={`h-3.5 w-3.5 text-foreground-muted transition-all group-hover:translate-x-0.5 ${colors.accent.replace('text-', 'group-hover:text-')}`}
+                      />
                     </div>
-                  </GlassCard>
+                  </div>
                 </Link>
               </motion.div>
             );
@@ -116,4 +210,20 @@ export function CoursesSection() {
       </div>
     </section>
   );
+}
+
+function getAccentHex(accentClass: string): string {
+  const map: Record<string, string> = {
+    "text-[#FF6B6B]": "#FF6B6B",
+    "text-neon-green": "#39FF14",
+    "text-[#F59E0B]": "#F59E0B",
+    "text-[#A855F7]": "#A855F7",
+    "text-[#06B6D4]": "#06B6D4",
+    "text-[#10B981]": "#10B981",
+    "text-[#3B82F6]": "#3B82F6",
+    "text-[#EC4899]": "#EC4899",
+    "text-[#8B5CF6]": "#8B5CF6",
+    "text-[#F97316]": "#F97316",
+  };
+  return map[accentClass] || "#39FF14";
 }

@@ -8,7 +8,6 @@ import {
   Award,
   ArrowRight,
   Briefcase,
-  DollarSign,
   Wrench,
   GraduationCap,
   Heart,
@@ -18,7 +17,7 @@ import {
   CheckCircle2,
   Target,
 } from "lucide-react";
-import { COURSES, LEVEL_LABELS, LEVEL_COLORS } from "@/lib/constants";
+import { COURSES } from "@/lib/constants";
 import { COURSES_DETAIL } from "@/lib/courses-data";
 import { NeonButton } from "@/components/common/neon-button";
 import { GlassCard } from "@/components/common/glass-card";
@@ -81,15 +80,6 @@ export default async function CourseDetailPage({ params }: PageProps) {
       {/* ============================================ */}
       <div className="rounded-2xl border border-border bg-card p-6 sm:p-10">
         <div className="flex flex-wrap items-center gap-3 mb-4">
-          <Badge
-            className={cn(
-              "text-xs font-medium",
-              LEVEL_COLORS[course.level]
-            )}
-            variant="secondary"
-          >
-            {LEVEL_LABELS[course.level]}
-          </Badge>
           <span className="text-xs text-foreground-muted">
             {course.durationMonths} meses &middot; {course.hoursPerWeek}{" "}
             hs/semana
@@ -225,9 +215,9 @@ export default async function CourseDetailPage({ params }: PageProps) {
                     </Badge>
                   </div>
                   <div className="mt-2 flex items-center gap-2">
-                    <DollarSign className="h-4 w-4 text-neon-green" />
+                    <Zap className="h-4 w-4 text-neon-green" />
                     <span className="text-sm font-medium text-neon-green">
-                      {job.salaryRange}
+                      {job.highlight}
                     </span>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-foreground-secondary">
@@ -238,7 +228,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
             </div>
 
             {/* Banner guia de empleabilidad */}
-            <Link href="/cursos">
+            <Link href="/empleabilidad">
               <div className="mt-6 group flex items-center gap-4 rounded-xl border border-neon-cyan/20 bg-neon-cyan/5 p-5 transition-all hover:border-neon-cyan/40 hover:bg-neon-cyan/10">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-neon-cyan/20">
                   <ArrowUpRight className="h-5 w-5 text-neon-cyan" />
@@ -248,9 +238,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                     Aprendé a conseguir estos trabajos
                   </p>
                   <p className="mt-1 text-sm text-foreground-secondary">
-                    Tenemos una guía completa y gratuita con plataformas,
-                    estrategias de postulación y cómo armar tu perfil
-                    profesional. Registrate para acceder.
+                    Guía completa y gratuita: plataformas donde buscar, cómo armar tu CV y portfolio, cómo postularte y cuánto cobrar.
                   </p>
                 </div>
                 <ArrowRight className="h-5 w-5 shrink-0 text-foreground-muted group-hover:text-neon-cyan transition-colors" />
@@ -311,22 +299,9 @@ export default async function CourseDetailPage({ params }: PageProps) {
                       neonBorder="cyan"
                       className="group h-full"
                     >
-                      <div className="flex items-center justify-between">
-                        <h3 className="font-semibold text-white group-hover:text-neon-cyan transition-colors">
-                          {comp.title}
-                        </h3>
-                        {compCourse && (
-                          <Badge
-                            className={cn(
-                              "text-xs font-medium",
-                              LEVEL_COLORS[compCourse.level]
-                            )}
-                            variant="secondary"
-                          >
-                            {LEVEL_LABELS[compCourse.level]}
-                          </Badge>
-                        )}
-                      </div>
+                      <h3 className="font-semibold text-white group-hover:text-neon-cyan transition-colors">
+                        {comp.title}
+                      </h3>
                       <p className="mt-3 text-sm leading-relaxed text-foreground-secondary">
                         {comp.reason}
                       </p>

@@ -4,7 +4,7 @@
 export interface JobOpportunity {
   title: string;
   type: "empleo" | "freelance" | "emprendimiento";
-  salaryRange: string;
+  highlight: string;
   description: string;
 }
 
@@ -56,28 +56,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Editor de video freelance",
         type: "freelance",
-        salaryRange: "USD 300-800 por proyecto",
+        highlight: "Alta demanda · Freelance global",
         description:
           "Editar reels, videos cortos y contenido para marcas y creadores. Uno de los trabajos más demandados en plataformas freelance.",
       },
       {
         title: "Community manager con IA",
         type: "empleo",
-        salaryRange: "USD 400-900 por mes",
+        highlight: "Crecimiento acelerado · Remoto",
         description:
           "Gestionar las redes sociales de empresas y emprendedores, creando contenido, respondiendo consultas y analizando métricas.",
       },
       {
         title: "Creador de contenido propio",
         type: "emprendimiento",
-        salaryRange: "USD 200-1500 por mes",
+        highlight: "Sin límite de clientes · Flexible",
         description:
           "Monetizar tu propio canal o cuenta con sponsorships, afiliados y productos digitales.",
       },
       {
         title: "Productor de podcasts",
         type: "freelance",
-        salaryRange: "USD 200-500 por episodio",
+        highlight: "Mercado en expansión · Creativo",
         description:
           "Grabar, editar y publicar podcasts para profesionales, empresas o medios que quieren tener presencia en audio.",
       },
@@ -158,28 +158,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Asistente virtual con IA",
         type: "freelance",
-        salaryRange: "USD 400-1000 por mes",
+        highlight: "Muy buscado · Todas las industrias",
         description:
           "Ayudar a profesionales y empresas a gestionar su día a día usando herramientas de IA: emails, agendas, documentos, investigaciones.",
       },
       {
         title: "Consultor de transformación digital",
         type: "freelance",
-        salaryRange: "USD 500-1200 por mes",
+        highlight: "Alta demanda · 100% remoto",
         description:
           "Asesorar a PyMEs y comercios locales sobre cómo incorporar IA en sus procesos diarios para ahorrar tiempo y dinero.",
       },
       {
         title: "Capacitador interno de IA",
         type: "empleo",
-        salaryRange: "USD 600-1200 por mes",
+        highlight: "Crecimiento rápido · Empresas tech",
         description:
           "Enseñar a otros empleados de tu empresa a usar herramientas de IA, convirtiéndote en referente dentro de tu organización.",
       },
       {
         title: "Mejor desempeño en tu empleo actual",
         type: "empleo",
-        salaryRange: "Mejora salarial y posicionamiento",
+        highlight: "Diferenciación profesional · Cualquier rubro",
         description:
           "No necesitás cambiar de trabajo. Usando IA vas a hacer más en menos tiempo, lo que te posiciona para ascensos y mejores condiciones.",
       },
@@ -259,28 +259,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Performance marketer freelance",
         type: "freelance",
-        salaryRange: "USD 500-1500 por mes",
+        highlight: "Muy solicitado · Freelance o agencia",
         description:
           "Gestionar campañas publicitarias para clientes, optimizando presupuesto y resultados. Altamente demandado por PyMEs.",
       },
       {
         title: "Community manager senior",
         type: "empleo",
-        salaryRange: "USD 400-900 por mes",
+        highlight: "Demanda constante · Remoto global",
         description:
           "Gestionar redes sociales con enfoque estratégico, no solo publicar contenido sino generar resultados medibles.",
       },
       {
         title: "Dueño de agencia de marketing",
         type: "emprendimiento",
-        salaryRange: "USD 1000-3000 por mes",
+        highlight: "Alto valor · Empresas y startups",
         description:
           "Armar tu propia agencia gestionando clientes de distintos rubros. Con IA podés dar servicio profesional siendo una persona sola.",
       },
       {
         title: "Especialista en email marketing",
         type: "freelance",
-        salaryRange: "USD 300-800 por mes",
+        highlight: "Ideal para empezar · Flexible",
         description:
           "Diseñar y automatizar secuencias de email que generan ventas. Un servicio muy valorado por tiendas online y SaaS.",
       },
@@ -363,28 +363,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Consultor de digitalización para comercios",
         type: "freelance",
-        salaryRange: "USD 400-1000 por mes",
+        highlight: "Creciente demanda · Freelance local y remoto",
         description:
           "Ayudar a comercios locales a pasar de la gestión manual a la digital: facturación, cobros, stock, clientes.",
       },
       {
         title: "Asistente administrativo digital",
         type: "empleo",
-        salaryRange: "USD 400-800 por mes",
+        highlight: "Muy solicitado · 100% remoto",
         description:
           "Llevar la administración de empresas usando herramientas digitales y IA: facturación, cobranzas, reportes.",
       },
       {
         title: "Tu propio negocio profesionalizado",
         type: "emprendimiento",
-        salaryRange: "Depende del rubro",
+        highlight: "Tu propio negocio · Sin límites",
         description:
           "Aplicar todo lo aprendido a tu propio emprendimiento para que sea más rentable, ordenado y escalable.",
       },
       {
         title: "Bookkeeper / Asistente contable",
         type: "freelance",
-        salaryRange: "USD 300-700 por mes",
+        highlight: "Demanda constante · Freelance o empleo",
         description:
           "Llevar los libros contables básicos de PyMEs y comercios, incluyendo facturación ARCA y conciliación bancaria.",
       },
@@ -466,28 +466,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Diseñador web freelance",
         type: "freelance",
-        salaryRange: "USD 300-1000 por sitio",
+        highlight: "Proyectos rápidos · Freelance ideal",
         description:
           "Crear sitios web para PyMEs, emprendedores y profesionales. Con IA podés entregar un sitio profesional en pocos días.",
       },
       {
         title: "Diseñador web junior en agencia",
         type: "empleo",
-        salaryRange: "USD 500-1200 por mes",
+        highlight: "Muy buscado · Agencias y startups",
         description:
           "Trabajar en agencias de diseño o marketing, creando sitios para múltiples clientes con herramientas modernas.",
       },
       {
         title: "Creador de plantillas web",
         type: "emprendimiento",
-        salaryRange: "USD 200-2000 por mes (pasivo)",
+        highlight: "Ingreso recurrente · Escalable",
         description:
           "Diseñar y vender templates reutilizables en marketplaces. Ingresos que pueden volverse pasivos con el tiempo.",
       },
       {
         title: "Especialista en landing pages",
         type: "freelance",
-        salaryRange: "USD 200-500 por landing",
+        highlight: "Fácil entrada · Alta rotación de proyectos",
         description:
           "Crear páginas de aterrizaje optimizadas para conversiones. Muy demandado por negocios que hacen publicidad online.",
       },
@@ -568,28 +568,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Gestor de tiendas online",
         type: "freelance",
-        salaryRange: "USD 400-800 por mes",
+        highlight: "Alta demanda · Freelance flexible",
         description:
           "Administrar tiendas online de clientes: carga de productos, gestión de pedidos, atención al cliente, reportes.",
       },
       {
         title: "Tu propia tienda online",
         type: "emprendimiento",
-        salaryRange: "Variable según el producto",
+        highlight: "Tu propio negocio · Sin techo",
         description:
           "Montar tu marca y vender tus propios productos o servicios en internet, con toda la operación profesionalizada.",
       },
       {
         title: "Consultor de digitalización comercial",
         type: "freelance",
-        salaryRange: "USD 300-700 por mes",
+        highlight: "Creciente demanda · Local y remoto",
         description:
           "Ayudar a comercios físicos a dar el salto al mundo online: elegir plataforma, configurar todo y capacitar al equipo.",
       },
       {
         title: "Asistente de e-commerce",
         type: "empleo",
-        salaryRange: "USD 400-800 por mes",
+        highlight: "Muy solicitado · Empresas en crecimiento",
         description:
           "Trabajar en empresas que venden online, gestionando el día a día de la operación: pedidos, stock, envíos, devoluciones.",
       },
@@ -670,28 +670,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Analista de datos junior",
         type: "empleo",
-        salaryRange: "USD 600-1200 por mes",
+        highlight: "Perfil escaso · Muy valorado",
         description:
           "Trabajar en empresas analizando datos de ventas, clientes, operaciones y generando reportes para la toma de decisiones.",
       },
       {
         title: "Freelance de dashboards",
         type: "freelance",
-        salaryRange: "USD 200-500 por dashboard",
+        highlight: "Proyectos puntuales · Buen margen",
         description:
           "Crear tableros de control personalizados para PyMEs y comercios que quieren visualizar sus métricas clave.",
       },
       {
         title: "Asistente de Business Intelligence",
         type: "empleo",
-        salaryRange: "USD 800-1500 por mes",
+        highlight: "Alta demanda global · Remoto",
         description:
           "Apoyar al área de BI de empresas medianas y grandes, preparando datos y generando visualizaciones.",
       },
       {
         title: "Consultor de datos para PyMEs",
         type: "freelance",
-        salaryRange: "USD 500-1000 por mes",
+        highlight: "Entrada directa al mundo tech",
         description:
           "Ayudar a negocios locales a entender sus números: qué productos rinden más, dónde pierden plata, cómo optimizar.",
       },
@@ -771,28 +771,28 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       {
         title: "Desarrollador junior en startups",
         type: "empleo",
-        salaryRange: "USD 800-2000 por mes (local), USD 3000+ (remoto)",
+        highlight: "El perfil más buscado · Remoto global",
         description:
           "Trabajar en startups construyendo y manteniendo aplicaciones web. Uno de los puestos mejor pagos del mercado digital.",
       },
       {
         title: "Freelance de MVPs",
         type: "freelance",
-        salaryRange: "USD 1500-5000 por proyecto",
+        highlight: "Alto valor · Proyectos globales",
         description:
           "Construir prototipos funcionales (MVPs) para emprendedores y empresas que quieren validar ideas de negocio.",
       },
       {
         title: "Creador de tu propio SaaS",
         type: "emprendimiento",
-        salaryRange: "Variable (potencial ilimitado)",
+        highlight: "Tu propio producto · Ingreso recurrente",
         description:
           "Construir tu propio producto digital (software como servicio) y venderlo a clientes recurrentes. El sueño de muchos devs.",
       },
       {
         title: "Desarrollador de herramientas con IA",
         type: "freelance",
-        salaryRange: "USD 2000-5000 por proyecto",
+        highlight: "Nicho en auge · Freelance premium",
         description:
           "Crear aplicaciones que integran IA para resolver problemas específicos de empresas. Un nicho en pleno crecimiento.",
       },
@@ -852,5 +852,171 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
     paidTools: ["Claude Pro", "Cursor Pro", "Claude Code Max"],
     finalProject:
       "Construir un SaaS funcional con IA integrada, deployado en producción y listo para conseguir tus primeros usuarios reales.",
+  },
+
+  "qa-testing-con-ia": {
+    slug: "qa-testing-con-ia",
+    longDescription:
+      "El testing es la puerta de entrada más rápida al mundo tech. Mientras todos aprenden a programar, las empresas buscan desesperadamente gente que sepa encontrar errores antes de que lleguen a los usuarios. En este curso vas a aprender a testear aplicaciones web y mobile usando IA como tu copiloto: desde pruebas manuales profesionales hasta automatización con herramientas modernas. Vas a salir con un portfolio de bugs reportados, casos de prueba reales y la capacidad de conseguir tu primer trabajo remoto como QA Junior.",
+    whatYouLearn: [
+      "Fundamentos de testing: tipos de prueba, ciclo de vida del bug y metodologías",
+      "Testing manual profesional: casos de prueba, matrices de cobertura y reportes",
+      "Automatización de pruebas con Playwright y asistencia de IA",
+      "Testing de APIs con Postman y validación automatizada",
+      "Uso de IA para generar casos de prueba, analizar logs y detectar patrones de error",
+      "Testing de accesibilidad, performance y seguridad básica",
+      "Gestión de bugs con Jira/Linear y comunicación efectiva con desarrolladores",
+      "Armado de portfolio QA y preparación para entrevistas técnicas",
+    ],
+    whoIsItFor:
+      "Para quienes quieren entrar al mundo tech con una ruta directa al empleo. Ideal si te gusta la atención al detalle, encontrar errores y tenés pensamiento analítico. No necesitás saber programar.",
+    prerequisites:
+      "Manejo básico de computadora y navegador. Recomendado haber completado 'IA para tu Trabajo'. No se requiere experiencia en programación.",
+    jobOpportunities: [
+      {
+        title: "QA Tester Junior remoto",
+        type: "empleo" as const,
+        highlight: "Puerta de entrada al mundo tech · Remoto",
+        description:
+          "Empresas de todo el mundo contratan QA Juniors remotos. Es uno de los roles tech con menor barrera de entrada y mayor demanda.",
+      },
+      {
+        title: "QA Freelance en plataformas",
+        type: "freelance" as const,
+        highlight: "Demanda constante · Proyectos flexibles",
+        description:
+          "Plataformas como Testlio, uTest y Upwork tienen demanda constante de testers freelance para proyectos puntuales.",
+      },
+      {
+        title: "QA Automation Junior",
+        type: "empleo" as const,
+        highlight: "Crecimiento profesional rápido · Remoto",
+        description:
+          "Con las bases de automatización del curso, podés evolucionar rápido a roles de QA Automation con mejores salarios.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "vibe-coding-desarrollo-apps-ia",
+        title: "Vibe Coding: Desarrollo de Apps con IA",
+        reason:
+          "Entender cómo se construyen las apps te hace un tester mucho más efectivo y valioso para cualquier equipo.",
+      },
+      {
+        slug: "ia-para-tu-trabajo",
+        title: "IA para tu Trabajo",
+        reason:
+          "Dominar las herramientas de IA base te permite automatizar reportes, documentación y análisis de bugs.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Atención al detalle",
+        description: "Capacidad de encontrar errores que otros pasan por alto.",
+      },
+      {
+        trait: "Comunicación técnica",
+        description: "Reportes de bugs claros, reproducibles y accionables.",
+      },
+      {
+        trait: "Automatización con IA",
+        description: "Uso de herramientas modernas para multiplicar la cobertura de pruebas.",
+      },
+    ],
+    freeTools: [
+      "Playwright (gratis)",
+      "Postman (gratis)",
+      "Claude (gratis)",
+      "ChatGPT (gratis)",
+      "Chrome DevTools",
+      "Linear (gratis)",
+      "GitHub",
+    ],
+    paidTools: ["Claude Pro", "BrowserStack"],
+    finalProject:
+      "Realizar un audit completo de QA sobre una aplicación web real: plan de pruebas, ejecución manual y automatizada, reporte profesional de bugs y propuesta de mejoras — listo para presentar como portfolio.",
+  },
+
+  "automatizaciones-con-ia-y-no-code": {
+    slug: "automatizaciones-con-ia-y-no-code",
+    longDescription:
+      "Las empresas pierden miles de horas en tareas repetitivas que se pueden automatizar en minutos. Este curso te enseña a construir flujos de automatización profesionales usando n8n, Make y herramientas no-code, integrando modelos de IA para crear soluciones inteligentes. La diferencia clave: no vas a automatizar solo tu negocio, vas a aprender a vender automatizaciones como servicio a otros. Empresas de todo el mundo pagan muy bien por flujos que vos vas a poder armar en horas.",
+    whatYouLearn: [
+      "Fundamentos de automatización: triggers, acciones, flujos y lógica condicional",
+      "n8n desde cero: instalación, nodos, workflows complejos y deploy",
+      "Make (ex Integromat): escenarios avanzados e integraciones con 500+ apps",
+      "Integración de APIs de IA (Claude, GPT, Whisper) en flujos automatizados",
+      "Automatización de email marketing, CRM, facturación y atención al cliente",
+      "Construcción de chatbots y asistentes con IA sin código",
+      "Bubble y herramientas no-code para crear interfaces de usuario",
+      "Cómo vender servicios de automatización: pricing, propuestas y delivery",
+    ],
+    whoIsItFor:
+      "Para quienes quieren ofrecer servicios digitales de alto valor sin programar. Ideal para emprendedores, freelancers y profesionales que quieren generar ingresos en dólares resolviendo problemas reales con tecnología.",
+    prerequisites:
+      "Manejo básico de computadora. Recomendado haber completado 'IA para tu Trabajo' o 'Gestión de Negocios con IA'.",
+    jobOpportunities: [
+      {
+        title: "Freelance de automatizaciones",
+        type: "freelance" as const,
+        highlight: "Alto valor por proyecto · Freelance global",
+        description:
+          "Empresas pagan muy bien por automatizar sus procesos. Un solo flujo bien armado tiene alto valor en el mercado según la complejidad.",
+      },
+      {
+        title: "Consultor de automatización / No-Code",
+        type: "empleo" as const,
+        highlight: "Perfil muy buscado · Empresas tech",
+        description:
+          "Agencias y empresas tech buscan especialistas en automatización para optimizar operaciones internas y de clientes.",
+      },
+      {
+        title: "Emprendimiento de servicios digitales",
+        type: "emprendimiento" as const,
+        highlight: "Tu propia agencia · Escalable",
+        description:
+          "Montá tu propia agencia de automatización ofreciendo soluciones a PyMEs y startups de toda Latinoamérica y el mundo.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "gestion-de-negocios-con-ia",
+        title: "Gestión de Negocios con IA",
+        reason:
+          "Entender los procesos de negocio te permite identificar qué automatizar y vender soluciones más completas.",
+      },
+      {
+        slug: "marketing-digital-con-ia",
+        title: "Marketing Digital con IA",
+        reason:
+          "Muchas automatizaciones de alto valor están en marketing: email sequences, lead scoring, reportes automáticos.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Pensamiento sistémico",
+        description: "Capacidad de mapear procesos completos y encontrar oportunidades de automatización.",
+      },
+      {
+        trait: "Integración de herramientas",
+        description: "Conectar múltiples plataformas en flujos coherentes y confiables.",
+      },
+      {
+        trait: "IA aplicada",
+        description: "Integrar modelos de lenguaje en flujos de trabajo para crear soluciones inteligentes.",
+      },
+    ],
+    freeTools: [
+      "n8n (gratis / self-hosted)",
+      "Make (plan gratuito)",
+      "Claude (gratis)",
+      "ChatGPT (gratis)",
+      "Bubble (plan gratuito)",
+      "Notion (gratis)",
+      "Google Sheets",
+    ],
+    paidTools: ["n8n Cloud", "Make Pro", "Claude Pro"],
+    finalProject:
+      "Diseñar, construir y documentar un sistema de automatización completo para un caso de negocio real: desde el relevamiento del proceso hasta el deploy, incluyendo una propuesta comercial profesional lista para presentar a un cliente.",
   },
 };

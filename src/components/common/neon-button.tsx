@@ -20,7 +20,7 @@ const NeonButton = forwardRef<HTMLButtonElement, NeonButtonProps>(
       secondary:
         "bg-secondary text-white hover:bg-neon-violet-bright glow-violet hover:glow-violet-strong",
       outline:
-        "bg-transparent text-white border border-white/20 hover:border-secondary hover:text-secondary",
+        "bg-white/5 text-white border border-white/25 hover:bg-secondary/10 hover:border-secondary hover:text-secondary backdrop-blur-sm",
     };
 
     const sizes = {

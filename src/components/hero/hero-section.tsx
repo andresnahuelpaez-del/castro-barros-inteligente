@@ -7,10 +7,10 @@ import { DepartmentSilhouette } from "./department-silhouette";
 import { Badge } from "@/components/ui/badge";
 
 const metrics = [
-  { value: "8", label: "cursos" },
-  { value: "100%", label: "gratuito" },
-  { value: "Oficial", label: "certificación" },
-  { value: "Online", label: "flexible" },
+  { value: "10", label: "cursos profesionales" },
+  { value: "100%", label: "gratuito y online" },
+  { value: "IA", label: "en cada programa" },
+  { value: "Oficial", label: "certificación válida" },
 ];
 
 export function HeroSection() {
@@ -23,9 +23,9 @@ export function HeroSection() {
         <div className="absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-neon-green opacity-10 blur-[120px] sm:h-[500px] sm:w-[500px] sm:blur-[150px]" />
       </div>
 
-      {/* Silhouette background */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
-        <DepartmentSilhouette className="h-[350px] w-[280px] opacity-30 sm:h-[500px] sm:w-[400px] sm:opacity-40 lg:h-[600px] lg:w-[480px]" />
+      {/* Silhouette background — centrada con el bloque principal */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center -translate-y-[15%] sm:-translate-y-[5%]" aria-hidden="true">
+        <DepartmentSilhouette className="h-[550px] w-[440px] opacity-[0.18] sm:h-[650px] sm:w-[520px] sm:opacity-20 lg:h-[780px] lg:w-[620px]" />
       </div>
 
       {/* Content */}
@@ -36,8 +36,9 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Badge className="mb-5 border-neon-green/30 bg-neon-green/10 px-3 py-1 text-xs text-neon-green sm:px-4 sm:py-1.5 sm:text-sm">
-            Programa 100% gratuito del Dpto. Castro Barros
+          <Badge className="mb-5 border-neon-green/30 bg-neon-green/10 px-3 py-1 text-[10px] leading-tight text-neon-green sm:px-4 sm:py-1.5 sm:text-sm">
+            <span className="hidden sm:inline">Programa 100% financiado por la Provincia de La Rioja para todo el país</span>
+            <span className="sm:hidden">100% financiado por la Provincia de La Rioja</span>
           </Badge>
         </motion.div>
 
@@ -60,7 +61,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          8 cursos intensivos con Inteligencia Artificial: Programación, Marketing digital, Diseño web, Creación de contenido y más.
+          10 cursos intensivos con Inteligencia Artificial: Programación, Marketing digital, Diseño web, Creación de contenido y más.
           <span className="block mt-2 text-neon-green font-medium text-glow-green">
             Inscribite gratis y obtené tu certificación oficial.
           </span>
@@ -72,12 +73,12 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <Link href="/cursos" className="w-full sm:w-auto">
+          <Link href="/registro" className="w-full sm:w-auto">
             <NeonButton size="lg" className="w-full sm:w-auto">Inscribite gratis &rarr;</NeonButton>
           </Link>
           <Link href="/cursos" className="w-full sm:w-auto">
-            <NeonButton variant="outline" size="lg" className="w-full sm:w-auto">
-              Explora los cursos
+            <NeonButton variant="outline" size="lg" className="w-full border-neon-green/30 text-neon-green hover:bg-neon-green/10 hover:border-neon-green/50 hover:text-neon-green sm:w-auto">
+              Explorá los cursos
             </NeonButton>
           </Link>
         </motion.div>
@@ -91,7 +92,7 @@ export function HeroSection() {
           {metrics.map((metric) => (
             <div
               key={metric.label}
-              className="rounded-xl border border-border/50 bg-background/30 backdrop-blur-sm px-3 py-3 text-center sm:p-4"
+              className="rounded-xl border border-border/50 bg-background/40 backdrop-blur-md px-3 py-3 text-center sm:p-4"
             >
               <div className="text-xl font-bold text-neon-green sm:text-3xl">
                 {metric.value}

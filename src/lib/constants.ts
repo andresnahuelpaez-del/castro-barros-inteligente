@@ -4,7 +4,6 @@ export const COURSES = [
     title: "Creación de Contenido con IA",
     shortDescription:
       "Aprendé a producir reels, videos para YouTube, podcasts, posts y carruseles usando IA de punta a punta.",
-    level: "inicial" as const,
     durationMonths: 4,
     hoursPerWeek: "6-8",
     order: 1,
@@ -15,7 +14,6 @@ export const COURSES = [
     title: "IA para tu Trabajo",
     shortDescription:
       "Dominá tu trabajo diario con IA: Excel, documentos, presentaciones, email, investigación y organización personal.",
-    level: "inicial" as const,
     durationMonths: 4,
     hoursPerWeek: "6",
     order: 2,
@@ -27,7 +25,6 @@ export const COURSES = [
     title: "Marketing Digital con IA",
     shortDescription:
       "Vendé online con campañas pagas, embudos automatizados y creativos generados por Inteligencia Artificial.",
-    level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8",
     order: 3,
@@ -38,7 +35,6 @@ export const COURSES = [
     title: "Gestión de Negocios con IA",
     shortDescription:
       "Ordená y digitalizá tu negocio completo: facturación, stock, finanzas, atención al cliente y automatización.",
-    level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8",
     order: 4,
@@ -49,7 +45,6 @@ export const COURSES = [
     title: "Diseño Web con IA",
     shortDescription:
       "Creá sitios web profesionales para PyMEs y emprendedores en días, no meses, usando herramientas de IA.",
-    level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8-10",
     order: 5,
@@ -60,7 +55,6 @@ export const COURSES = [
     title: "E-commerce con IA",
     shortDescription:
       "Monta y opera tiendas online completas con IA, optimizando cada paso en el ecosistema argentino.",
-    level: "intermedio" as const,
     durationMonths: 4,
     hoursPerWeek: "8",
     order: 6,
@@ -71,7 +65,6 @@ export const COURSES = [
     title: "Análisis de Datos con IA",
     shortDescription:
       "Convertí datos crudos en insights accionables y dashboards profesionales con herramientas de IA.",
-    level: "intermedio" as const,
     durationMonths: 5,
     hoursPerWeek: "8",
     order: 7,
@@ -82,11 +75,30 @@ export const COURSES = [
     title: "Vibe Coding: Desarrollo de Apps con IA",
     shortDescription:
       "Construí aplicaciones web reales (SaaS, marketplaces, plataformas) usando IA como copiloto principal.",
-    level: "avanzado" as const,
     durationMonths: 6,
     hoursPerWeek: "10-12",
     order: 8,
     icon: "Code",
+  },
+  {
+    slug: "qa-testing-con-ia",
+    title: "QA Testing con IA",
+    shortDescription:
+      "Aprendé a testear aplicaciones web y mobile con IA: automatización de pruebas, detección de bugs y reportes profesionales para trabajar como QA remoto.",
+    durationMonths: 3,
+    hoursPerWeek: "8-10",
+    order: 9,
+    icon: "ShieldCheck",
+  },
+  {
+    slug: "automatizaciones-con-ia-y-no-code",
+    title: "Automatizaciones con IA y No-Code",
+    shortDescription:
+      "Creá flujos automatizados para empresas y clientes usando n8n, Make y herramientas no-code. Vendé servicios de automatización como freelancer.",
+    durationMonths: 4,
+    hoursPerWeek: "8",
+    order: 10,
+    icon: "Workflow",
   },
 ];
 
@@ -107,19 +119,12 @@ export const COURSE_COMPETENCIES: Record<string, string> = {
     "análisis de datos con IA: transformación de datos crudos en insights accionables y dashboards profesionales",
   "vibe-coding-desarrollo-apps-ia":
     "desarrollo de aplicaciones web reales (SaaS, marketplaces, plataformas) utilizando IA como copiloto de programación",
+  "qa-testing-con-ia":
+    "testing y aseguramiento de calidad de software con IA: automatización de pruebas funcionales, detección de errores y generación de reportes profesionales de QA",
+  "automatizaciones-con-ia-y-no-code":
+    "diseño e implementación de flujos de automatización profesionales con herramientas no-code e Inteligencia Artificial para optimizar procesos de negocio y ofrecer servicios a terceros",
 };
 
-export const LEVEL_LABELS = {
-  inicial: "Inicial",
-  intermedio: "Intermedio",
-  avanzado: "Avanzado",
-} as const;
-
-export const LEVEL_COLORS = {
-  inicial: "bg-neon-green/20 text-neon-green",
-  intermedio: "bg-secondary/20 text-neon-violet-bright",
-  avanzado: "bg-neon-cyan/20 text-neon-cyan-bright",
-} as const;
 
 export const FAQ_ITEMS = [
   {

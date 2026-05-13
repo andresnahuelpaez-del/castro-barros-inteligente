@@ -10,7 +10,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { NeonButton } from "@/components/common/neon-button";
-import { COURSES, LEVEL_LABELS, LEVEL_COLORS } from "@/lib/constants";
+import { COURSES } from "@/lib/constants";
 import { MOCK_MODULES } from "@/lib/mock-course-data";
 import { cn } from "@/lib/utils";
 
@@ -73,15 +73,6 @@ export default async function MisCursosPage() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <Badge
-                        variant="secondary"
-                        className={cn(
-                          "text-xs",
-                          LEVEL_COLORS[course.level]
-                        )}
-                      >
-                        {LEVEL_LABELS[course.level]}
-                      </Badge>
                       <Badge
                         variant="secondary"
                         className={cn(

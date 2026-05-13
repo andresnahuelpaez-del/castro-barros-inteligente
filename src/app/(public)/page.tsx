@@ -9,6 +9,7 @@ import { HowItWorksSection } from "@/components/landing/how-it-works-section";
 import { MetricsSection } from "@/components/landing/metrics-section";
 import { AudienceSection } from "@/components/landing/audience-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { EmployabilitySection } from "@/components/landing/employability-section";
 import { CertificateSection } from "@/components/landing/certificate-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
@@ -32,6 +33,7 @@ export default function Home() {
       <MetricsSection />
       <TestimonialsSection />
       <SectionDivider color="cyan" />
+      <EmployabilitySection />
       <CertificateSection />
       <FaqSection />
       <CtaSection />

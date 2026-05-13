@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 
 const publicLinks = [
   { href: "/cursos", label: "Cursos" },
+  { href: "/empleabilidad", label: "Conseguí trabajo" },
   { href: "/preguntas", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
 ];
