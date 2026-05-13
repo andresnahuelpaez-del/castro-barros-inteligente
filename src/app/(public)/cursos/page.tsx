@@ -11,17 +11,18 @@ import {
   Code,
   ShieldCheck,
   Workflow,
+  Languages,
 } from "lucide-react";
 import { COURSES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Cursos",
   description:
-    "Explorá los 10 cursos de capacitación digital gratuita con IA del Departamento Castro Barros.",
+    "Explorá los 11 cursos de capacitación digital gratuita con IA del Departamento Castro Barros.",
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  Video, Briefcase, Megaphone, Store, Globe, ShoppingCart, BarChart3, Code, ShieldCheck, Workflow,
+  Video, Briefcase, Megaphone, Store, Globe, ShoppingCart, BarChart3, Code, ShieldCheck, Workflow, Languages,
 };
 
 const courseColors: Record<string, { accent: string; bg: string; border: string }> = {
@@ -35,6 +36,7 @@ const courseColors: Record<string, { accent: string; bg: string; border: string 
   "vibe-coding-desarrollo-apps-ia": { accent: "#EC4899", bg: "bg-[#EC4899]/10", border: "border-[#EC4899]/20 hover:border-[#EC4899]/40" },
   "qa-testing-con-ia": { accent: "#8B5CF6", bg: "bg-[#8B5CF6]/10", border: "border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40" },
   "automatizaciones-con-ia-y-no-code": { accent: "#F97316", bg: "bg-[#F97316]/10", border: "border-[#F97316]/20 hover:border-[#F97316]/40" },
+  "ingles-laboral-con-ia": { accent: "#14B8A6", bg: "bg-[#14B8A6]/10", border: "border-[#14B8A6]/20 hover:border-[#14B8A6]/40" },
 };
 
 const defaultColor = { accent: "#39FF14", bg: "bg-neon-green/10", border: "border-border hover:border-border-bright" };

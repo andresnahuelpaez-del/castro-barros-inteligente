@@ -1019,4 +1019,116 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
     finalProject:
       "Diseñar, construir y documentar un sistema de automatización completo para un caso de negocio real: desde el relevamiento del proceso hasta el deploy, incluyendo una propuesta comercial profesional lista para presentar a un cliente.",
   },
+
+  "ingles-laboral-con-ia": {
+    slug: "ingles-laboral-con-ia",
+    longDescription:
+      "El inglés dejó de ser opcional en el mundo digital. Este curso te prepara para comunicarte con confianza en entornos laborales internacionales, usando herramientas de IA como aliadas para traducir, comprender y redactar en inglés profesional. No necesitás saber inglés para empezar: la IA te acompaña en cada paso mientras desarrollás las habilidades para trabajar de forma remota con clientes y equipos de cualquier parte del mundo.",
+    whatYouLearn: [
+      "Vocabulario y expresiones clave del trabajo remoto y digital",
+      "Usar herramientas de IA para traducción y comprensión de textos",
+      "Redactar emails, mensajes y propuestas profesionales en inglés",
+      "Comunicación verbal básica para reuniones y calls de trabajo",
+      "Interpretar tareas, instrucciones y feedback en inglés",
+      "Crear y optimizar perfiles profesionales en plataformas internacionales",
+      "Automatizar traducciones y respuestas con asistentes de IA",
+      "Desenvolverte en Slack, Notion, Asana y otras herramientas en inglés",
+    ],
+    whoIsItFor:
+      "Para quienes quieren acceder a trabajos remotos internacionales y necesitan mejorar su inglés laboral. Ideal para freelancers, asistentes virtuales y cualquier persona que quiera ampliar sus oportunidades más allá del mercado local.",
+    prerequisites:
+      "No se requieren conocimientos previos de inglés. Manejo básico de computadora o celular con acceso a internet.",
+    jobOpportunities: [
+      {
+        title: "Asistente virtual remoto",
+        type: "freelance" as const,
+        highlight: "Alta demanda · Clientes globales",
+        description:
+          "Brindar soporte administrativo, gestión de agenda, emails y tareas a emprendedores y empresas de habla inglesa desde cualquier lugar.",
+      },
+      {
+        title: "Atención al cliente internacional",
+        type: "empleo" as const,
+        highlight: "Muy buscado · 100% remoto",
+        description:
+          "Responder consultas y gestionar soporte para empresas con clientes internacionales, usando inglés y herramientas de IA.",
+      },
+      {
+        title: "Community Manager remoto",
+        type: "freelance" as const,
+        highlight: "Creciente demanda · Freelance flexible",
+        description:
+          "Gestionar redes sociales y comunidades en inglés para marcas internacionales, creando contenido y respondiendo interacciones.",
+      },
+      {
+        title: "Soporte administrativo digital",
+        type: "empleo" as const,
+        highlight: "Perfil solicitado · Empresas tech",
+        description:
+          "Realizar tareas administrativas en plataformas internacionales: documentación, reportes, coordinación de equipo en inglés.",
+      },
+      {
+        title: "Freelancer internacional",
+        type: "freelance" as const,
+        highlight: "Sin fronteras · Ingreso en divisas",
+        description:
+          "Ofrecer cualquier servicio digital (diseño, marketing, desarrollo, datos) a clientes de todo el mundo comunicándote en inglés con confianza.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "ia-para-tu-trabajo",
+        title: "IA para tu Trabajo",
+        reason:
+          "Combiná el inglés laboral con productividad digital para ser un profesional remoto completo y competitivo.",
+      },
+      {
+        slug: "creacion-de-contenido-con-ia",
+        title: "Creación de Contenido con IA",
+        reason:
+          "Creá contenido en inglés y español para duplicar tu audiencia y acceder a mercados internacionales.",
+      },
+      {
+        slug: "automatizaciones-con-ia-y-no-code",
+        title: "Automatizaciones con IA y No-Code",
+        reason:
+          "Los servicios de automatización se venden mayormente a clientes internacionales. El inglés es clave para ese mercado.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Comunicación profesional",
+        description:
+          "Capacidad de expresarse de forma clara y profesional en inglés escrito y verbal.",
+      },
+      {
+        trait: "Autonomía con herramientas de IA",
+        description:
+          "Saber usar IA para resolver dudas de idioma en tiempo real sin depender de otros.",
+      },
+      {
+        trait: "Adaptabilidad cultural",
+        description:
+          "Entender las normas y expectativas de comunicación en entornos laborales internacionales.",
+      },
+      {
+        trait: "Proactividad",
+        description:
+          "Tomar iniciativa en la comunicación, anticipar necesidades y resolver sin esperar instrucciones detalladas.",
+      },
+    ],
+    freeTools: [
+      "Claude (gratis)",
+      "ChatGPT (gratis)",
+      "Google Translate",
+      "DeepL (gratis)",
+      "Grammarly (plan gratuito)",
+      "Notion (gratis)",
+      "Slack (gratis)",
+      "LinkedIn",
+    ],
+    paidTools: ["Grammarly Premium", "Claude Pro"],
+    finalProject:
+      "Creación de un perfil profesional completo orientado al trabajo remoto internacional: CV en inglés, perfil de LinkedIn optimizado, propuesta de servicios en inglés y simulaciones de comunicación laboral (emails, mensajes y una call de presentación) utilizando herramientas de IA.",
+  },
 };
