@@ -18,7 +18,7 @@ import {
 import { COURSES } from "@/lib/constants";
 import { NeonButton } from "@/components/common/neon-button";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   Video,
   Briefcase,
   Megaphone,
