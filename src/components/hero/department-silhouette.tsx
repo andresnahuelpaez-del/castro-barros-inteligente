@@ -53,7 +53,7 @@ export function DepartmentSilhouette({ className }: { className?: string }) {
         }}
       />
 
-      {/* Capa 2: Contorno principal con trazo animado */}
+      {/* Capa 2: Contorno principal con trazo animado + latido neon */}
       <motion.path
         d={LA_RIOJA_PATH}
         fill="none"
@@ -67,6 +67,29 @@ export function DepartmentSilhouette({ className }: { className?: string }) {
             pathLength: 1,
             opacity: 1,
             transition: { duration: 3, ease: "easeInOut" },
+          },
+        }}
+      />
+
+      {/* Capa 2b: Latido neon — pulso sutil en el contorno */}
+      <motion.path
+        d={LA_RIOJA_PATH}
+        fill="none"
+        stroke="#C084FC"
+        strokeWidth="4"
+        strokeLinejoin="round"
+        filter="url(#silhouette-halo)"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: [0, 0.25, 0, 0],
+            transition: {
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3.5,
+              times: [0, 0.15, 0.4, 1],
+            },
           },
         }}
       />
