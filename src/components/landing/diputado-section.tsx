@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Quote } from "lucide-react";
 
 export function DiputadoSection() {
@@ -16,11 +17,13 @@ export function DiputadoSection() {
           >
             <Quote className="h-8 w-8 text-neon-green/40 mb-3 sm:h-10 sm:w-10 sm:mb-4" />
             <blockquote className="text-base leading-relaxed text-foreground-secondary sm:text-lg md:text-xl">
-              Mi misión es acompañar a cada habitante del Departamento
-              Castro Barros en este proceso de transformación, acercando
-              herramientas educativas que permitan crecer, adaptarse y construir
-              un futuro mejor. Con conocimiento y oportunidades, nuestra
-              comunidad puede desarrollar todo su potencial.
+              Mi misión es acompañar a cada habitante de la provincia de
+              La Rioja en este proceso de transformación digital, acercando
+              herramientas educativas gratuitas, potenciadas con inteligencia
+              artificial y a la altura de las mejores instituciones online del
+              país, que permitan crecer, adaptarse y construir un futuro mejor.
+              Con conocimiento y oportunidades, nuestra comunidad puede
+              desarrollar todo su potencial.
             </blockquote>
             <div className="mt-6 flex items-center gap-3 sm:mt-8 sm:gap-4">
               <div className="h-0.5 w-8 bg-neon-green sm:w-12" />
@@ -46,18 +49,23 @@ export function DiputadoSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative">
-              <div className="h-56 w-48 rounded-2xl border border-neon-green/20 bg-gradient-to-br from-background-tertiary to-background-secondary flex flex-col items-center justify-center overflow-hidden sm:h-80 sm:w-64">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neon-green/10 border-2 border-neon-green/30 sm:h-24 sm:w-24">
-                  <span className="text-xl font-bold text-neon-green sm:text-3xl">
-                    MDM
-                  </span>
+              <div className="relative h-72 w-56 overflow-hidden rounded-2xl border border-neon-green/20 bg-gradient-to-br from-background-tertiary to-background-secondary sm:h-96 sm:w-72">
+                <Image
+                  src="/marcelo-del-moral.jpg"
+                  alt="Diputado Marcelo Daniel Del Moral"
+                  fill
+                  sizes="(max-width: 640px) 224px, 288px"
+                  className="object-cover object-top"
+                  priority
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 sm:p-4">
+                  <p className="text-xs font-semibold text-white sm:text-sm">
+                    Marcelo Del Moral
+                  </p>
+                  <p className="text-[10px] text-foreground-muted sm:text-xs">
+                    Diputado Provincial
+                  </p>
                 </div>
-                <p className="mt-3 text-xs font-medium text-white sm:mt-4 sm:text-sm">
-                  Marcelo Del Moral
-                </p>
-                <p className="mt-0.5 text-[10px] text-foreground-muted sm:mt-1 sm:text-xs">
-                  Diputado Provincial
-                </p>
               </div>
               <div className="absolute -inset-1 -z-10 rounded-2xl bg-neon-green/5 blur-xl" />
             </div>
