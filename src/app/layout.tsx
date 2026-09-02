@@ -20,7 +20,12 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Castro Barros Inteligente | Capacitación Digital Gratuita con IA",
     template: "%s | Castro Barros Inteligente",
