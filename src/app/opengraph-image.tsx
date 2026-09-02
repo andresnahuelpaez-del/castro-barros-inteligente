@@ -64,7 +64,7 @@ export default function OpengraphImage() {
               color: "#B4B4B4",
             }}
           >
-            11 cursos profesionales · Certificación oficial · La Rioja
+            10 cursos profesionales · Certificación oficial · La Rioja
           </div>
         </div>
 

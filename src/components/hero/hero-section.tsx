@@ -7,7 +7,7 @@ import { DepartmentSilhouette } from "./department-silhouette";
 import { Badge } from "@/components/ui/badge";
 
 const metrics = [
-  { value: "11", label: "cursos profesionales" },
+  { value: "10", label: "cursos profesionales" },
   { value: "100%", label: "gratuito y online" },
   { value: "IA", label: "en cada programa" },
   { value: "Oficial", label: "certificación válida" },
@@ -61,7 +61,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          11 cursos intensivos con Inteligencia Artificial: Programación, Marketing digital, Diseño web, Creación de contenido, Inglés laboral y más.
+          10 cursos intensivos con Inteligencia Artificial: Programación, Marketing digital, Diseño web, Creación de contenido y más.
           <span className="block mt-2 text-neon-green font-medium text-glow-green">
             Inscribite gratis y obtené tu certificación oficial.
           </span>

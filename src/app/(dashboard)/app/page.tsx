@@ -196,7 +196,7 @@ export default async function DashboardPage() {
                 Explorar cursos
               </p>
               <p className="mt-1 text-sm text-foreground-secondary">
-                8 programas profesionales listos para que empieces.
+                10 programas profesionales listos para que empieces.
               </p>
             </div>
             <ArrowRight className="h-5 w-5 text-foreground-muted group-hover:text-neon-green transition-colors" />

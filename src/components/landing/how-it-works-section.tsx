@@ -13,7 +13,7 @@ const steps = [
     icon: BookOpen,
     title: "Elegí tu curso",
     description:
-      "Explorá los 8 programas y elegí el que más se adapte a tus objetivos.",
+      "Explorá los 10 programas y elegí el que más se adapte a tus objetivos.",
   },
   {
     icon: Lightbulb,

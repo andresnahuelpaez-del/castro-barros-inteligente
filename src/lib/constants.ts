@@ -100,16 +100,6 @@ export const COURSES = [
     order: 10,
     icon: "Workflow",
   },
-  {
-    slug: "ingles-laboral-con-ia",
-    title: "Inglés Laboral con IA",
-    shortDescription:
-      "Aprendé inglés práctico para el trabajo remoto e internacional, usando herramientas de IA para comunicarte con confianza.",
-    durationMonths: 3,
-    hoursPerWeek: "5-6",
-    order: 11,
-    icon: "Languages",
-  },
 ];
 
 export const COURSE_COMPETENCIES: Record<string, string> = {
@@ -133,8 +123,6 @@ export const COURSE_COMPETENCIES: Record<string, string> = {
     "testing y aseguramiento de calidad de software con IA: automatización de pruebas funcionales, detección de errores y generación de reportes profesionales de QA",
   "automatizaciones-con-ia-y-no-code":
     "diseño e implementación de flujos de automatización profesionales con herramientas no-code e Inteligencia Artificial para optimizar procesos de negocio y ofrecer servicios a terceros",
-  "ingles-laboral-con-ia":
-    "comprensión y uso práctico del inglés aplicado al trabajo remoto y digital, incorporando herramientas de Inteligencia Artificial para comunicación profesional en entornos internacionales",
 };
 
 

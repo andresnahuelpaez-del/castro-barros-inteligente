@@ -13,7 +13,6 @@ import {
   Code,
   ShieldCheck,
   Workflow,
-  Languages,
   ArrowRight,
 } from "lucide-react";
 import { COURSES } from "@/lib/constants";
@@ -30,7 +29,6 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code,
   ShieldCheck,
   Workflow,
-  Languages,
 };
 
 // Cada curso tiene su color accent para diferenciarse visualmente
@@ -97,12 +95,6 @@ const courseAccents: Record<
     bg: "bg-[#F97316]/10",
     border: "border-[#F97316]/20 hover:border-[#F97316]/50",
     glow: "hover:shadow-[0_0_20px_rgba(249,115,22,0.15)]",
-  },
-  "ingles-laboral-con-ia": {
-    accent: "text-[#14B8A6]",
-    bg: "bg-[#14B8A6]/10",
-    border: "border-[#14B8A6]/20 hover:border-[#14B8A6]/50",
-    glow: "hover:shadow-[0_0_20px_rgba(20,184,166,0.15)]",
   },
 };
 
