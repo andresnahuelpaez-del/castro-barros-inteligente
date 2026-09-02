@@ -130,6 +130,7 @@ export function CoursesSection() {
           {COURSES.map((course, i) => {
             const Icon = iconMap[course.icon];
             const colors = courseAccents[course.slug] || defaultAccent;
+            const hex = getAccentHex(colors.accent);
             return (
               <motion.div
                 key={course.slug}
@@ -140,51 +141,74 @@ export function CoursesSection() {
               >
                 <Link href={`/cursos/${course.slug}`}>
                   <div
-                    className={`group relative flex h-full flex-col rounded-xl border bg-card p-5 transition-all duration-300 hover:-translate-y-1.5 ${colors.border} ${colors.glow}`}
+                    className={`group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card p-5 transition-all duration-300 hover:-translate-y-1.5 ${colors.border} ${colors.glow}`}
+                    style={{
+                      backgroundImage: `radial-gradient(125% 90% at 100% 0%, ${hex}14, transparent 55%)`,
+                    }}
                   >
-                    {/* Accent line top */}
+                    {/* Baño de color: se intensifica al hover */}
                     <div
-                      className={`absolute top-0 left-4 right-4 h-[2px] rounded-full opacity-40 group-hover:opacity-100 transition-opacity ${colors.bg.replace('/10', '')}`}
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                       style={{
-                        background: `linear-gradient(90deg, transparent, ${getAccentHex(colors.accent)}, transparent)`,
+                        backgroundImage: `radial-gradient(125% 90% at 100% 0%, ${hex}26, transparent 55%)`,
                       }}
                     />
 
-                    {/* Icon */}
+                    {/* Ícono marca de agua: identidad visual de cada curso */}
+                    {Icon && (
+                      <Icon
+                        aria-hidden="true"
+                        className="pointer-events-none absolute -bottom-6 -right-3 h-32 w-32 opacity-[0.06] transition-all duration-500 group-hover:-rotate-6 group-hover:opacity-[0.13]"
+                        style={{ color: hex }}
+                      />
+                    )}
+
+                    {/* Accent line top */}
                     <div
-                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${colors.bg}`}
+                      aria-hidden="true"
+                      className="absolute top-0 left-4 right-4 h-[2px] rounded-full opacity-50 transition-opacity group-hover:opacity-100"
+                      style={{
+                        background: `linear-gradient(90deg, transparent, ${hex}, transparent)`,
+                      }}
+                    />
+
+                    {/* Icon chip protagonista */}
+                    <div
+                      className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:scale-105"
+                      style={{
+                        background: `linear-gradient(135deg, ${hex}2e, ${hex}0d)`,
+                        borderColor: `${hex}40`,
+                        boxShadow: `0 8px 24px -14px ${hex}`,
+                      }}
                     >
-                      {Icon && <Icon className={`h-5 w-5 ${colors.accent}`} />}
+                      {Icon && <Icon className="h-6 w-6" style={{ color: hex }} />}
                     </div>
 
                     {/* Title */}
-                    <h3
-                      className={`text-[15px] font-semibold leading-snug text-white transition-colors group-hover:${colors.accent.replace('text-', 'text-')}`}
-                      style={{
-                        // Use inline for dynamic hover color
-                      }}
-                    >
+                    <h3 className="relative z-10 text-[15px] font-semibold leading-snug text-white">
                       <span className="group-hover:hidden">{course.title}</span>
                       <span
                         className="hidden group-hover:inline"
-                        style={{ color: getAccentHex(colors.accent) }}
+                        style={{ color: hex }}
                       >
                         {course.title}
                       </span>
                     </h3>
 
                     {/* Description */}
-                    <p className="mt-2 flex-1 text-xs leading-relaxed text-foreground-secondary">
+                    <p className="relative z-10 mt-2 flex-1 text-xs leading-relaxed text-foreground-secondary">
                       {course.shortDescription}
                     </p>
 
                     {/* Footer */}
-                    <div className="mt-4 flex items-center justify-between border-t border-border/50 pt-3">
+                    <div className="relative z-10 mt-4 flex items-center justify-between border-t border-border/50 pt-3">
                       <span className="text-[11px] text-foreground-muted">
                         {course.durationMonths} meses · {course.hoursPerWeek} hs/sem
                       </span>
                       <ArrowRight
-                        className={`h-3.5 w-3.5 text-foreground-muted transition-all group-hover:translate-x-0.5 ${colors.accent.replace('text-', 'group-hover:text-')}`}
+                        className="h-3.5 w-3.5 opacity-50 transition-all group-hover:translate-x-0.5 group-hover:opacity-100"
+                        style={{ color: hex }}
                       />
                     </div>
                   </div>
