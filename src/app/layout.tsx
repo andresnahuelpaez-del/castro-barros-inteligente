@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Castro Barros Inteligente",
   },
   description:
-    "Capacitación digital profesional, gratuita y certificada por el Departamento Castro Barros, La Rioja. Cursos intensivos con Inteligencia Artificial: Programación, Marketing Digital, Diseño Web, E-commerce y más.",
+    "Capacitaciones digitales profesionales, gratuitas y certificadas. Cursos intensivos con IA para construir tu futuro digital.",
   keywords: [
     "Castro Barros",
     "capacitación digital",
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     siteName: "Castro Barros Inteligente",
     title: "Castro Barros Inteligente | Capacitación Digital Gratuita con IA",
     description:
-      "Capacitación digital profesional, gratuita y certificada. Cursos intensivos con IA para construir tu futuro digital.",
+      "Capacitaciones digitales profesionales, gratuitas y certificadas. Cursos intensivos con IA para construir tu futuro digital.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Castro Barros Inteligente",
     description:
-      "Capacitación digital profesional, gratuita y certificada con IA.",
+      "Capacitaciones digitales gratuitas y certificadas, con IA para construir tu futuro.",
   },
   robots: {
     index: true,
