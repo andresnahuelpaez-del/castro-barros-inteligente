@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt =
-  "Castro Barros Inteligente — Capacitación digital gratuita con Inteligencia Artificial";
+export const alt = "Castro Barros Inteligente";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,80 +15,73 @@ export default function OpengraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "72px 80px",
+          alignItems: "center",
+          justifyContent: "center",
           background:
-            "radial-gradient(1000px 600px at 15% -10%, rgba(168,85,247,0.22), transparent), radial-gradient(900px 600px at 100% 120%, rgba(57,255,20,0.18), transparent), #0A0A0A",
-          color: "#FFFFFF",
+            "radial-gradient(900px 500px at 20% 0%, rgba(168,85,247,0.20), transparent 60%), radial-gradient(1000px 620px at 85% 110%, rgba(57,255,20,0.18), transparent 60%), #050505",
+          border: "1px solid rgba(57,255,20,0.12)",
         }}
       >
-        {/* Top: brand */}
-        <div style={{ display: "flex", alignItems: "center" }}>
+        {/* Logo */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <div
             style={{
-              width: 18,
-              height: 18,
-              borderRadius: 9,
-              background: GREEN,
-              marginRight: 16,
-              boxShadow: `0 0 24px ${GREEN}`,
-            }}
-          />
-          <div
-            style={{
-              fontSize: 26,
-              letterSpacing: 4,
-              color: "#C9C9C9",
+              fontSize: 132,
+              fontWeight: 800,
+              letterSpacing: -3,
+              lineHeight: 1,
+              color: "#FFFFFF",
+              textShadow: "0 4px 40px rgba(255,255,255,0.15)",
             }}
           >
-            CASTRO BARROS INTELIGENTE®
-          </div>
-        </div>
-
-        {/* Middle: headline */}
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", fontSize: 76, lineHeight: 1.05 }}>
-            Capacitación digital
-          </div>
-          <div style={{ display: "flex", fontSize: 76, lineHeight: 1.1 }}>
-            <span style={{ color: GREEN }}>gratuita</span>
-            <span>&nbsp;con&nbsp;</span>
-            <span style={{ color: GREEN }}>IA</span>
+            Castro Barros
           </div>
           <div
             style={{
               display: "flex",
-              marginTop: 28,
-              fontSize: 32,
-              color: "#B4B4B4",
+              alignItems: "flex-start",
+              marginTop: 8,
+              fontSize: 132,
+              fontWeight: 800,
+              letterSpacing: -3,
+              lineHeight: 1,
+              color: GREEN,
+              textShadow: `0 0 40px rgba(57,255,20,0.65), 0 0 90px rgba(57,255,20,0.35)`,
             }}
           >
-            10 cursos profesionales · Certificación oficial · La Rioja
+            Inteligente
+            <span style={{ fontSize: 40, marginTop: 12, marginLeft: 6 }}>®</span>
           </div>
         </div>
 
-        {/* Bottom: badges */}
-        <div style={{ display: "flex", alignItems: "center" }}>
-          {["100% gratuito", "Con Inteligencia Artificial", "Certificado válido"].map(
-            (label) => (
-              <div
-                key={label}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginRight: 20,
-                  padding: "14px 26px",
-                  fontSize: 26,
-                  borderRadius: 999,
-                  border: "1px solid rgba(57,255,20,0.35)",
-                  background: "rgba(57,255,20,0.08)",
-                  color: GREEN,
-                }}
-              >
-                {label}
-              </div>
-            )
-          )}
+        {/* Divider */}
+        <div
+          style={{
+            width: 220,
+            height: 4,
+            marginTop: 44,
+            borderRadius: 999,
+            background: GREEN,
+            boxShadow: `0 0 24px ${GREEN}`,
+          }}
+        />
+
+        {/* Tagline */}
+        <div
+          style={{
+            marginTop: 30,
+            fontSize: 34,
+            letterSpacing: 1,
+            color: "#C9C9C9",
+          }}
+        >
+          Capacitación digital gratuita con Inteligencia Artificial
         </div>
       </div>
     ),
