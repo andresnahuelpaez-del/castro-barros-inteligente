@@ -18,8 +18,8 @@ export default function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           background:
-            "radial-gradient(900px 500px at 20% 0%, rgba(168,85,247,0.20), transparent 60%), radial-gradient(1000px 620px at 85% 110%, rgba(57,255,20,0.18), transparent 60%), #050505",
-          border: "1px solid rgba(57,255,20,0.12)",
+            "radial-gradient(880px 560px at 78% 14%, rgba(168,85,247,0.38), transparent 60%), radial-gradient(560px 380px at 6% 104%, rgba(57,255,20,0.12), transparent 60%), linear-gradient(140deg, #040406 0%, #0b0617 48%, #1d0a38 100%)",
+          border: "1px solid rgba(168,85,247,0.18)",
         }}
       >
         {/* Logo */}
@@ -81,7 +81,7 @@ export default function OpengraphImage() {
             color: "#C9C9C9",
           }}
         >
-          Capacitación digital gratuita con Inteligencia Artificial
+          Capacitaciones digitales gratuitas con Inteligencia Artificial
         </div>
       </div>
     ),
