@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Quote } from "lucide-react";
 
 export function DiputadoSection() {
   return (
@@ -15,16 +14,30 @@ export function DiputadoSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Quote className="h-8 w-8 text-neon-green/40 mb-3 sm:h-10 sm:w-10 sm:mb-4" />
-            <blockquote className="text-base leading-relaxed text-foreground-secondary sm:text-lg md:text-xl">
-              Mi misión es acompañar a cada habitante de la provincia de
-              La Rioja en este proceso de transformación digital, acercando
-              herramientas educativas gratuitas, potenciadas con inteligencia
-              artificial y a la altura de las mejores instituciones online del
-              país, que permitan crecer, adaptarse y construir un futuro mejor.
-              Con conocimiento y oportunidades, nuestra comunidad puede
-              desarrollar todo su potencial.
-            </blockquote>
+            <div className="relative">
+              {/* Comilla tipográfica gigante como textura de fondo */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute -left-2 -top-12 select-none font-serif text-[120px] leading-none text-neon-green/10 sm:-top-16 sm:text-[170px]"
+              >
+                &ldquo;
+              </span>
+              <blockquote className="relative text-lg font-light leading-relaxed text-foreground/90 sm:text-xl md:text-[1.6rem] md:leading-[1.6]">
+                Mi misión es acompañar a cada habitante de la provincia de
+                La Rioja en este proceso de{" "}
+                <span className="font-normal text-neon-green text-glow-green">
+                  transformación digital
+                </span>
+                , acercando herramientas educativas gratuitas, potenciadas con
+                inteligencia artificial y{" "}
+                <span className="font-normal text-neon-green text-glow-green">
+                  a la altura de las mejores instituciones online del país
+                </span>
+                , que permitan crecer, adaptarse y construir un futuro mejor.
+                Con conocimiento y oportunidades, nuestra comunidad puede
+                desarrollar todo su potencial.
+              </blockquote>
+            </div>
             <div className="mt-6 flex items-center gap-3 sm:mt-8 sm:gap-4">
               <div className="h-0.5 w-8 bg-neon-green sm:w-12" />
               <p className="text-base font-bold text-neon-green text-glow-green sm:text-lg">
