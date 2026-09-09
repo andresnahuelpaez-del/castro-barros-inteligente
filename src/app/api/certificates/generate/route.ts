@@ -1,8 +1,11 @@
 import { createClient } from "@/lib/supabase/server";
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
-import { generateCertificatePDF } from "@/lib/certificate-pdf";
+import { renderCertificatePDF } from "@/lib/certificate-render";
 import { COURSE_COMPETENCIES } from "@/lib/constants";
+
+export const runtime = "nodejs";
+export const maxDuration = 60;
 
 export async function POST(request: NextRequest) {
   const supabase = await createClient();
@@ -122,7 +125,7 @@ export async function POST(request: NextRequest) {
   const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
 
   // Generate the PDF
-  const pdfBytes = await generateCertificatePDF({
+  const pdfBytes = await renderCertificatePDF({
     studentName: profile?.full_name || "Estudiante",
     courseTitle: course?.title || "Curso",
     competencyDescription:

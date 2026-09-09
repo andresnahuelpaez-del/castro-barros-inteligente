@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateCertificatePDF } from "@/lib/certificate-pdf";
+import { renderCertificatePDF } from "@/lib/certificate-render";
 import { COURSES, COURSE_COMPETENCIES } from "@/lib/constants";
+
+export const runtime = "nodejs";
+export const maxDuration = 60;
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -21,7 +24,7 @@ export async function GET(request: NextRequest) {
   const baseUrl = request.nextUrl.origin;
   const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
 
-  const pdfBytes = await generateCertificatePDF({
+  const pdfBytes = await renderCertificatePDF({
     studentName: name,
     courseTitle,
     competencyDescription: competency,
