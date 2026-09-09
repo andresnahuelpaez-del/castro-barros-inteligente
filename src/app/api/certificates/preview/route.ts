@@ -24,24 +24,33 @@ export async function GET(request: NextRequest) {
   const baseUrl = request.nextUrl.origin;
   const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
 
-  const pdfBytes = await renderCertificatePDF({
-    studentName: name,
-    courseTitle,
-    competencyDescription: competency,
-    issuedDate: new Date().toLocaleDateString("es-AR", {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-    }),
-    verificationHash,
-    verificationUrl,
-    certificateCode,
-  });
+  try {
+    const pdfBytes = await renderCertificatePDF({
+      studentName: name,
+      courseTitle,
+      competencyDescription: competency,
+      issuedDate: new Date().toLocaleDateString("es-AR", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      }),
+      verificationHash,
+      verificationUrl,
+      certificateCode,
+    });
 
-  return new NextResponse(Buffer.from(pdfBytes), {
-    headers: {
-      "Content-Type": "application/pdf",
-      "Content-Disposition": `inline; filename="certificado-${courseSlug}.pdf"`,
-    },
-  });
+    return new NextResponse(Buffer.from(pdfBytes), {
+      headers: {
+        "Content-Type": "application/pdf",
+        "Content-Disposition": `inline; filename="certificado-${courseSlug}.pdf"`,
+      },
+    });
+  } catch (err) {
+    // TEMP diagnóstico: exponer el error del render para depurar en producción
+    const msg = err instanceof Error ? `${err.message}\n\n${err.stack}` : String(err);
+    return new NextResponse(msg, {
+      status: 500,
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    });
+  }
 }
