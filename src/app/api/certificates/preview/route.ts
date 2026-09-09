@@ -46,9 +46,8 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (err) {
-    // TEMP diagnóstico: exponer el error del render para depurar en producción
-    const msg = err instanceof Error ? `${err.message}\n\n${err.stack}` : String(err);
-    return new NextResponse(msg, {
+    console.error("Error al generar el certificado (preview):", err);
+    return new NextResponse("No se pudo generar el certificado.", {
       status: 500,
       headers: { "Content-Type": "text/plain; charset=utf-8" },
     });
