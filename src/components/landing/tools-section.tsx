@@ -4,283 +4,99 @@ import { motion } from "framer-motion";
 
 interface Tool {
   name: string;
-  color: string;
-  bg: string;
-  border: string;
-  logo: React.ReactNode;
+  /** Color de marca para el hover (los negros se muestran claros sobre fondo oscuro) */
+  hex: string;
+  /** Path oficial (simple-icons), viewBox 0 0 24 24 */
+  path: string;
 }
 
 const tools: Tool[] = [
   {
     name: "Claude",
-    color: "text-[#D4A574]",
-    bg: "bg-[#D4A574]/10",
-    border: "border-[#D4A574]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M16.5 3.5C13 3.5 11 6 11 8.5C11 11 9 13.5 5.5 13.5" stroke="#D4A574" strokeWidth="2" strokeLinecap="round" />
-        <path d="M8 3.5C11 3.5 13 6 13 8.5C13 11 15 13.5 18.5 13.5" stroke="#D4A574" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="12" cy="17" r="3.5" stroke="#D4A574" strokeWidth="2" />
-      </svg>
-    ),
-  },
-  {
-    name: "ChatGPT",
-    color: "text-[#10A37F]",
-    bg: "bg-[#10A37F]/10",
-    border: "border-[#10A37F]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#10A37F" strokeWidth="1.5" />
-        <path d="M8 12h8M12 8v8M8 8l8 8M16 8l-8 8" stroke="#10A37F" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
+    hex: "#D4A574",
+    path: "m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z",
   },
   {
     name: "Gemini",
-    color: "text-[#4285F4]",
-    bg: "bg-[#4285F4]/10",
-    border: "border-[#4285F4]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M12 2C12 2 4 8 4 14a8 8 0 0016 0c0-6-8-12-8-12z" fill="url(#gemini)" />
-        <defs>
-          <linearGradient id="gemini" x1="4" y1="2" x2="20" y2="22">
-            <stop stopColor="#4285F4" />
-            <stop offset="1" stopColor="#A855F7" />
-          </linearGradient>
-        </defs>
-      </svg>
-    ),
-  },
-  {
-    name: "Cursor",
-    color: "text-white",
-    bg: "bg-white/8",
-    border: "border-white/15",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M5 3l14 9-6 2-3 7L5 3z" fill="white" fillOpacity="0.9" />
-      </svg>
-    ),
-  },
-  {
-    name: "v0",
-    color: "text-white",
-    bg: "bg-white/8",
-    border: "border-white/15",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M6 6l6 12 6-12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="19" cy="7" r="2.5" stroke="white" strokeWidth="1.5" />
-      </svg>
-    ),
-  },
-  {
-    name: "Lovable",
-    color: "text-[#FF6B6B]",
-    bg: "bg-[#FF6B6B]/10",
-    border: "border-[#FF6B6B]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M12 21C12 21 3 14 3 8.5C3 5.42 5.42 3 8.5 3c1.74 0 3.41.81 4.5 2.09A6.04 6.04 0 0115.5 3C18.58 3 21 5.42 21 8.5 21 14 12 21 12 21z" fill="#FF6B6B" />
-      </svg>
-    ),
-  },
-  {
-    name: "Figma",
-    color: "text-[#A259FF]",
-    bg: "bg-[#A259FF]/10",
-    border: "border-[#A259FF]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <rect x="6" y="3" width="5" height="6" rx="2.5" fill="#F24E1E" />
-        <rect x="13" y="3" width="5" height="6" rx="2.5" fill="#FF7262" />
-        <rect x="6" y="9" width="5" height="6" rx="2.5" fill="#A259FF" />
-        <circle cx="15.5" cy="12" r="2.5" fill="#1ABCFE" />
-        <rect x="6" y="15" width="5" height="6" rx="2.5" fill="#0ACF83" />
-      </svg>
-    ),
-  },
-  {
-    name: "Canva",
-    color: "text-[#00C4CC]",
-    bg: "bg-[#00C4CC]/10",
-    border: "border-[#00C4CC]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <circle cx="12" cy="12" r="9" fill="#7D2AE8" />
-        <path d="M14.5 9.5c-.8-1-2-1.5-3-1.2-1.8.5-2.8 2.8-2.2 5 .5 1.8 2 3 3.5 2.7 1-.2 1.7-1 2-1.8" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    name: "Tienda Nube",
-    color: "text-[#2F88FF]",
-    bg: "bg-[#2F88FF]/10",
-    border: "border-[#2F88FF]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M4 16.5a4 4 0 014-4h.5a5 5 0 019.5-1.5A3.5 3.5 0 0120 14.5a3 3 0 01-1 5.5H7a3 3 0 01-3-3.5z" fill="#2F88FF" />
-      </svg>
-    ),
-  },
-  {
-    name: "MercadoPago",
-    color: "text-[#00BCFF]",
-    bg: "bg-[#00BCFF]/10",
-    border: "border-[#00BCFF]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <rect x="3" y="6" width="18" height="12" rx="2" stroke="#00BCFF" strokeWidth="1.5" />
-        <path d="M3 10h18" stroke="#00BCFF" strokeWidth="1.5" />
-        <rect x="6" y="13" width="4" height="2" rx="0.5" fill="#00BCFF" />
-      </svg>
-    ),
-  },
-  {
-    name: "Vercel",
-    color: "text-white",
-    bg: "bg-white/8",
-    border: "border-white/15",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M12 4L22 20H2L12 4z" fill="white" />
-      </svg>
-    ),
-  },
-  {
-    name: "Supabase",
-    color: "text-[#3ECF8E]",
-    bg: "bg-[#3ECF8E]/10",
-    border: "border-[#3ECF8E]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M13.5 21c-.3.4-.9.1-.9-.4V13h6.8c.7 0 1.1.8.6 1.3L13.5 21z" fill="#3ECF8E" />
-        <path d="M10.5 3c.3-.4.9-.1.9.4V11H4.6c-.7 0-1.1-.8-.6-1.3L10.5 3z" fill="#3ECF8E" fillOpacity="0.6" />
-      </svg>
-    ),
-  },
-  {
-    name: "CapCut",
-    color: "text-white",
-    bg: "bg-white/8",
-    border: "border-white/15",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <circle cx="12" cy="12" r="9" stroke="white" strokeWidth="1.5" />
-        <path d="M10 8l6 4-6 4V8z" fill="white" />
-      </svg>
-    ),
-  },
-  {
-    name: "DaVinci",
-    color: "text-[#FF6B35]",
-    bg: "bg-[#FF6B35]/10",
-    border: "border-[#FF6B35]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <rect x="3" y="5" width="18" height="14" rx="2" stroke="#FF6B35" strokeWidth="1.5" />
-        <path d="M3 9h18" stroke="#FF6B35" strokeWidth="1.5" />
-        <rect x="5" y="11" width="6" height="6" rx="1" fill="#FF6B35" fillOpacity="0.4" />
-        <rect x="13" y="11" width="6" height="2" rx="0.5" fill="#FF6B35" fillOpacity="0.4" />
-        <rect x="13" y="15" width="4" height="2" rx="0.5" fill="#FF6B35" fillOpacity="0.4" />
-      </svg>
-    ),
+    hex: "#8E75B2",
+    path: "M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81",
   },
   {
     name: "ElevenLabs",
-    color: "text-[#B4F461]",
-    bg: "bg-[#B4F461]/10",
-    border: "border-[#B4F461]/20",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <rect x="9" y="4" width="2.5" height="16" rx="1.25" fill="#B4F461" />
-        <rect x="13.5" y="4" width="2.5" height="16" rx="1.25" fill="#B4F461" />
-      </svg>
-    ),
+    hex: "#EDEDED",
+    path: "M4.6035 0v24h4.9317V0zm9.8613 0v24h4.9317V0z",
   },
   {
-    name: "Notion AI",
-    color: "text-white",
-    bg: "bg-white/8",
-    border: "border-white/15",
-    logo: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 sm:h-7 sm:w-7">
-        <path d="M5 4h10l4 4v12a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="white" strokeWidth="1.5" />
-        <path d="M7 9h6M7 12h8M7 15h5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
+    name: "Figma",
+    hex: "#F24E1E",
+    path: "M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z",
   },
-];
-
-// Group by category
-const categories = [
-  { label: "Inteligencia Artificial", items: ["Claude", "ChatGPT", "Gemini"] },
-  { label: "Desarrollo", items: ["Cursor", "v0", "Lovable", "Vercel", "Supabase"] },
-  { label: "Diseño y Video", items: ["Figma", "Canva", "CapCut", "DaVinci"] },
-  { label: "E-commerce", items: ["Tienda Nube", "MercadoPago"] },
-  { label: "Productividad", items: ["ElevenLabs", "Notion AI"] },
+  {
+    name: "Notion",
+    hex: "#EDEDED",
+    path: "M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z",
+  },
+  {
+    name: "Cursor",
+    hex: "#EDEDED",
+    path: "M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23",
+  },
+  {
+    name: "Vercel",
+    hex: "#EDEDED",
+    path: "m12 1.608 12 20.784H0Z",
+  },
+  {
+    name: "Supabase",
+    hex: "#3FCF8E",
+    path: "M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z",
+  },
+  {
+    name: "Mercado Pago",
+    hex: "#00B1EA",
+    path: "M11.115 16.479a.93.927 0 0 1-.939-.886c-.002-.042-.006-.155-.103-.155-.04 0-.074.023-.113.059-.112.103-.254.206-.46.206a.816.814 0 0 1-.305-.066c-.535-.214-.542-.578-.521-.725.006-.038.007-.08-.02-.11l-.032-.03h-.034c-.027 0-.055.012-.093.039a.788.786 0 0 1-.454.16.7.699 0 0 1-.253-.05c-.708-.27-.65-.928-.617-1.126.005-.041-.005-.072-.03-.092l-.05-.04-.047.043a.728.726 0 0 1-.505.203.73.728 0 0 1-.732-.725c0-.4.328-.722.732-.722.364 0 .675.27.721.63l.026.195.11-.165c.01-.018.307-.46.852-.46.102 0 .21.016.316.05.434.13.508.52.519.68.008.094.075.1.09.1.037 0 .064-.024.083-.045a.746.744 0 0 1 .54-.225c.128 0 .263.03.402.09.69.293.379 1.158.374 1.167-.058.144-.061.207-.005.244l.027.013h.02c.03 0 .07-.014.134-.035.093-.032.235-.08.367-.08a.944.942 0 0 1 .94.93.936.934 0 0 1-.94.928zm7.302-4.171c-1.138-.98-3.768-3.24-4.481-3.77-.406-.302-.685-.462-.928-.533a1.559 1.554 0 0 0-.456-.07c-.182 0-.376.032-.58.095-.46.145-.918.505-1.362.854l-.023.018c-.414.324-.84.66-1.164.73a1.986 1.98 0 0 1-.43.049c-.362 0-.687-.104-.81-.258-.02-.025-.007-.066.04-.125l.008-.008 1-1.067c.783-.774 1.525-1.506 3.23-1.545h.085c1.062 0 2.12.469 2.24.524a7.03 7.03 0 0 0 3.056.724c1.076 0 2.188-.263 3.354-.795a9.135 9.11 0 0 0-.405-.317c-1.025.44-2.003.66-2.946.66-.962 0-1.925-.229-2.858-.68-.05-.022-1.22-.567-2.44-.57-.032 0-.065 0-.096.002-1.434.033-2.24.536-2.782.976-.528.013-.982.138-1.388.25-.361.1-.673.186-.979.185-.125 0-.35-.01-.37-.012-.35-.01-2.115-.437-3.518-.962-.143.1-.28.203-.415.31 1.466.593 3.25 1.053 3.812 1.089.157.01.323.027.491.027.372 0 .744-.103 1.104-.203.213-.059.446-.123.692-.17l-.196.194-1.017 1.087c-.08.08-.254.294-.14.557a.705.703 0 0 0 .268.292c.243.162.677.27 1.08.271.152 0 .297-.015.43-.044.427-.095.874-.448 1.349-.82.377-.296.913-.672 1.323-.782a1.494 1.49 0 0 1 .37-.05.611.61 0 0 1 .095.005c.27.034.533.125 1.003.472.835.62 4.531 3.815 4.566 3.846.002.002.238.203.22.537-.007.186-.11.352-.294.466a.902.9 0 0 1-.484.15.804.802 0 0 1-.428-.124c-.014-.01-1.28-1.157-1.746-1.543-.074-.06-.146-.115-.22-.115a.122.122 0 0 0-.096.045c-.073.09.01.212.105.294l1.48 1.47c.002 0 .184.17.204.395.012.244-.106.447-.35.606a.957.955 0 0 1-.526.171.766.764 0 0 1-.42-.127l-.214-.206a21.035 20.978 0 0 0-1.08-1.009c-.072-.058-.148-.112-.221-.112a.127.127 0 0 0-.094.038c-.033.037-.056.103.028.212a.698.696 0 0 0 .075.083l1.078 1.198c.01.01.222.26.024.511l-.038.048a1.18 1.178 0 0 1-.1.096c-.184.15-.43.164-.527.164a.8.798 0 0 1-.147-.012c-.106-.018-.178-.048-.212-.089l-.013-.013c-.06-.06-.602-.609-1.054-.98-.059-.05-.133-.11-.21-.11a.128.128 0 0 0-.096.042c-.09.096.044.24.1.293l.92 1.003a.204.204 0 0 1-.033.062c-.033.044-.144.155-.479.196a.91.907 0 0 1-.122.007c-.345 0-.712-.164-.902-.264a1.343 1.34 0 0 0 .13-.576 1.368 1.365 0 0 0-1.42-1.357c.024-.342-.025-.99-.697-1.274a1.455 1.452 0 0 0-.575-.125c-.146 0-.287.025-.42.075a1.153 1.15 0 0 0-.671-.564 1.52 1.515 0 0 0-.494-.085c-.28 0-.537.08-.767.242a1.168 1.165 0 0 0-.903-.43 1.173 1.17 0 0 0-.82.335c-.287-.217-1.425-.93-4.467-1.613a17.39 17.344 0 0 1-.692-.189 4.822 4.82 0 0 0-.077.494l.67.157c3.108.682 4.136 1.391 4.309 1.525a1.145 1.142 0 0 0-.09.442 1.16 1.158 0 0 0 1.378 1.132c.096.467.406.821.879 1.003a1.165 1.162 0 0 0 .415.08c.09 0 .179-.012.266-.034.086.22.282.493.722.668a1.233 1.23 0 0 0 .457.094c.122 0 .241-.022.355-.063a1.373 1.37 0 0 0 1.269.841c.37.002.726-.147.985-.41.221.121.688.341 1.163.341.06 0 .118-.002.175-.01.47-.059.689-.24.789-.382a.571.57 0 0 0 .048-.078c.11.032.234.058.373.058.255 0 .501-.086.75-.265.244-.174.418-.424.444-.637v-.01c.083.017.167.026.251.026.265 0 .527-.082.773-.242.48-.31.562-.715.554-.98a1.28 1.279 0 0 0 .978-.194 1.04 1.04 0 0 0 .502-.808 1.088 1.085 0 0 0-.16-.653c.804-.342 2.636-1.003 4.795-1.483a4.734 4.721 0 0 0-.067-.492 27.742 27.667 0 0 0-5.049 1.62zm5.123-.763c0 4.027-5.166 7.293-11.537 7.293-6.372 0-11.538-3.266-11.538-7.293 0-4.028 5.165-7.293 11.539-7.293 6.371 0 11.537 3.265 11.537 7.293zm.46.004c0-4.272-5.374-7.755-12-7.755S.002 7.277.002 11.55L0 12.004c0 4.533 4.695 8.203 11.999 8.203 7.347 0 12-3.67 12-8.204z",
+  },
 ];
 
 export function ToolsSection() {
   return (
-    <section className="py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-14">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-xs font-medium uppercase tracking-widest text-neon-green mb-3 sm:mb-4">
+          <p className="mb-2 text-xs font-medium uppercase tracking-widest text-neon-green">
             Tecnología de primer nivel
           </p>
-          <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
-            Herramientas profesionales
+          <h2 className="text-xl font-bold sm:text-2xl">
+            Aprendé las herramientas que usan los profesionales
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-foreground-secondary sm:mt-4 sm:text-base">
-            Las mismas tecnologías que usan empresas y profesionales de primera
-            línea en todo el mundo.
-          </p>
         </motion.div>
 
-        <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((cat, catIdx) => (
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5 sm:mt-9 sm:gap-3">
+          {tools.map((tool, i) => (
             <motion.div
-              key={cat.label}
-              className="rounded-2xl border border-border bg-card/50 p-5 sm:p-6"
-              initial={{ opacity: 0, y: 20 }}
+              key={tool.name}
+              className="group flex items-center gap-2 rounded-full border border-border bg-card/40 px-3.5 py-2 transition-colors hover:border-[color:var(--brand)]/40 sm:px-4 sm:py-2.5"
+              style={{ ["--brand" as string]: tool.hex }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: catIdx * 0.08 }}
+              transition={{ delay: i * 0.04 }}
             >
-              <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-neon-green">
-                {cat.label}
-              </p>
-              <div className="space-y-3">
-                {cat.items.map((name, i) => {
-                  const tool = tools.find((t) => t.name === name);
-                  if (!tool) return null;
-                  return (
-                    <motion.div
-                      key={tool.name}
-                      className={`flex items-center gap-3 rounded-xl border p-3 transition-all duration-200 hover:scale-[1.02] ${tool.bg} ${tool.border}`}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.05 }}
-                    >
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background/50">
-                        {tool.logo}
-                      </div>
-                      <span className={`text-sm font-semibold ${tool.color}`}>
-                        {tool.name}
-                      </span>
-                    </motion.div>
-                  );
-                })}
-              </div>
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-4 w-4 shrink-0 fill-foreground-secondary transition-colors group-hover:fill-[color:var(--brand)] sm:h-[18px] sm:w-[18px]"
+              >
+                <path d={tool.path} />
+              </svg>
+              <span className="text-xs font-medium text-foreground-secondary transition-colors group-hover:text-white sm:text-sm">
+                {tool.name}
+              </span>
             </motion.div>
           ))}
         </div>
