@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { renderCertificatePDF } from "@/lib/certificate-render";
+import {
+  renderCertificatePDF,
+  renderCertificatePNG,
+} from "@/lib/certificate-render";
 import { COURSES, COURSE_COMPETENCIES } from "@/lib/constants";
 import { getPublicBaseUrl } from "@/lib/site-url";
 
@@ -25,25 +28,42 @@ export async function GET(request: NextRequest) {
   const baseUrl = getPublicBaseUrl(request);
   const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
 
-  try {
-    const pdfBytes = await renderCertificatePDF({
-      studentName: name,
-      courseTitle,
-      competencyDescription: competency,
-      issuedDate: new Date().toLocaleDateString("es-AR", {
-        day: "2-digit",
-        month: "long",
-        year: "numeric",
-      }),
-      verificationHash,
-      verificationUrl,
-      certificateCode,
-    });
+  // format=png|image => descarga como imagen HD; por defecto PDF.
+  const format = (searchParams.get("format") || "pdf").toLowerCase();
+  const asImage = format === "png" || format === "image" || format === "imagen";
+  // download=1 fuerza descarga (attachment) en vez de abrir en el navegador.
+  const asDownload = searchParams.get("download") === "1";
 
+  const data = {
+    studentName: name,
+    courseTitle,
+    competencyDescription: competency,
+    issuedDate: new Date().toLocaleDateString("es-AR", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    }),
+    verificationHash,
+    verificationUrl,
+    certificateCode,
+  };
+
+  try {
+    if (asImage) {
+      const pngBytes = await renderCertificatePNG(data);
+      return new NextResponse(Buffer.from(pngBytes), {
+        headers: {
+          "Content-Type": "image/png",
+          "Content-Disposition": `${asDownload ? "attachment" : "inline"}; filename="certificado-${courseSlug}.png"`,
+        },
+      });
+    }
+
+    const pdfBytes = await renderCertificatePDF(data);
     return new NextResponse(Buffer.from(pdfBytes), {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": `inline; filename="certificado-${courseSlug}.pdf"`,
+        "Content-Disposition": `${asDownload ? "attachment" : "inline"}; filename="certificado-${courseSlug}.pdf"`,
       },
     });
   } catch (err) {

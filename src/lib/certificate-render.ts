@@ -54,10 +54,10 @@ async function getBrowser(): Promise<Browser> {
 }
 
 /**
- * Genera el certificado en PDF renderizando el HTML/CSS definitivo con Chromium.
- * Es idéntico al diseño aprobado (degradados, glow, panel glass, etc.).
+ * Captura el certificado como imagen PNG (2x, nítida) renderizando el HTML/CSS
+ * definitivo con Chromium. Base para el PDF y para la descarga como imagen.
  */
-export async function renderCertificatePDF(
+export async function renderCertificatePNG(
   data: CertificateData
 ): Promise<Uint8Array> {
   const qrDataUrl = await QRCode.toDataURL(data.verificationUrl, {
@@ -92,30 +92,29 @@ export async function renderCertificatePDF(
       await (document as unknown as { fonts: { ready: Promise<unknown> } }).fonts
         .ready;
     });
-
-    // Capturamos el diseño como imagen y armamos un PDF de una sola imagen.
-    // Esto evita las fuentes Tipo 3 y las máscaras de transparencia que generaba
-    // Chromium con page.pdf(), que los visores de PDF móviles renderizan mal
-    // (el glow neón salía como bloques verdes). Un PDF de imagen abre bien en
-    // cualquier dispositivo y conserva el diseño exacto.
-    const png = (await page.screenshot({
+    return (await page.screenshot({
       type: "png",
       clip: { x: 0, y: 0, width: CERT_WIDTH, height: CERT_HEIGHT },
     })) as Uint8Array;
-
-    const pdfDoc = await PDFDocument.create();
-    pdfDoc.setTitle(`Certificado ${data.certificateCode}`);
-    pdfDoc.setProducer("Castro Barros Inteligente");
-    const img = await pdfDoc.embedPng(png);
-    const pdfPage = pdfDoc.addPage([CERT_WIDTH, CERT_HEIGHT]);
-    pdfPage.drawImage(img, {
-      x: 0,
-      y: 0,
-      width: CERT_WIDTH,
-      height: CERT_HEIGHT,
-    });
-    return await pdfDoc.save();
   } finally {
     await browser.close();
   }
+}
+
+/**
+ * Genera el certificado en PDF. Envuelve la imagen PNG en un PDF de una sola
+ * página. Al ser un PDF de imagen (sin fuentes Tipo 3 ni máscaras de
+ * transparencia) abre bien en cualquier dispositivo y conserva el diseño exacto.
+ */
+export async function renderCertificatePDF(
+  data: CertificateData
+): Promise<Uint8Array> {
+  const png = await renderCertificatePNG(data);
+  const pdfDoc = await PDFDocument.create();
+  pdfDoc.setTitle(`Certificado ${data.certificateCode}`);
+  pdfDoc.setProducer("Castro Barros Inteligente");
+  const img = await pdfDoc.embedPng(png);
+  const pdfPage = pdfDoc.addPage([CERT_WIDTH, CERT_HEIGHT]);
+  pdfPage.drawImage(img, { x: 0, y: 0, width: CERT_WIDTH, height: CERT_HEIGHT });
+  return await pdfDoc.save();
 }

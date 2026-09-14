@@ -5,7 +5,6 @@ import {
   BadgeCheck,
   XCircle,
   ShieldCheck,
-  Download,
   Award,
   Calendar,
   BookOpen,
@@ -14,6 +13,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { getDemoCertificate } from "@/lib/certificates-demo";
+import { CertificateActions } from "@/components/certificate/certificate-actions";
 
 export const dynamic = "force-dynamic";
 
@@ -227,22 +227,12 @@ export default async function VerificarPage({ params }: PageProps) {
           </div>
 
           {/* Acciones */}
-          <div className="border-t border-border p-4 sm:p-5">
-            <Link
-              href={`/api/certificates/preview?name=${encodeURIComponent(
-                certificate.studentName
-              )}&title=${encodeURIComponent(
-                certificate.courseTitle
-              )}&competency=${encodeURIComponent(
-                certificate.competency
-              )}&code=${encodeURIComponent(certificate.code)}`}
-              target="_blank"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-neon-green px-4 py-3 text-sm font-semibold text-black transition-colors hover:bg-neon-green/90"
-            >
-              <Download className="h-4 w-4" />
-              Descargar certificado (PDF)
-            </Link>
-          </div>
+          <CertificateActions
+            studentName={certificate.studentName}
+            courseTitle={certificate.courseTitle}
+            competency={certificate.competency}
+            code={certificate.code}
+          />
         </div>
 
         {/* Pie */}
