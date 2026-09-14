@@ -171,8 +171,9 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
+        style={{ backgroundColor: "#0B0B0C" }}
         className={cn(
-          "fixed inset-y-0 right-0 z-50 w-[280px] transform border-l border-border bg-[#111111] transition-transform duration-300 md:hidden",
+          "fixed inset-y-0 right-0 z-[60] w-[280px] transform border-l border-border shadow-2xl transition-transform duration-300 md:hidden",
           mobileOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -243,7 +244,7 @@ export function Navbar() {
       {/* Mobile overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 md:hidden"
+          className="fixed inset-0 z-[55] bg-black/70 md:hidden"
           onClick={() => setMobileOpen(false)}
           aria-hidden="true"
         />
