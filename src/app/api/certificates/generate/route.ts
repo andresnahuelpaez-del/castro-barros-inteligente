@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { renderCertificatePDF } from "@/lib/certificate-render";
 import { COURSE_COMPETENCIES } from "@/lib/constants";
+import { getPublicBaseUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -121,7 +122,7 @@ export async function POST(request: NextRequest) {
     .digest("hex");
 
   const courseSlug = course?.slug || "";
-  const baseUrl = request.nextUrl.origin;
+  const baseUrl = getPublicBaseUrl(request);
   const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
 
   // Generate the PDF

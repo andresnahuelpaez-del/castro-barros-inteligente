@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { renderCertificatePDF } from "@/lib/certificate-render";
 import { COURSES, COURSE_COMPETENCIES } from "@/lib/constants";
+import { getPublicBaseUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -21,7 +22,7 @@ export async function GET(request: NextRequest) {
 
   const certificateCode = searchParams.get("code") || "CERT-CB-2026-00142";
   const verificationHash = certificateCode;
-  const baseUrl = request.nextUrl.origin;
+  const baseUrl = getPublicBaseUrl(request);
   const verificationUrl = `${baseUrl}/verificar/${verificationHash}`;
 
   try {
