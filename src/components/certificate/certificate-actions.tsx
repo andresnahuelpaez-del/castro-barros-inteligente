@@ -44,12 +44,13 @@ export function CertificateActions({
     setVerifyUrl(window.location.href);
   }, []);
 
+  // Sin download=1 => se abre inline: la pestaña MUESTRA el certificado y el
+  // navegador ofrece guardarlo (no una pestaña en blanco con prompt de descarga).
   const params = new URLSearchParams({
     name: studentName,
     title: courseTitle,
     competency,
     code,
-    download: "1",
   });
   const pdfUrl = `/api/certificates/preview?${params.toString()}`;
   const imgUrl = `/api/certificates/preview?${params.toString()}&format=png`;
