@@ -1,5 +1,6 @@
 import puppeteer, { type Browser } from "puppeteer-core";
 import QRCode from "qrcode";
+import { PDFDocument } from "pdf-lib";
 import {
   buildCertificateHTML,
   CERT_WIDTH,
@@ -79,20 +80,41 @@ export async function renderCertificatePDF(
   const browser = await getBrowser();
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width: CERT_WIDTH, height: CERT_HEIGHT });
+    // deviceScaleFactor 2 => captura a 2x para nitidez.
+    await page.setViewport({
+      width: CERT_WIDTH,
+      height: CERT_HEIGHT,
+      deviceScaleFactor: 2,
+    });
     await page.setContent(html, { waitUntil: "load" });
-    // Asegurar que la fuente embebida esté lista antes de imprimir
+    // Asegurar que la fuente embebida esté lista antes de capturar
     await page.evaluate(async () => {
       await (document as unknown as { fonts: { ready: Promise<unknown> } }).fonts
         .ready;
     });
-    const pdf = await page.pdf({
-      width: `${CERT_WIDTH}px`,
-      height: `${CERT_HEIGHT}px`,
-      printBackground: true,
-      pageRanges: "1",
+
+    // Capturamos el diseño como imagen y armamos un PDF de una sola imagen.
+    // Esto evita las fuentes Tipo 3 y las máscaras de transparencia que generaba
+    // Chromium con page.pdf(), que los visores de PDF móviles renderizan mal
+    // (el glow neón salía como bloques verdes). Un PDF de imagen abre bien en
+    // cualquier dispositivo y conserva el diseño exacto.
+    const png = (await page.screenshot({
+      type: "png",
+      clip: { x: 0, y: 0, width: CERT_WIDTH, height: CERT_HEIGHT },
+    })) as Uint8Array;
+
+    const pdfDoc = await PDFDocument.create();
+    pdfDoc.setTitle(`Certificado ${data.certificateCode}`);
+    pdfDoc.setProducer("Castro Barros Inteligente");
+    const img = await pdfDoc.embedPng(png);
+    const pdfPage = pdfDoc.addPage([CERT_WIDTH, CERT_HEIGHT]);
+    pdfPage.drawImage(img, {
+      x: 0,
+      y: 0,
+      width: CERT_WIDTH,
+      height: CERT_HEIGHT,
     });
-    return pdf;
+    return await pdfDoc.save();
   } finally {
     await browser.close();
   }

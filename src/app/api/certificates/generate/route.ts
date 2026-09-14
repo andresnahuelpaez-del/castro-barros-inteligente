@@ -6,7 +6,7 @@ import { COURSE_COMPETENCIES } from "@/lib/constants";
 import { getPublicBaseUrl } from "@/lib/site-url";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 export async function POST(request: NextRequest) {
   const supabase = await createClient();
