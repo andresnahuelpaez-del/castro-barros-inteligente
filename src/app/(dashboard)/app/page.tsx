@@ -8,13 +8,15 @@ import {
   ArrowRight,
   Compass,
   TrendingUp,
-  PlayCircle,
-  Clock,
 } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 import { GlassCard } from "@/components/common/glass-card";
 import { COURSES } from "@/lib/constants";
-import { MOCK_MODULES } from "@/lib/mock-course-data";
+import { ALL_LESSONS } from "@/lib/mock-course-data";
+import {
+  LessonsStat,
+  ContinueLearningCard,
+  DashboardCourseCard,
+} from "@/components/course/dashboard-progress";
 
 export const dynamic = "force-dynamic";
 
@@ -26,19 +28,13 @@ export default async function DashboardPage() {
   // Mock data for visual demo
   const userName = "Estudiante";
   const enrolledCourses = COURSES.slice(0, 3);
-  const totalLessons = MOCK_MODULES.reduce(
-    (acc, m) => acc + m.lessons.length,
-    0
-  );
-  const completedLessons = MOCK_MODULES.reduce(
-    (acc, m) => acc + m.lessons.filter((l) => l.completed).length,
-    0
-  );
-
-  // Find the next uncompleted lesson
-  const nextLesson = MOCK_MODULES.flatMap((m) => m.lessons).find(
-    (l) => !l.completed
-  );
+  const totalLessons = ALL_LESSONS.length;
+  const firstCourse = enrolledCourses[0];
+  const orderedLessons = ALL_LESSONS.map((l) => ({
+    slug: l.slug,
+    title: l.title,
+    durationMin: l.durationMin,
+  }));
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -80,12 +76,7 @@ export default async function DashboardPage() {
               Lecciones
             </h3>
           </div>
-          <p className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-            {completedLessons}
-            <span className="text-sm font-normal text-foreground-muted">
-              /{totalLessons}
-            </span>
-          </p>
+          <LessonsStat courseSlug={firstCourse.slug} total={totalLessons} />
         </div>
         <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
           <div className="flex items-center gap-2 sm:gap-3">
@@ -99,44 +90,11 @@ export default async function DashboardPage() {
       </div>
 
       {/* Continue learning */}
-      {nextLesson && (
-        <div className="mt-8">
-          <h2 className="text-lg font-semibold text-white mb-4">
-            Continuá aprendiendo
-          </h2>
-          <Link href={`/app/cursos/${enrolledCourses[0].slug}/leccion/${nextLesson.slug}`}>
-            <div className="group rounded-2xl border border-neon-green/20 bg-card p-4 sm:p-5 hover:border-neon-green/40 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-green/10 sm:h-14 sm:w-14">
-                  <PlayCircle className="h-6 w-6 text-neon-green sm:h-7 sm:w-7" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs text-foreground-muted mb-0.5">
-                    {enrolledCourses[0].title}
-                  </p>
-                  <p className="text-sm font-semibold text-white group-hover:text-neon-green transition-colors truncate sm:text-base">
-                    {nextLesson.title}
-                  </p>
-                  <div className="flex items-center gap-3 mt-1">
-                    <span className="flex items-center gap-1 text-xs text-foreground-muted">
-                      <Clock className="h-3 w-3" />
-                      {nextLesson.durationMin} min
-                    </span>
-                    <span className="text-xs text-foreground-muted">
-                      {completedLessons}/{totalLessons} completadas
-                    </span>
-                  </div>
-                </div>
-                <ArrowRight className="h-5 w-5 shrink-0 text-foreground-muted group-hover:text-neon-green transition-colors" />
-              </div>
-              <Progress
-                value={Math.round((completedLessons / totalLessons) * 100)}
-                className="mt-3 h-1.5"
-              />
-            </div>
-          </Link>
-        </div>
-      )}
+      <ContinueLearningCard
+        courseSlug={firstCourse.slug}
+        courseTitle={firstCourse.title}
+        lessons={orderedLessons}
+      />
 
       {/* Enrolled courses */}
       <div className="mt-8">
@@ -150,34 +108,16 @@ export default async function DashboardPage() {
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {enrolledCourses.map((course, i) => {
-            const progress = i === 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
-            return (
-              <Link key={course.slug} href={`/app/cursos/${course.slug}`}>
-                <div className="group rounded-2xl border border-border bg-card p-4 sm:p-5 hover:border-foreground-muted/30 transition-colors h-full">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="inline-block h-2 w-2 rounded-full bg-neon-green" />
-                    <span className="text-xs text-foreground-muted">
-                      En progreso
-                    </span>
-                  </div>
-                  <h3 className="text-sm font-semibold text-white group-hover:text-neon-green transition-colors sm:text-base">
-                    {course.title}
-                  </h3>
-                  <p className="mt-1 text-xs text-foreground-secondary line-clamp-2">
-                    {course.shortDescription}
-                  </p>
-                  <div className="mt-4">
-                    <div className="flex items-center justify-between text-xs text-foreground-muted mb-1.5">
-                      <span>{progress}% completado</span>
-                      <span>{course.durationMonths} meses</span>
-                    </div>
-                    <Progress value={progress} className="h-1.5" />
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+          {enrolledCourses.map((course) => (
+            <DashboardCourseCard
+              key={course.slug}
+              courseSlug={course.slug}
+              courseTitle={course.title}
+              shortDescription={course.shortDescription}
+              durationMonths={course.durationMonths}
+              lessons={orderedLessons}
+            />
+          ))}
         </div>
       </div>
 
