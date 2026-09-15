@@ -33,6 +33,16 @@ export const DEMO_CERTIFICATES: Record<string, DemoCertificate> = {
     issuedAt: "2026-09-09T00:00:00Z",
     durationMonths: 4,
   },
+  "CBI-2026-000142": {
+    code: "CBI-2026-000142",
+    studentName: "Herrera Juan Cruz",
+    courseTitle: "Minería con Inteligencia Artificial",
+    courseSlug: null,
+    competency:
+      "aplicación profesional de Inteligencia Artificial en el sector minero: monitoreo de procesos y de planta, análisis de datos para la toma de decisiones, seguridad con visión por computadora y exploración con imágenes satelitales",
+    issuedAt: "2026-09-15T00:00:00Z",
+    durationMonths: 4,
+  },
 };
 
 export function getDemoCertificate(code: string): DemoCertificate | null {
