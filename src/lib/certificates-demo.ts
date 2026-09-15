@@ -35,7 +35,7 @@ export const DEMO_CERTIFICATES: Record<string, DemoCertificate> = {
   },
   "CBI-2026-000142": {
     code: "CBI-2026-000142",
-    studentName: "Vega Camila Rocío",
+    studentName: "Ledesma Julieta Antonella",
     courseTitle: "Minería con Inteligencia Artificial",
     courseSlug: null,
     competency:
