@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const docentes = [
-  { name: "Docente 1", role: "Especialista en IA", course: "IA para tu Trabajo", color: "from-neon-green/30 to-neon-green/5" },
-  { name: "Docente 2", role: "Content Creator", course: "Creación de Contenido con IA", color: "from-secondary/30 to-secondary/5" },
-  { name: "Docente 3", role: "Marketing Digital", course: "Marketing Digital con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
-  { name: "Docente 4", role: "Desarrollador Full Stack", course: "Vibe Coding", color: "from-neon-green/30 to-neon-green/5" },
+  { name: "Docente 1", role: "Especialista en Industria 4.0", course: "Gemelos Digitales con IA", color: "from-neon-green/30 to-neon-green/5" },
+  { name: "Docente 2", role: "Especialista en Minería", course: "Minería con IA", color: "from-secondary/30 to-secondary/5" },
+  { name: "Docente 3", role: "Desarrollador Full Stack", course: "Programación y Desarrollo con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
+  { name: "Docente 4", role: "Marketing Digital", course: "Marketing y Creación de Contenido con IA", color: "from-neon-green/30 to-neon-green/5" },
   { name: "Docente 5", role: "Analista de Datos", course: "Análisis de Datos con IA", color: "from-secondary/30 to-secondary/5" },
-  { name: "Docente 6", role: "Diseñador Web", course: "Diseño Web con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
+  { name: "Docente 6", role: "Diseñador Digital", course: "Diseño Digital con IA", color: "from-neon-cyan/30 to-neon-cyan/5" },
 ];
 
 function getInitials(name: string) {

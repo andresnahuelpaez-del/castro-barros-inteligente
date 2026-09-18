@@ -21,7 +21,7 @@ export default async function CertificadosPage() {
   // Mock certificate for visual demo
   const mockCertificate = {
     id: "CERT-CB-2026-00142",
-    courseTitle: "IA para tu Trabajo",
+    courseTitle: "Gemelos Digitales con IA",
     issuedAt: "15 de abril de 2026",
     studentName: "Estudiante Demo",
     verificationUrl: "#",
@@ -33,7 +33,7 @@ export default async function CertificadosPage() {
         Mis certificados
       </h1>
       <p className="mt-1 text-sm text-foreground-secondary">
-        Certificados oficiales emitidos por el Departamento Castro Barros.
+        Certificados oficiales emitidos por la Provincia de La Rioja.
       </p>
 
       {/* Certificate card */}
@@ -91,7 +91,7 @@ export default async function CertificadosPage() {
           {/* Actions */}
           <div className="flex flex-col gap-2 p-4 sm:flex-row sm:p-5">
             <Link
-              href="/api/certificates/preview?name=Estudiante+Demo&course=ia-para-tu-trabajo"
+              href="/api/certificates/preview?name=Estudiante+Demo&course=gemelos-digitales-con-ia"
               target="_blank"
               className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-neon-green text-black px-4 py-2.5 text-sm font-medium hover:bg-neon-green/90 transition-colors"
             >
@@ -106,7 +106,7 @@ export default async function CertificadosPage() {
               Verificación pública
             </Link>
             <Link
-              href="/api/certificates/preview?name=Estudiante+Demo&course=ia-para-tu-trabajo"
+              href="/api/certificates/preview?name=Estudiante+Demo&course=gemelos-digitales-con-ia"
               target="_blank"
               className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium text-white hover:bg-background-tertiary transition-colors"
             >
@@ -165,7 +165,7 @@ export default async function CertificadosPage() {
           Cursos en progreso
         </h3>
         <div className="space-y-3">
-          {["Creación de Contenido con IA", "Marketing Digital con IA"].map(
+          {["Gemelos Digitales con IA", "Minería con IA"].map(
             (title) => (
               <div
                 key={title}

@@ -24,13 +24,24 @@ const GENDERS = [
 ];
 
 const LOCALIDADES = [
-  "Aminga",
-  "Anillaco",
-  "Anjullón",
-  "Chuquis",
-  "Las Peñas",
-  "Pinchas",
-  "San Pedro",
+  "Capital",
+  "Arauco",
+  "Castro Barros",
+  "Chamical",
+  "Chilecito",
+  "Coronel Felipe Varela",
+  "Famatina",
+  "General Ángel V. Peñaloza",
+  "General Belgrano",
+  "General Juan F. Quiroga",
+  "General Lamadrid",
+  "General Ocampo",
+  "General San Martín",
+  "Independencia",
+  "Rosario Vera Peñaloza",
+  "San Blas de Los Sauces",
+  "Sanagasta",
+  "Vinchina",
   "Otra",
 ];
 
@@ -192,7 +203,7 @@ export function OnboardingWizard() {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-white">Tu localidad</h2>
           <p className="text-sm text-foreground-secondary">
-            ¿En qué localidad del Departamento Castro Barros vivís?
+            ¿En qué departamento de la Provincia de La Rioja vivís?
           </p>
           <div>
             <Label>Localidad</Label>

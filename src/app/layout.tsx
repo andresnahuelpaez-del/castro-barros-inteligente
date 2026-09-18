@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Argentina",
     "certificación oficial",
   ],
-  authors: [{ name: "Departamento Castro Barros" }],
+  authors: [{ name: "Escuela Online de Oficios Digitales · Provincia de La Rioja" }],
   openGraph: {
     type: "website",
     locale: "es_AR",

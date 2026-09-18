@@ -34,11 +34,11 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-3 text-xs text-foreground-secondary sm:text-sm">
-              Capacitación digital profesional, gratuita y certificada por el
-              Departamento Castro Barros.
+              Capacitación digital profesional, gratuita y certificada para
+              toda la Provincia de La Rioja.
             </p>
             <p className="mt-3 text-xs text-foreground-muted">
-              Departamento Castro Barros
+              Escuela Online de Oficios Digitales
               <br />
               Provincia de La Rioja, Argentina
             </p>

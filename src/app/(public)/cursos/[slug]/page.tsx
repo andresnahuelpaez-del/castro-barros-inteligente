@@ -391,7 +391,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           Capacitación digital profesional, gratuita y certificada. Estudiás
           desde tu celular o computadora, organizás tus horarios según tu
           disponibilidad, y al completar el curso obtenés un certificado oficial
-          del Departamento Castro Barros con código de verificación pública.
+          de la Provincia de La Rioja con código de verificación pública.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link href="/cursos">

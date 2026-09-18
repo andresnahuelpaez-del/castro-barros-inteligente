@@ -12,12 +12,12 @@ export const maxDuration = 300;
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const name = searchParams.get("name") || "Maria Lopez";
-  const courseSlug = searchParams.get("course") || "ia-para-tu-trabajo";
+  const courseSlug = searchParams.get("course") || "gemelos-digitales-con-ia";
 
   const course = COURSES.find((c) => c.slug === courseSlug);
   // Los parámetros explícitos tienen prioridad (certificados de demo sin slug)
   const courseTitle =
-    searchParams.get("title") || course?.title || "IA para tu Trabajo";
+    searchParams.get("title") || course?.title || "Gemelos Digitales con IA";
   const competency =
     searchParams.get("competency") ||
     COURSE_COMPETENCIES[courseSlug] ||

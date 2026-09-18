@@ -190,7 +190,7 @@ export const APPLICATION_METHODS: ApplicationMethod[] = [
   {
     title: "Contacto directo con negocios locales",
     description:
-      "Ofrecer tus servicios directamente a comercios y emprendedores de tu zona. Es la forma más rápida de conseguir clientes si sos de Castro Barros o alrededores.",
+      "Ofrecer tus servicios directamente a comercios y emprendedores de tu zona. Es la forma más rápida de conseguir tus primeros clientes en tu localidad o departamento.",
     steps: [
       "Hacé una lista de 20 negocios locales que podrían necesitar tus servicios",
       "Prepará una presentación simple: qué hacés, cómo los ayuda, cuánto cuesta",

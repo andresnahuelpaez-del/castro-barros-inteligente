@@ -7,30 +7,30 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "María González",
-    localidad: "Anillaco",
-    course: "IA para tu Trabajo",
-    text: "Nunca pensé que a mis 45 años iba a aprender a usar herramientas de IA. Hoy las uso todos los días en mi trabajo y mis compañeros me piden ayuda.",
+    localidad: "Chilecito",
+    course: "PyMEs y Negocios con IA",
+    text: "Nunca pensé que a mis 45 años iba a aprender a usar herramientas de IA. Hoy las uso todos los días para gestionar mi negocio y hasta mis compañeros me piden ayuda.",
     color: "bg-neon-green/20 text-neon-green",
   },
   {
     name: "Lucas Herrera",
-    localidad: "Aminga",
-    course: "Vibe Coding",
+    localidad: "Vinchina",
+    course: "Programación y Desarrollo con IA",
     text: "Gracias al curso de desarrollo pude construir mi primera app y ya tengo dos clientes. El certificado me abrió puertas que no imaginaba.",
     color: "bg-secondary/20 text-secondary",
   },
   {
     name: "Ana Belén Torres",
-    localidad: "Chuquis",
-    course: "Marketing Digital con IA",
+    localidad: "Chamical",
+    course: "Marketing y Creación de Contenido con IA",
     text: "Tenía un kiosco y no sabía cómo promocionarlo online. Ahora manejo las redes con IA y las ventas crecieron un 40% en tres meses.",
     color: "bg-neon-cyan/20 text-neon-cyan",
   },
   {
     name: "Carlos Medina",
-    localidad: "San Pedro",
-    course: "E-commerce con IA",
-    text: "Monté mi tienda online desde cero siguiendo el curso. Ya llevo más de 50 ventas y estoy expandiendo a otras provincias.",
+    localidad: "Aimogasta",
+    course: "PyMEs y Negocios con IA",
+    text: "Monté mi tienda online desde cero siguiendo el curso. Ya llevo más de 50 ventas y estoy vendiendo a todo el país.",
     color: "bg-neon-green/20 text-neon-green",
   },
 ];
@@ -54,7 +54,7 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Historias reales de Castro Barros
+            Historias reales de La Rioja
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground-secondary">
             Personas de nuestro departamento que ya están transformando su vida

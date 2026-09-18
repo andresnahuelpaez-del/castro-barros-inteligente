@@ -1,128 +1,116 @@
 export const COURSES = [
   {
-    slug: "creacion-de-contenido-con-ia",
-    title: "Creación de Contenido con IA",
+    slug: "gemelos-digitales-con-ia",
+    title: "Gemelos Digitales con IA",
     shortDescription:
-      "Aprendé a producir reels, videos para YouTube, podcasts, posts y carruseles usando IA de punta a punta.",
-    durationMonths: 4,
+      "Creá una réplica digital de un proceso real (una mina, un campo, una planta) para simular cambios sin riesgo, anticipar fallas y optimizar con IA.",
+    durationMonths: 5,
     hoursPerWeek: "6-8",
     order: 1,
-    icon: "Video",
-  },
-  {
-    slug: "ia-para-tu-trabajo",
-    title: "IA para tu Trabajo",
-    shortDescription:
-      "Dominá tu trabajo diario con IA: Excel, documentos, presentaciones, email, investigación y organización personal.",
-    durationMonths: 4,
-    hoursPerWeek: "6",
-    order: 2,
-    icon: "Briefcase",
+    icon: "Boxes",
     featured: true,
   },
   {
-    slug: "marketing-digital-con-ia",
-    title: "Marketing Digital con IA",
+    slug: "mineria-con-ia",
+    title: "Minería con IA",
     shortDescription:
-      "Vendé online con campañas pagas, embudos automatizados y creativos generados por Inteligencia Artificial.",
-    durationMonths: 5,
-    hoursPerWeek: "8",
-    order: 3,
-    icon: "Megaphone",
+      "La capa digital de la minería moderna: monitoreo en tiempo real, visión por computadora, satélites y datos para decidir. Todo desde la computadora.",
+    durationMonths: 4,
+    hoursPerWeek: "6-8",
+    order: 2,
+    icon: "Mountain",
   },
   {
-    slug: "gestion-de-negocios-con-ia",
-    title: "Gestión de Negocios con IA",
+    slug: "programacion-y-desarrollo-con-ia",
+    title: "Programación y Desarrollo con IA",
     shortDescription:
-      "Ordená y digitalizá tu negocio completo: facturación, stock, finanzas, atención al cliente y automatización.",
+      "Creá aplicaciones, sitios web y automatismos usando IA, aunque nunca hayas programado. La nueva forma de desarrollar junto a la IA.",
+    durationMonths: 6,
+    hoursPerWeek: "10-12",
+    order: 3,
+    icon: "Code",
+  },
+  {
+    slug: "pymes-y-negocios-con-ia",
+    title: "PyMEs y Negocios con IA",
+    shortDescription:
+      "Usá la IA para hacer crecer un negocio o poner en orden un emprendimiento: vender online, atención al cliente, finanzas y productividad.",
     durationMonths: 5,
     hoursPerWeek: "8",
     order: 4,
     icon: "Store",
   },
   {
-    slug: "diseno-web-con-ia",
-    title: "Diseño Web con IA",
+    slug: "practica-juridica-con-ia",
+    title: "Práctica Jurídica con IA",
     shortDescription:
-      "Creá sitios web profesionales para PyMEs y emprendedores en días, no meses, usando herramientas de IA.",
-    durationMonths: 5,
-    hoursPerWeek: "8-10",
+      "Aplicá la IA al trabajo legal: redactar escritos, investigar jurisprudencia y organizar casos más rápido, con criterio ético y responsable.",
+    durationMonths: 3,
+    hoursPerWeek: "6",
     order: 5,
-    icon: "Globe",
+    icon: "Scale",
   },
   {
-    slug: "ecommerce-con-ia",
-    title: "E-commerce con IA",
+    slug: "automatizacion-y-agentes-con-ia",
+    title: "Automatización y Agentes con IA",
     shortDescription:
-      "Monta y opera tiendas online completas con IA, optimizando cada paso en el ecosistema argentino.",
+      "Automatizá tareas repetitivas y creá agentes de IA que trabajan solos para empresas y comercios. Uno de los servicios digitales más demandados.",
     durationMonths: 4,
     hoursPerWeek: "8",
     order: 6,
-    icon: "ShoppingCart",
+    icon: "Bot",
   },
   {
     slug: "analisis-de-datos-con-ia",
     title: "Análisis de Datos con IA",
     shortDescription:
-      "Convertí datos crudos en insights accionables y dashboards profesionales con herramientas de IA.",
+      "Convertí montañas de datos en decisiones claras con ayuda de la IA, sin necesidad de saber estadística avanzada ni programar.",
     durationMonths: 5,
     hoursPerWeek: "8",
     order: 7,
     icon: "BarChart3",
   },
   {
-    slug: "vibe-coding-desarrollo-apps-ia",
-    title: "Vibe Coding: Desarrollo de Apps con IA",
+    slug: "marketing-y-creacion-de-contenido-con-ia",
+    title: "Marketing y Creación de Contenido con IA",
     shortDescription:
-      "Construí aplicaciones web reales (SaaS, marketplaces, plataformas) usando IA como copiloto principal.",
-    durationMonths: 6,
-    hoursPerWeek: "10-12",
+      "Conseguí clientes y vendé online: estrategia, contenido para redes, copywriting, publicidad y campañas simples asistidas por IA.",
+    durationMonths: 5,
+    hoursPerWeek: "8",
     order: 8,
-    icon: "Code",
+    icon: "Megaphone",
   },
   {
-    slug: "qa-testing-con-ia",
-    title: "QA Testing con IA",
+    slug: "diseno-digital-con-ia",
+    title: "Diseño Digital con IA",
     shortDescription:
-      "Aprendé a testear aplicaciones web y mobile con IA: automatización de pruebas, detección de bugs y reportes profesionales para trabajar como QA remoto.",
-    durationMonths: 3,
+      "Creá las piezas visuales de toda marca: logos, identidad, edición de imágenes y de video con IA, piezas para redes y diseño de interfaces (UX/UI).",
+    durationMonths: 5,
     hoursPerWeek: "8-10",
     order: 9,
-    icon: "ShieldCheck",
-  },
-  {
-    slug: "automatizaciones-con-ia-y-no-code",
-    title: "Automatizaciones con IA y No-Code",
-    shortDescription:
-      "Creá flujos automatizados para empresas y clientes usando n8n, Make y herramientas no-code. Vendé servicios de automatización como freelancer.",
-    durationMonths: 4,
-    hoursPerWeek: "8",
-    order: 10,
-    icon: "Workflow",
+    icon: "Palette",
   },
 ];
 
 export const COURSE_COMPETENCIES: Record<string, string> = {
-  "creacion-de-contenido-con-ia":
-    "producción de contenido digital profesional (reels, videos, podcasts, posts y carruseles) utilizando herramientas de Inteligencia Artificial de última generación",
-  "ia-para-tu-trabajo":
-    "aplicación de Inteligencia Artificial en el entorno laboral: automatización de documentos, presentaciones, email, investigación y organización personal con IA",
-  "marketing-digital-con-ia":
-    "marketing digital con IA: diseño de campañas pagas, embudos automatizados y creativos generados por Inteligencia Artificial",
-  "gestion-de-negocios-con-ia":
-    "gestión y digitalización integral de negocios: facturación, stock, finanzas, atención al cliente y automatización con herramientas de IA",
-  "diseno-web-con-ia":
-    "diseño y desarrollo de sitios web profesionales utilizando herramientas de Inteligencia Artificial para PyMEs y emprendedores",
-  "ecommerce-con-ia":
-    "implementación y operación de tiendas online con IA: catálogos, pagos, logística y optimización en el ecosistema de e-commerce argentino",
+  "gemelos-digitales-con-ia":
+    "creación y uso de gemelos digitales con Inteligencia Artificial para simular, optimizar y anticipar fallas en procesos productivos de minería, agro, energía e industria",
+  "mineria-con-ia":
+    "aplicación de la Inteligencia Artificial a la operación minera: monitoreo de procesos, visión por computadora para seguridad, teledetección y análisis de datos del sector",
+  "programacion-y-desarrollo-con-ia":
+    "desarrollo de aplicaciones, sitios web y automatismos asistido por Inteligencia Artificial, desde la lógica de programación hasta la publicación de proyectos",
+  "pymes-y-negocios-con-ia":
+    "gestión y crecimiento de negocios con Inteligencia Artificial: venta online, atención al cliente, finanzas, automatización y productividad diaria",
+  "practica-juridica-con-ia":
+    "aplicación de la Inteligencia Artificial al trabajo jurídico: redacción asistida de escritos, análisis de documentos, búsqueda de jurisprudencia y organización de casos con uso ético y responsable",
+  "automatizacion-y-agentes-con-ia":
+    "diseño de automatizaciones sin código y creación de agentes de Inteligencia Artificial para optimizar procesos y ofrecer servicios digitales a terceros",
   "analisis-de-datos-con-ia":
-    "análisis de datos con IA: transformación de datos crudos en insights accionables y dashboards profesionales",
-  "vibe-coding-desarrollo-apps-ia":
-    "desarrollo de aplicaciones web reales (SaaS, marketplaces, plataformas) utilizando IA como copiloto de programación",
-  "qa-testing-con-ia":
-    "testing y aseguramiento de calidad de software con IA: automatización de pruebas funcionales, detección de errores y generación de reportes profesionales de QA",
-  "automatizaciones-con-ia-y-no-code":
-    "diseño e implementación de flujos de automatización profesionales con herramientas no-code e Inteligencia Artificial para optimizar procesos de negocio y ofrecer servicios a terceros",
+    "análisis e interpretación de datos con Inteligencia Artificial: creación de tableros, visualizaciones e informes para la toma de decisiones",
+  "marketing-y-creacion-de-contenido-con-ia":
+    "marketing digital y creación de contenido con Inteligencia Artificial: estrategia, contenido para redes, copywriting, publicidad y campañas",
+  "diseno-digital-con-ia":
+    "diseño digital con Inteligencia Artificial: identidad de marca, creación y edición de imágenes, edición de video y diseño de interfaces (UX/UI)",
 };
 
 
@@ -135,12 +123,12 @@ export const FAQ_ITEMS = [
   {
     question: "¿El certificado tiene validez oficial?",
     answer:
-      "Sí. Cada certificado es emitido oficialmente por el Departamento Castro Barros con un código único de verificación pública. Cualquier empleador puede verificar su autenticidad en línea escaneando el código QR o ingresando a la página de verificación.",
+      "Sí. Cada certificado es oficial, emitido por la Escuela Online de Oficios Digitales de la Provincia de La Rioja, con un código único de verificación pública. Cualquier empleador puede verificar su autenticidad en línea escaneando el código QR o ingresando a la página de verificación.",
   },
   {
     question: "¿Necesito conocimientos previos?",
     answer:
-      "Depende del curso. Los de nivel Inicial (como Creación de Contenido con IA o IA para tu Trabajo) no requieren conocimientos previos. Los de nivel Intermedio y Avanzado recomiendan cierta familiaridad con las herramientas básicas que se indican en cada programa.",
+      "Depende del curso. Los de nivel inicial (como PyMEs y Negocios con IA o Marketing y Creación de Contenido con IA) no requieren conocimientos previos. Los más avanzados (como Programación y Desarrollo o Gemelos Digitales) recomiendan cierta familiaridad con las herramientas básicas que se indican en cada programa.",
   },
   {
     question: "¿Puedo estudiar mientras trabajo o estudio otra cosa?",
@@ -170,7 +158,7 @@ export const FAQ_ITEMS = [
   {
     question: "¿Quién puede inscribirse?",
     answer:
-      "Cualquier persona mayor de 16 años. Si bien la iniciativa está pensada especialmente para habitantes del Departamento Castro Barros, la inscripción está abierta a toda persona interesada.",
+      "Cualquier persona mayor de 16 años. La iniciativa está pensada para todos los habitantes de la Provincia de La Rioja, con especial foco en las localidades del interior donde las oportunidades laborales son más escasas. La inscripción está abierta a toda persona interesada.",
   },
   {
     question: "¿Cómo me inscribo?",
@@ -198,13 +186,25 @@ export const TOOLS_LOGOS = [
   "Notion AI",
 ];
 
+// Departamentos de la Provincia de La Rioja (alcance provincial).
 export const LOCALIDADES = [
-  "Aminga",
-  "Anillaco",
-  "Anjullon",
-  "Chuquis",
-  "Las Peñas",
-  "Pinchas",
-  "San Pedro",
+  "Capital",
+  "Arauco",
+  "Castro Barros",
+  "Chamical",
+  "Chilecito",
+  "Coronel Felipe Varela",
+  "Famatina",
+  "General Ángel V. Peñaloza",
+  "General Belgrano",
+  "General Juan F. Quiroga",
+  "General Lamadrid",
+  "General Ocampo",
+  "General San Martín",
+  "Independencia",
+  "Rosario Vera Peñaloza",
+  "San Blas de Los Sauces",
+  "Sanagasta",
+  "Vinchina",
   "Otra",
 ] as const;

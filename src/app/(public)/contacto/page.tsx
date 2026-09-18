@@ -71,7 +71,7 @@ export default function ContactoPage() {
             <div>
               <h3 className="font-semibold text-white">Dirección</h3>
               <p className="mt-1 text-sm text-foreground-secondary">
-                Departamento Castro Barros
+                Escuela Online de Oficios Digitales
                 <br />
                 Provincia de La Rioja, Argentina
               </p>

@@ -159,8 +159,8 @@ export function EnrollDialog({
               htmlFor="terms"
               className="text-sm text-foreground-secondary leading-relaxed cursor-pointer"
             >
-              Acepto los términos del programa de capacitación gratuita del
-              Departamento Castro Barros y me comprometo a mantener un ritmo de
+              Acepto los términos del programa de capacitación gratuita de la
+              Provincia de La Rioja y me comprometo a mantener un ritmo de
               estudio constante.
             </label>
           </div>

@@ -7,7 +7,7 @@ import { DepartmentSilhouette } from "./department-silhouette";
 import { Badge } from "@/components/ui/badge";
 
 const metrics = [
-  { value: "10", label: "cursos profesionales" },
+  { value: "9", label: "cursos profesionales" },
   { value: "100%", label: "gratuito y online" },
   { value: "IA", label: "en cada programa" },
   { value: "Oficial", label: "certificación válida" },
@@ -37,7 +37,7 @@ export function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <Badge className="mb-5 border-neon-green/30 bg-neon-green/10 px-3 py-1 text-[10px] leading-tight text-neon-green sm:px-4 sm:py-1.5 sm:text-sm">
-            <span className="hidden sm:inline">Programa 100% financiado por la Provincia de La Rioja para todo el país</span>
+            <span className="hidden sm:inline">Programa 100% financiado por la Provincia de La Rioja para todos los riojanos</span>
             <span className="sm:hidden">100% financiado por la Provincia de La Rioja</span>
           </Badge>
         </motion.div>
@@ -61,7 +61,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          10 cursos intensivos con Inteligencia Artificial: Programación, Marketing digital, Diseño web, Creación de contenido y más.
+          9 cursos con Inteligencia Artificial aplicada: Gemelos Digitales, Minería, Programación, PyMEs, Marketing, Diseño Digital y más.
           <span className="block mt-2 text-neon-green font-medium text-glow-green">
             Inscribite gratis y obtené tu certificación oficial.
           </span>

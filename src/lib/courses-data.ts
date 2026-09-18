@@ -34,190 +34,429 @@ export interface CourseDetail {
 }
 
 export const COURSES_DETAIL: Record<string, CourseDetail> = {
-  "creacion-de-contenido-con-ia": {
-    slug: "creacion-de-contenido-con-ia",
+  "gemelos-digitales-con-ia": {
+    slug: "gemelos-digitales-con-ia",
     longDescription:
-      "Este curso te lleva de cero a profesional en la creación de contenido digital usando Inteligencia Artificial. Vas a aprender a producir videos cortos, reels, contenido para YouTube, podcasts, carruseles y posts para redes sociales, todo con herramientas de IA que hacen el trabajo pesado por vos. No necesitás experiencia previa ni equipos caros: con tu celular y estas herramientas, ya podés empezar.",
+      "Un gemelo digital es una réplica virtual y viva de algo real —una mina, un campo, una planta o un comercio— que se alimenta de datos para funcionar en la computadora. En este curso aprendés a construir y usar esa réplica para simular escenarios, probar cambios sin riesgo, anticipar fallas y optimizar la operación antes de tocar un solo equipo. Es una de las tecnologías de mayor crecimiento de la industria 4.0 y una puerta directa a los sectores productivos de La Rioja. Todo se dicta 100% online: cuando un tema toca sensores o electrónica, se explica su lógica para que se entienda, sin necesidad de manejar hardware.",
     whatYouLearn: [
-      "Crear guiones y copys con IA para cualquier formato",
-      "Editar videos profesionales con CapCut y DaVinci Resolve",
-      "Generar voces, música y efectos de sonido con IA",
-      "Crear imágenes y thumbnails atractivos con IA",
-      "Planificar calendarios de contenido para redes sociales",
-      "Grabar y editar podcasts completos",
-      "Optimizar contenido para cada plataforma (Instagram, TikTok, YouTube)",
-      "Construir una marca personal o para clientes",
+      "Qué es un gemelo digital y para qué sirve en la industria real",
+      "El rol de los datos y los sensores IoT, a nivel conceptual",
+      "Cómo simular y optimizar un proceso con Inteligencia Artificial",
+      "Mantenimiento predictivo: anticipar fallas antes de que ocurran",
+      "Modelado de impacto ambiental (uso del agua, colas y residuos)",
+      "Integración con flotas y equipos autónomos",
+      "Armado de tableros para decidir en tiempo real",
+      "Casos aplicados en minería, agro, energía e industria",
     ],
     whoIsItFor:
-      "Para cualquier persona que quiera crear contenido digital, sin importar la edad ni la experiencia. Si alguna vez quisiste tener tu canal, tu cuenta profesional o trabajar creando contenido para otros, este curso es para vos.",
+      "Para quienes quieren entrar a la industria 4.0 y a los sectores productivos de La Rioja sin ser ingenieros: personas curiosas por la tecnología, los datos y los procesos, que buscan un perfil moderno y bien pago sin tener que manejar maquinaria.",
     prerequisites:
-      "Ninguno. Solo necesitás un celular o computadora con internet. Te enseñamos todo desde el principio.",
+      "Manejo básico de computadora e internet. No se necesita experiencia técnica previa: se explica todo desde cero, con enfoque conceptual y práctico.",
     jobOpportunities: [
       {
-        title: "Editor de video freelance",
-        type: "freelance",
-        highlight: "Alta demanda · Freelance global",
-        description:
-          "Editar reels, videos cortos y contenido para marcas y creadores. Uno de los trabajos más demandados en plataformas freelance.",
-      },
-      {
-        title: "Community manager con IA",
+        title: "Asistente de operaciones 4.0",
         type: "empleo",
-        highlight: "Crecimiento acelerado · Remoto",
+        highlight: "Sector estratégico · La Rioja",
         description:
-          "Gestionar las redes sociales de empresas y emprendedores, creando contenido, respondiendo consultas y analizando métricas.",
+          "Apoyar la digitalización de operaciones en minería, energía o industria, trabajando con datos, simulaciones y tableros.",
       },
       {
-        title: "Creador de contenido propio",
-        type: "emprendimiento",
-        highlight: "Sin límite de clientes · Flexible",
+        title: "Analista de procesos y simulación",
+        type: "empleo",
+        highlight: "Perfil escaso · Muy valorado",
         description:
-          "Monetizar tu propio canal o cuenta con sponsorships, afiliados y productos digitales.",
+          "Modelar procesos productivos, correr simulaciones y proponer mejoras basadas en datos para empresas del sector.",
       },
       {
-        title: "Productor de podcasts",
+        title: "Soporte de proyectos de digitalización",
         type: "freelance",
-        highlight: "Mercado en expansión · Creativo",
+        highlight: "Demanda creciente · Local y remoto",
         description:
-          "Grabar, editar y publicar podcasts para profesionales, empresas o medios que quieren tener presencia en audio.",
+          "Acompañar a empresas e industrias que están incorporando gemelos digitales, IoT y monitoreo inteligente.",
       },
     ],
     complementaryCourses: [
       {
-        slug: "marketing-digital-con-ia",
-        title: "Marketing Digital con IA",
+        slug: "mineria-con-ia",
+        title: "Minería con IA",
         reason:
-          "Aprender a crear contenido es el primer paso. Combinándolo con marketing digital, vas a saber cómo promocionarlo, llegar a más gente y convertir seguidores en clientes.",
+          "El gemelo digital es la herramienta; Minería con IA te da la salida laboral concreta en el sector que es motor de La Rioja.",
       },
       {
-        slug: "ecommerce-con-ia",
-        title: "E-commerce con IA",
+        slug: "analisis-de-datos-con-ia",
+        title: "Análisis de Datos con IA",
         reason:
-          "Si creás contenido y además sabés vender online, podés montar tu propia tienda de productos digitales, cursos o servicios creativos.",
+          "Un gemelo digital vive de datos. Saber analizarlos e interpretarlos potencia enormemente tu perfil.",
       },
     ],
     employerValues: [
       {
-        trait: "Creatividad con criterio",
+        trait: "Pensamiento de procesos",
         description:
-          "No se trata de hacer cosas raras. Las empresas valoran a alguien que proponga ideas frescas pero alineadas con la marca y el objetivo del negocio.",
+          "Entender cómo funciona una operación de punta a punta y detectar dónde se puede mejorar. Es lo que hace útil a un gemelo digital.",
       },
       {
-        trait: "Constancia y cumplimiento",
+        trait: "Rigurosidad con los datos",
         description:
-          "Entregar contenido en tiempo y forma, todas las semanas, es lo que diferencia a un profesional de un aficionado. Los clientes necesitan alguien confiable.",
+          "Un modelo se basa en datos: verificar, cruzar información y no asumir nada sin comprobarlo es clave para que las decisiones sean confiables.",
       },
       {
-        trait: "Capacidad de adaptación",
+        trait: "Curiosidad técnica",
         description:
-          "Las plataformas cambian, los formatos evolucionan. Quien se actualiza rápido y no le tiene miedo a lo nuevo es siempre más valioso para cualquier equipo.",
-      },
-      {
-        trait: "Buena comunicación",
-        description:
-          "Saber escuchar lo que el cliente necesita, preguntar cuando algo no queda claro y explicar tus ideas con claridad. Esto vale más que cualquier herramienta técnica.",
+          "Ganas de entender cómo funcionan las cosas y de aprender herramientas nuevas. En un sector que se digitaliza rápido, eso vale oro.",
       },
     ],
     freeTools: [
       "Claude.ai",
       "ChatGPT",
       "Gemini",
-      "CapCut",
-      "DaVinci Resolve",
-      "ElevenLabs (gratis)",
-      "Suno (gratis)",
-      "Krea AI",
-      "Bing Image Creator",
-      "Leonardo.ai",
-      "OpusClip (gratis)",
+      "Google Sheets",
+      "Looker Studio",
+      "Google Colab",
+      "Tinkercad / simuladores web",
+      "NotebookLM",
     ],
-    paidTools: ["HeyGen", "Descript", "Midjourney", "Runway Gen-3"],
+    paidTools: ["Azure Digital Twins (nivel demo)", "Power BI Pro"],
     finalProject:
-      "Crear tu propia cuenta o canal con al menos 30 piezas de contenido publicadas, más 3 trabajos reales para clientes (pueden ser conocidos o pequeños negocios locales).",
+      "Construir el gemelo digital simplificado de un proceso real o simulado (una mina, un campo, una planta o un comercio): modelar el proceso, cargar datos, simular un cambio y presentar conclusiones con un tablero.",
   },
 
-  "ia-para-tu-trabajo": {
-    slug: "ia-para-tu-trabajo",
+  "mineria-con-ia": {
+    slug: "mineria-con-ia",
     longDescription:
-      "Este es el curso más universal de la plataforma. No importa si sos empleado, profesional independiente, docente, administrativo o estudiante: acá vas a aprender a usar Inteligencia Artificial para hacer mejor y más rápido todo lo que ya hacés en tu trabajo. Desde escribir emails profesionales hasta analizar documentos complejos, crear presentaciones y organizar tu vida productiva.",
+      "La minería moderna tiene una enorme capa digital, y ahí es donde entra el talento formado: monitorear, analizar y decidir con datos, todo desde la computadora y sin manejar maquinaria. En este curso aprendés cómo la Inteligencia Artificial hace que la operación sea más segura, más eficiente y más cuidadosa con el ambiente, en un sector que es motor económico de La Rioja. Se enseña solo la capa digital y de datos; lo mecánico o de campo se menciona para que se entienda, pero la práctica con equipos es materia aparte.",
     whatYouLearn: [
-      "Usar Claude, ChatGPT y Gemini como asistentes profesionales",
-      "Automatizar tareas repetitivas con IA",
-      "Crear documentos, informes y presentaciones con IA",
-      "Analizar datos en Excel y Google Sheets con IA",
-      "Escribir emails profesionales en segundos",
-      "Investigar y resumir información compleja",
-      "Transcribir reuniones y generar actas automáticas",
-      "Organizar proyectos y tareas con herramientas de IA",
+      "Monitoreo de procesos y de planta en tiempo real",
+      "Visión por computadora para seguridad (riesgos, protección y fatiga)",
+      "Cámaras térmicas para anticipar fallas de equipos",
+      "Drones e imágenes satelitales para exploración y control de taludes y presas",
+      "Estimación de recursos y planificación minera con IA",
+      "Mantenimiento predictivo aplicado al sector",
+      "Gestión del agua y la energía con datos",
+      "Monitoreo ambiental y licencia social",
     ],
     whoIsItFor:
-      "Para cualquier persona que use una computadora o celular en su trabajo. Empleados públicos, privados, profesionales independientes, docentes, administrativos, comerciantes, estudiantes. Si trabajás, este curso te hace mejor en lo que hacés.",
+      "Para habitantes de La Rioja que quieren insertarse en el sector minero desde la parte digital, y para quienes ya trabajan en el rubro y quieren sumar habilidades de datos e IA. No hace falta experiencia técnica previa.",
     prerequisites:
-      "Saber usar una computadora o celular a nivel básico (navegar internet, usar email). Nada más.",
+      "Manejo básico de computadora e internet. Ideal (no obligatorio) haber hecho Gemelos Digitales o Análisis de Datos.",
     jobOpportunities: [
       {
-        title: "Asistente virtual con IA",
-        type: "freelance",
-        highlight: "Muy buscado · Todas las industrias",
-        description:
-          "Ayudar a profesionales y empresas a gestionar su día a día usando herramientas de IA: emails, agendas, documentos, investigaciones.",
-      },
-      {
-        title: "Consultor de transformación digital",
-        type: "freelance",
-        highlight: "Alta demanda · 100% remoto",
-        description:
-          "Asesorar a PyMEs y comercios locales sobre cómo incorporar IA en sus procesos diarios para ahorrar tiempo y dinero.",
-      },
-      {
-        title: "Capacitador interno de IA",
+        title: "Asistente de monitoreo y operaciones mineras",
         type: "empleo",
-        highlight: "Crecimiento rápido · Empresas tech",
+        highlight: "Motor de La Rioja · Sector en crecimiento",
         description:
-          "Enseñar a otros empleados de tu empresa a usar herramientas de IA, convirtiéndote en referente dentro de tu organización.",
+          "Trabajar en el monitoreo digital de procesos, seguridad y ambiente en empresas mineras y sus proveedoras.",
       },
       {
-        title: "Mejor desempeño en tu empleo actual",
+        title: "Analista de datos del sector",
         type: "empleo",
-        highlight: "Diferenciación profesional · Cualquier rubro",
+        highlight: "Perfil buscado · Bien remunerado",
         description:
-          "No necesitás cambiar de trabajo. Usando IA vas a hacer más en menos tiempo, lo que te posiciona para ascensos y mejores condiciones.",
+          "Interpretar datos de operación, generar reportes y apoyar decisiones en proyectos de litio y minerales estratégicos.",
+      },
+      {
+        title: "Soporte de seguridad y medio ambiente con IA",
+        type: "freelance",
+        highlight: "Demanda creciente · Local",
+        description:
+          "Colaborar con empresas del sector en monitoreo ambiental, visión por computadora y cumplimiento con apoyo de IA.",
       },
     ],
     complementaryCourses: [
       {
-        slug: "gestion-de-negocios-con-ia",
-        title: "Gestión de Negocios con IA",
+        slug: "gemelos-digitales-con-ia",
+        title: "Gemelos Digitales con IA",
         reason:
-          "Si ya dominás IA para tu trabajo, el siguiente paso natural es aprender a digitalizar un negocio completo: facturación, finanzas, clientes.",
+          "Gemelos digitales es la herramienta transversal que potencia todo lo que aprendés en minería.",
       },
       {
         slug: "analisis-de-datos-con-ia",
         title: "Análisis de Datos con IA",
         reason:
-          "Saber analizar datos te convierte en alguien indispensable en cualquier empresa. Combina perfecto con las habilidades de productividad.",
+          "La minería genera muchísimos datos. Saber analizarlos te convierte en un perfil clave del sector.",
       },
     ],
     employerValues: [
       {
-        trait: "Proactividad",
+        trait: "Cultura de seguridad",
         description:
-          "Las empresas valoran a la persona que no espera instrucciones para todo, sino que identifica problemas y propone soluciones antes de que se los pidan.",
+          "En minería, la seguridad es lo primero. Se valora enormemente a quien piensa en el riesgo y en el cuidado de las personas.",
       },
       {
-        trait: "Organización y eficiencia",
+        trait: "Responsabilidad ambiental",
         description:
-          "Cumplir plazos, mantener el orden en los proyectos y hacer buen uso del tiempo. La IA te ayuda con esto, pero la actitud tiene que ser tuya.",
+          "El sector necesita gente comprometida con el monitoreo y el cuidado del ambiente. Es parte central del trabajo.",
       },
       {
-        trait: "Ganas de aprender",
+        trait: "Precisión y atención al detalle",
         description:
-          "El mundo laboral cambia rápido. Los empleadores buscan gente que se mantenga actualizada por voluntad propia, no porque se lo obliguen.",
+          "Los datos de operación deben ser exactos. Verificar y reportar con rigor es lo que genera confianza.",
+      },
+    ],
+    freeTools: [
+      "Claude.ai",
+      "ChatGPT",
+      "Gemini",
+      "Google Earth Engine (nivel demo)",
+      "QGIS",
+      "Google Sheets",
+      "Looker Studio",
+      "Roboflow (visión por computadora, gratis)",
+    ],
+    paidTools: ["Power BI Pro", "Plataformas de monitoreo del sector"],
+    finalProject:
+      "Realizar un caso aplicado del sector: analizar un set de datos de operación (o imágenes satelitales), detectar un riesgo o una oportunidad de mejora y presentar un informe con recomendaciones.",
+  },
+
+  "programacion-y-desarrollo-con-ia": {
+    slug: "programacion-y-desarrollo-con-ia",
+    longDescription:
+      "Creá aplicaciones, sitios web y automatismos usando Inteligencia Artificial, aunque nunca hayas programado. Es la nueva forma de desarrollar: le decís a la IA qué querés lograr y lo construís junto a ella, paso a paso, hasta publicarlo. Con herramientas como Cursor, v0, Lovable y Bolt, vas a pasar de cero a construir productos digitales reales, aprendiendo a guiar, corregir y publicar lo que hacés.",
+    whatYouLearn: [
+      "Fundamentos de la lógica de programación",
+      "Herramientas de desarrollo asistido por IA (Cursor, Copilot)",
+      "Creación de sitios web y apps sin escribir código complejo (v0, Lovable, Bolt)",
+      "Diseño de interfaz (UX) de lo que construís",
+      "Bases de datos y backend con Supabase",
+      "Integración de funcionalidades: autenticación, pagos, APIs de IA",
+      "Publicación y puesta en marcha de proyectos (Vercel)",
+      "Cómo guiar y corregir a la IA para construir productos que funcionan",
+    ],
+    whoIsItFor:
+      "Para personas ambiciosas que quieren aprender a crear software y productos digitales, la habilidad mejor paga del mercado. No necesitás saber programar de antes, pero sí ganas de dedicarle tiempo. Es el curso más largo y exigente, y el que abre las mejores oportunidades.",
+    prerequisites:
+      "Ganas de aprender y dedicación real (10-12 horas por semana). Manejo fluido de computadora. No se requiere experiencia en programación.",
+    jobOpportunities: [
+      {
+        title: "Desarrollador junior asistido por IA",
+        type: "empleo",
+        highlight: "El perfil más buscado · Remoto global",
+        description:
+          "Construir y mantener aplicaciones web en startups y empresas. Uno de los puestos mejor pagos del mercado digital.",
       },
       {
-        trait: "Trabajo en equipo",
+        title: "Creador de webs y apps freelance",
+        type: "freelance",
+        highlight: "Alta demanda · Proyectos globales",
         description:
-          "Saber colaborar, compartir información y ayudar a los compañeros. Una persona que mejora al equipo completo siempre tiene lugar.",
+          "Crear sitios, landing pages y MVPs para emprendedores y PyMEs que necesitan presencia digital o validar ideas.",
+      },
+      {
+        title: "Creador de tu propio producto (SaaS)",
+        type: "emprendimiento",
+        highlight: "Ingreso recurrente · Sin techo",
+        description:
+          "Construir tu propio software como servicio y venderlo a clientes recurrentes. El sueño de muchos desarrolladores.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "diseno-digital-con-ia",
+        title: "Diseño Digital con IA",
+        reason:
+          "Saber diseñar además de programar te vuelve un perfil completo: productos que funcionan y se ven increíbles.",
+      },
+      {
+        slug: "automatizacion-y-agentes-con-ia",
+        title: "Automatización y Agentes con IA",
+        reason:
+          "Sumar automatización y agentes de IA a tus desarrollos multiplica el valor de lo que podés ofrecer.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Resolución de problemas",
+        description:
+          "Programar es resolver problemas todo el día. Se valora a quien ante un error lo investiga y prueba soluciones en lugar de frustrarse.",
+      },
+      {
+        trait: "Aprender rápido",
+        description:
+          "La tecnología cambia cada semana. Poder aprender cosas nuevas rápido y aplicarlas vale más que saberlo todo de memoria.",
+      },
+      {
+        trait: "Comunicación clara",
+        description:
+          "Saber explicar qué hiciste y por qué. Los mejores desarrolladores son los que el resto del equipo entiende.",
+      },
+      {
+        trait: "Responsabilidad con el código",
+        description:
+          "Escribir con orden, probar antes de entregar y hacerse cargo cuando algo falla. La confianza se construye con cada entrega.",
+      },
+    ],
+    freeTools: [
+      "VS Code",
+      "Cursor (gratis)",
+      "GitHub Copilot Free",
+      "Claude.ai",
+      "ChatGPT",
+      "v0 (gratis)",
+      "Lovable (gratis)",
+      "Bolt.new (gratis)",
+      "Supabase (gratis)",
+      "Vercel (gratis)",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+    paidTools: ["Cursor Pro", "Claude Pro", "Claude Code"],
+    finalProject:
+      "Desarrollar y publicar una aplicación web funcional con IA integrada, lista para conseguir sus primeros usuarios reales.",
+  },
+
+  "pymes-y-negocios-con-ia": {
+    slug: "pymes-y-negocios-con-ia",
+    longDescription:
+      "Usá la Inteligencia Artificial para hacer crecer un negocio propio o para ordenar y potenciar un emprendimiento: desde vender online hasta automatizar la atención al cliente, controlar las finanzas y ganar tiempo todos los días. Este curso está pensado para la realidad argentina —facturación con ARCA, medios de pago locales, WhatsApp— y sirve tanto para tu propio negocio como para ofrecer servicios de gestión a comercios de tu zona.",
+    whatYouLearn: [
+      "Automatización de tareas repetitivas del negocio",
+      "Atención al cliente con IA y WhatsApp Business",
+      "Venta online y tienda propia (Tienda Nube, Mercado Libre)",
+      "Cobros digitales: MercadoPago, Modo, transferencias",
+      "Facturación electrónica con ARCA",
+      "Finanzas básicas y control de ingresos y gastos",
+      "Organización y productividad diaria con IA",
+      "Cómo ofrecer estos servicios de gestión a otros comercios",
+    ],
+    whoIsItFor:
+      "Para dueños de comercios y emprendedores que quieren profesionalizar su negocio, y para quienes quieren generar ingresos ayudando a PyMEs y comercios locales a ordenarse y digitalizarse.",
+    prerequisites:
+      "Tener un negocio o idea de emprendimiento (o querer gestionar negocios de otros). Manejo básico de celular o computadora.",
+    jobOpportunities: [
+      {
+        title: "Emprendedor digital",
+        type: "emprendimiento",
+        highlight: "Tu propio negocio · Sin techo",
+        description:
+          "Aplicar todo lo aprendido a tu propio emprendimiento para que sea más rentable, ordenado y escalable.",
+      },
+      {
+        title: "Encargado de PyME con IA",
+        type: "empleo",
+        highlight: "Muy solicitado · Comercios y PyMEs",
+        description:
+          "Llevar la operación diaria de un comercio o PyME con herramientas digitales: ventas, atención, facturación, stock.",
+      },
+      {
+        title: "Asistente de negocios / digitalización",
+        type: "freelance",
+        highlight: "Demanda constante · Local y remoto",
+        description:
+          "Ayudar a comercios a pasar de la gestión manual a la digital: facturación, cobros, atención y automatización.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "marketing-y-creacion-de-contenido-con-ia",
+        title: "Marketing y Creación de Contenido con IA",
+        reason:
+          "Gestionar el negocio es una parte; saber conseguir clientes y vender es la otra. Juntas son imbatibles.",
+      },
+      {
+        slug: "automatizacion-y-agentes-con-ia",
+        title: "Automatización y Agentes con IA",
+        reason:
+          "Automatizar la atención y los procesos del negocio te ahorra horas y te permite ofrecer más servicios.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Responsabilidad con la información",
+        description:
+          "Cuando manejás plata, facturas y datos de un negocio, la confianza es todo: ser puntual, honesto y cuidadoso.",
+      },
+      {
+        trait: "Resolución de problemas",
+        description:
+          "Los negocios tienen problemas todos los días. Se valora saber resolverlos con calma y eficiencia.",
+      },
+      {
+        trait: "Trato amable con clientes",
+        description:
+          "Escuchar, responder con paciencia y hacer sentir bien atendida a la gente. Un negocio crece con buenos clientes.",
+      },
+    ],
+    freeTools: [
+      "Portal ARCA",
+      "MercadoPago",
+      "WhatsApp Business",
+      "Tienda Nube",
+      "Mercado Libre",
+      "Claude.ai",
+      "ChatGPT",
+      "Gemini",
+      "Google Sheets",
+      "Notion (gratis)",
+    ],
+    paidTools: ["Tienda Nube (plan pago)", "Herramientas de gestión del rubro"],
+    finalProject:
+      "Presentar un plan de digitalización aplicado a un negocio real o simulado: venta online, cobros, facturación ARCA y al menos un proceso automatizado con IA.",
+  },
+
+  "practica-juridica-con-ia": {
+    slug: "practica-juridica-con-ia",
+    longDescription:
+      "Aplicá la Inteligencia Artificial al trabajo legal para redactar, investigar y organizar mucho más rápido, con más precisión y menos tareas tediosas. Este curso está pensado para estudios jurídicos, escribanías, organismos públicos y áreas legales que quieren incorporar IA de forma útil y, sobre todo, responsable: sin perder rigor ni criterio profesional.",
+    whatYouLearn: [
+      "Herramientas de IA aplicadas al trabajo jurídico",
+      "Redacción asistida de escritos y documentos legales",
+      "Análisis de documentos extensos con IA",
+      "Búsqueda e interpretación de jurisprudencia",
+      "Organización y seguimiento de casos",
+      "Automatización de tareas administrativas del estudio",
+      "Uso ético, responsable y con control humano",
+      "Límites y riesgos de la IA en lo legal (verificación de fuentes)",
+    ],
+    whoIsItFor:
+      "Para abogados, escribanos, procuradores, estudiantes de Derecho y personal administrativo de áreas legales que quieren trabajar más rápido y mejor con IA, manteniendo el criterio y la responsabilidad profesional.",
+    prerequisites:
+      "Estar vinculado al ámbito jurídico o administrativo-legal (o querer trabajar en él). Manejo básico de computadora.",
+    jobOpportunities: [
+      {
+        title: "Asistente jurídico digital",
+        type: "empleo",
+        highlight: "Nicho especializado · Estudios y organismos",
+        description:
+          "Apoyar a estudios jurídicos y áreas legales con redacción asistida, análisis de documentos y organización de casos.",
+      },
+      {
+        title: "Apoyo administrativo-legal con IA",
+        type: "freelance",
+        highlight: "Demanda creciente · Flexible",
+        description:
+          "Ofrecer servicios de redacción, organización documental y automatización a estudios y profesionales del Derecho.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "automatizacion-y-agentes-con-ia",
+        title: "Automatización y Agentes con IA",
+        reason:
+          "Automatizar plazos, seguimientos y documentación potencia enormemente el trabajo de un estudio jurídico.",
+      },
+      {
+        slug: "pymes-y-negocios-con-ia",
+        title: "PyMEs y Negocios con IA",
+        reason:
+          "Un estudio también es un negocio: gestionar clientes, cobros y organización lo hace más rentable.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Rigor y verificación",
+        description:
+          "La IA puede equivocarse o inventar. Verificar cada fuente y cada cita es innegociable en lo legal.",
+      },
+      {
+        trait: "Confidencialidad",
+        description:
+          "El trabajo legal maneja información sensible. Cuidar la privacidad y usar las herramientas con criterio es fundamental.",
+      },
+      {
+        trait: "Ética profesional",
+        description:
+          "La IA es una ayuda, no un reemplazo del criterio del profesional. Usarla de forma responsable es lo que se valora.",
       },
     ],
     freeTools: [
@@ -226,797 +465,374 @@ export const COURSES_DETAIL: Record<string, CourseDetail> = {
       "Gemini",
       "NotebookLM",
       "Perplexity",
-      "Notion AI (gratis)",
-      "Microsoft Copilot Web",
-      "Otter.ai (gratis)",
-      "Gamma (gratis)",
       "Google Workspace",
     ],
-    paidTools: ["Microsoft Copilot 365", "Superhuman AI"],
+    paidTools: ["Claude Pro", "Herramientas legales con IA del mercado"],
     finalProject:
-      "Documentar un caso real de transformación con IA en tu trabajo o negocio actual, con métricas de mejora: cuánto tiempo ahorraste, qué procesos mejoraste, qué resultados obtuviste.",
+      "Resolver un caso práctico: redactar un escrito con asistencia de IA, analizar un documento extenso y organizar la información del caso, documentando el control humano y la verificación de fuentes.",
   },
 
-  "marketing-digital-con-ia": {
-    slug: "marketing-digital-con-ia",
+  "automatizacion-y-agentes-con-ia": {
+    slug: "automatizacion-y-agentes-con-ia",
     longDescription:
-      "Aprendé a vender online de verdad. Este curso te enseña a crear campañas publicitarias en Meta, Google y TikTok, diseñar embudos de venta automatizados, escribir copys que convierten y generar creativos profesionales con IA. Todo con foco en resultados medibles: cuánto invertís, cuánto vendés, cuánto ganás.",
+      "Automatizá tareas repetitivas y creá «agentes» de IA que trabajan solos —responden mensajes, cargan datos, hacen seguimientos— para empresas y comercios que pagan por ese tiempo ahorrado. La diferencia clave de este curso: no vas a automatizar solo tu negocio, vas a aprender a vender automatizaciones como servicio. Es uno de los oficios digitales de mayor demanda del momento, y podés cobrarlo en dólares.",
     whatYouLearn: [
-      "Crear y optimizar campañas en Meta Ads, Google Ads y TikTok Ads",
-      "Diseñar embudos de venta automatizados con email marketing",
-      "Escribir copys persuasivos con IA",
-      "Generar creativos publicitarios (imágenes y videos) con IA",
-      "Analizar métricas: CPA, ROAS, ROI, CTR",
-      "Configurar Google Analytics 4 y Microsoft Clarity",
-      "Automatizar procesos con n8n y Make",
-      "Optimizar SEO con herramientas de IA",
+      "Fundamentos de automatización y lógica de flujos",
+      "Automatización sin código conectando apps entre sí (Make, n8n)",
+      "Creación de agentes de IA que ejecutan tareas solos",
+      "Chatbots que responden sobre los datos de un negocio (RAG)",
+      "Integración de APIs de IA (Claude, GPT) en los flujos",
+      "Automatización de atención al cliente, ventas y administración",
+      "Integración de múltiples herramientas y plataformas",
+      "Cómo vender servicios de automatización: propuestas, precios y entrega",
     ],
     whoIsItFor:
-      "Para emprendedores que quieren vender más, futuros agencieros de marketing, gente que quiere trabajar gestionando publicidad online para empresas. Si te interesa el mundo de las ventas digitales, este curso es para vos.",
+      "Para quienes quieren ofrecer servicios digitales de alto valor sin programar de forma tradicional. Ideal para emprendedores, freelancers y profesionales que quieren generar ingresos resolviendo problemas reales con tecnología.",
     prerequisites:
-      "Saber usar redes sociales a nivel básico. Recomendable (no obligatorio) haber hecho primero IA para tu Trabajo.",
+      "Manejo básico de computadora. Recomendable haber hecho PyMEs y Negocios o IA aplicada al trabajo.",
     jobOpportunities: [
       {
-        title: "Performance marketer freelance",
+        title: "Automatizador freelance",
         type: "freelance",
-        highlight: "Muy solicitado · Freelance o agencia",
+        highlight: "Alto valor por proyecto · Freelance global",
         description:
-          "Gestionar campañas publicitarias para clientes, optimizando presupuesto y resultados. Altamente demandado por PyMEs.",
+          "Las empresas pagan muy bien por automatizar sus procesos. Un solo flujo bien armado tiene alto valor según su complejidad.",
       },
       {
-        title: "Community manager senior",
+        title: "Constructor de bots y asistentes",
+        type: "freelance",
+        highlight: "Nicho en auge · Freelance premium",
+        description:
+          "Crear chatbots y agentes de IA a medida para comercios, PyMEs y agencias que quieren atender y vender mejor.",
+      },
+      {
+        title: "Consultor de procesos / No-Code",
         type: "empleo",
-        highlight: "Demanda constante · Remoto global",
+        highlight: "Perfil buscado · Empresas y agencias",
         description:
-          "Gestionar redes sociales con enfoque estratégico, no solo publicar contenido sino generar resultados medibles.",
-      },
-      {
-        title: "Dueño de agencia de marketing",
-        type: "emprendimiento",
-        highlight: "Alto valor · Empresas y startups",
-        description:
-          "Armar tu propia agencia gestionando clientes de distintos rubros. Con IA podés dar servicio profesional siendo una persona sola.",
-      },
-      {
-        title: "Especialista en email marketing",
-        type: "freelance",
-        highlight: "Ideal para empezar · Flexible",
-        description:
-          "Diseñar y automatizar secuencias de email que generan ventas. Un servicio muy valorado por tiendas online y SaaS.",
+          "Optimizar operaciones internas y de clientes conectando herramientas y automatizando tareas repetitivas.",
       },
     ],
     complementaryCourses: [
       {
-        slug: "creacion-de-contenido-con-ia",
-        title: "Creación de Contenido con IA",
+        slug: "pymes-y-negocios-con-ia",
+        title: "PyMEs y Negocios con IA",
         reason:
-          "El marketing necesita contenido. Si además de saber hacer campañas también sabés crear los videos, imágenes y copys, tu valor se multiplica.",
+          "Entender los procesos de un negocio te permite identificar qué automatizar y vender soluciones más completas.",
       },
       {
-        slug: "ecommerce-con-ia",
-        title: "E-commerce con IA",
+        slug: "programacion-y-desarrollo-con-ia",
+        title: "Programación y Desarrollo con IA",
         reason:
-          "Marketing + E-commerce es la combinación perfecta. Podés montar tiendas y además saber cómo llevarles tráfico y ventas.",
+          "Sumar desarrollo a la automatización te abre proyectos más grandes y mejor pagos.",
       },
     ],
     employerValues: [
       {
-        trait: "Orientación a resultados",
+        trait: "Pensamiento sistémico",
         description:
-          "En marketing, los números hablan. Las empresas buscan a alguien que pueda demostrar con datos que su trabajo genera ventas, no solo likes.",
+          "Mapear procesos completos y encontrar dónde se puede automatizar. Es la base de una buena solución.",
       },
       {
-        trait: "Pensamiento analítico",
+        trait: "Integración de herramientas",
         description:
-          "Saber leer métricas, identificar qué funciona y qué no, y tomar decisiones basadas en datos. No hace falta ser matemático, pero sí curioso con los números.",
-      },
-      {
-        trait: "Iniciativa y autonomía",
-        description:
-          "Un buen marketer no espera que le digan qué hacer. Propone ideas, prueba cosas nuevas y ajusta rápido cuando algo no funciona.",
-      },
-      {
-        trait: "Empatía con el cliente",
-        description:
-          "Entender qué necesita, qué siente y qué le preocupa a la persona que va a comprar. Eso es lo que hace la diferencia entre un anuncio que vende y uno que se ignora.",
-      },
-    ],
-    freeTools: [
-      "Meta Ads Manager",
-      "Google Ads",
-      "TikTok Ads",
-      "Claude.ai",
-      "ChatGPT",
-      "Gemini",
-      "Brevo (gratis)",
-      "MailerLite (gratis)",
-      "Google Analytics 4",
-      "Microsoft Clarity",
-      "Google Search Console",
-      "n8n",
-      "Make (gratis)",
-    ],
-    paidTools: ["Surfer SEO", "Frase", "Klaviyo", "Creatify"],
-    finalProject:
-      "Lanzar una campaña publicitaria real con USD 50-100 de presupuesto, documentando todo el proceso: estrategia, creativos, segmentación, métricas y resultados.",
-  },
-
-  "gestion-de-negocios-con-ia": {
-    slug: "gestion-de-negocios-con-ia",
-    longDescription:
-      "Si tenés un comercio, un emprendimiento o trabajás de forma independiente, este curso te enseña a poner todo en orden usando tecnología. Vas a aprender a facturar electrónicamente con ARCA (actualizado a la normativa 2026), llevar las cuentas, gestionar stock, atender clientes con IA y digitalizar todos los procesos de tu negocio. Diseñado especialmente para la realidad argentina.",
-    whatYouLearn: [
-      "Facturación electrónica con ARCA (RG 5824/2026)",
-      "Contabilidad básica y gestión financiera con planillas",
-      "Control de stock e inventario digitalizado",
-      "Atención al cliente con WhatsApp Business e IA",
-      "Cobros digitales con MercadoPago, Modo y Ualá Bis",
-      "Automatización de tareas administrativas",
-      "Formalización de negocios y monotributo",
-      "Marketing básico para comercios locales",
-    ],
-    whoIsItFor:
-      "Para dueños de comercios (kioscos, almacenes, peluquerías, restaurantes), profesionales independientes, emprendedores y cualquier persona que quiera aprender a gestionar un negocio de forma profesional y digital.",
-    prerequisites:
-      "Tener un negocio o idea de emprendimiento (o querer trabajar gestionando negocios de otros). Manejo básico de celular o computadora.",
-    jobOpportunities: [
-      {
-        title: "Consultor de digitalización para comercios",
-        type: "freelance",
-        highlight: "Creciente demanda · Freelance local y remoto",
-        description:
-          "Ayudar a comercios locales a pasar de la gestión manual a la digital: facturación, cobros, stock, clientes.",
-      },
-      {
-        title: "Asistente administrativo digital",
-        type: "empleo",
-        highlight: "Muy solicitado · 100% remoto",
-        description:
-          "Llevar la administración de empresas usando herramientas digitales y IA: facturación, cobranzas, reportes.",
-      },
-      {
-        title: "Tu propio negocio profesionalizado",
-        type: "emprendimiento",
-        highlight: "Tu propio negocio · Sin límites",
-        description:
-          "Aplicar todo lo aprendido a tu propio emprendimiento para que sea más rentable, ordenado y escalable.",
-      },
-      {
-        title: "Bookkeeper / Asistente contable",
-        type: "freelance",
-        highlight: "Demanda constante · Freelance o empleo",
-        description:
-          "Llevar los libros contables básicos de PyMEs y comercios, incluyendo facturación ARCA y conciliación bancaria.",
-      },
-    ],
-    complementaryCourses: [
-      {
-        slug: "ecommerce-con-ia",
-        title: "E-commerce con IA",
-        reason:
-          "Si ya sabés gestionar un negocio, el paso natural es venderlo online. Aprendé a montar tu tienda digital y expandir tus ventas más allá del local físico.",
-      },
-      {
-        slug: "ia-para-tu-trabajo",
-        title: "IA para tu Trabajo",
-        reason:
-          "Complementá la gestión de negocios con herramientas de productividad general: documentos, presentaciones, emails profesionales.",
-      },
-    ],
-    employerValues: [
-      {
-        trait: "Responsabilidad y compromiso",
-        description:
-          "Cuando manejás plata, facturas y datos de un negocio, la confianza es todo. Ser puntual, honesto y cuidadoso con la información es lo que más valoran.",
-      },
-      {
-        trait: "Atención al detalle",
-        description:
-          "Un número mal cargado puede generar problemas serios. La gente que revisa su trabajo, que chequea dos veces, siempre es más valorada.",
-      },
-      {
-        trait: "Resolución de problemas",
-        description:
-          "Los negocios tienen problemas todos los días. Lo que se valora no es que no haya problemas, sino saber resolverlos con calma y eficiencia.",
-      },
-      {
-        trait: "Trato amable con clientes",
-        description:
-          "Saber tratar a las personas, escuchar sus necesidades y responder con paciencia. Un negocio crece cuando sus clientes se sienten bien atendidos.",
-      },
-    ],
-    freeTools: [
-      "Portal ARCA",
-      "Facturador móvil ARCA",
-      "Mi Argentina",
-      "MercadoPago",
-      "Google Workspace",
-      "WhatsApp Business",
-      "Claude.ai",
-      "ChatGPT",
-      "Gemini",
-      "Excel / Google Sheets",
-      "Xubio (gratis)",
-      "Notion (gratis)",
-    ],
-    paidTools: ["Tango Software", "Holded"],
-    finalProject:
-      "Presentar un plan de digitalización completo aplicado a un negocio real: facturación ARCA configurada, sistema de stock, cobros digitales, y al menos un proceso automatizado con IA.",
-  },
-
-  "diseno-web-con-ia": {
-    slug: "diseno-web-con-ia",
-    longDescription:
-      "Aprendé a crear sitios web profesionales para clientes reales en días, no meses. Usando herramientas de IA como v0, Lovable, Bolt y Cursor, vas a diseñar y construir webs que se ven increíbles y funcionan perfecto, sin necesitar años de estudio en programación. Este curso te convierte en la persona que las PyMEs y emprendedores necesitan para tener presencia online.",
-    whatYouLearn: [
-      "Diseñar interfaces profesionales con Figma",
-      "Generar sitios web completos con v0, Lovable y Bolt",
-      "Personalizar y ajustar código con Cursor e IA",
-      "Crear landing pages que convierten",
-      "Optimizar sitios para celulares (responsive design)",
-      "Publicar sitios en Vercel, Netlify o Cloudflare Pages",
-      "Configurar dominios y hosting",
-      "Fundamentos de UX/UI para sitios que funcionan",
-    ],
-    whoIsItFor:
-      "Para personas con gusto por lo visual y el diseño, que quieran generar ingresos creando sitios web. No necesitás saber programar: las herramientas de IA hacen gran parte del código. Si te gusta crear cosas lindas y útiles, este curso es perfecto.",
-    prerequisites:
-      "Saber navegar internet y usar aplicaciones básicas. Recomendable tener interés por el diseño y lo visual. No se necesita experiencia en programación.",
-    jobOpportunities: [
-      {
-        title: "Diseñador web freelance",
-        type: "freelance",
-        highlight: "Proyectos rápidos · Freelance ideal",
-        description:
-          "Crear sitios web para PyMEs, emprendedores y profesionales. Con IA podés entregar un sitio profesional en pocos días.",
-      },
-      {
-        title: "Diseñador web junior en agencia",
-        type: "empleo",
-        highlight: "Muy buscado · Agencias y startups",
-        description:
-          "Trabajar en agencias de diseño o marketing, creando sitios para múltiples clientes con herramientas modernas.",
-      },
-      {
-        title: "Creador de plantillas web",
-        type: "emprendimiento",
-        highlight: "Ingreso recurrente · Escalable",
-        description:
-          "Diseñar y vender templates reutilizables en marketplaces. Ingresos que pueden volverse pasivos con el tiempo.",
-      },
-      {
-        title: "Especialista en landing pages",
-        type: "freelance",
-        highlight: "Fácil entrada · Alta rotación de proyectos",
-        description:
-          "Crear páginas de aterrizaje optimizadas para conversiones. Muy demandado por negocios que hacen publicidad online.",
-      },
-    ],
-    complementaryCourses: [
-      {
-        slug: "vibe-coding-desarrollo-apps-ia",
-        title: "Vibe Coding: Desarrollo de Apps con IA",
-        reason:
-          "Si ya sabés diseñar sitios, dar el salto a aplicaciones web completas te abre un mercado con mucho mayor potencial de ingresos.",
-      },
-      {
-        slug: "marketing-digital-con-ia",
-        title: "Marketing Digital con IA",
-        reason:
-          "Saber diseñar un sitio Y saber cómo llevarle tráfico y ventas es una combinación ganadora. Podés ofrecer el servicio completo.",
-      },
-    ],
-    employerValues: [
-      {
-        trait: "Ojo para el detalle visual",
-        description:
-          "Un píxel de diferencia puede cambiar la impresión de un sitio. Las empresas valoran a quien cuida la estética y la coherencia visual.",
-      },
-      {
-        trait: "Velocidad de entrega",
-        description:
-          "En el mundo web, rápido vale más que perfecto. Un profesional que entrega un buen sitio en una semana vale más que uno que tarda tres meses.",
-      },
-      {
-        trait: "Capacidad de escuchar al cliente",
-        description:
-          "El cliente muchas veces no sabe explicar lo que quiere. Saber hacer las preguntas correctas y traducir ideas vagas en diseño concreto es una habilidad clave.",
-      },
-      {
-        trait: "Autonomía para resolver problemas",
-        description:
-          "Cuando algo no funciona como esperabas, buscar la solución por tu cuenta (con IA, documentación, comunidades) en lugar de trabarte y esperar.",
-      },
-    ],
-    freeTools: [
-      "v0 by Vercel (gratis)",
-      "Lovable (gratis)",
-      "Bolt.new (gratis)",
-      "Figma (gratis)",
-      "VS Code",
-      "Cursor (gratis)",
-      "GitHub Copilot Free",
-      "Vercel (gratis)",
-      "Netlify (gratis)",
-      "Tailwind CSS",
-      "shadcn/ui",
-    ],
-    paidTools: ["Cursor Pro", "Claude Pro", "Framer", "Webflow"],
-    finalProject:
-      "Entregar 3 sitios web reales publicados en internet para clientes reales (pueden ser negocios locales, conocidos o proyectos personales).",
-  },
-
-  "ecommerce-con-ia": {
-    slug: "ecommerce-con-ia",
-    longDescription:
-      "Aprendé a montar y operar tiendas online en el ecosistema argentino. Desde elegir la plataforma correcta hasta gestionar envíos, cobros con MercadoPago, facturación con ARCA y atención al cliente con IA. Este curso está pensado para la realidad argentina: plataformas locales, medios de pago nacionales, logística del país y regulaciones vigentes.",
-    whatYouLearn: [
-      "Montar tiendas en Tienda Nube, MercadoShops y Empretienda",
-      "Publicar y optimizar productos en Mercado Libre",
-      "Configurar cobros con MercadoPago, Modo y Ualá Bis",
-      "Gestionar logística con Andreani, OCA y MercadoEnvíos",
-      "Crear fotos y descripciones de productos con IA",
-      "Facturación electrónica para e-commerce con ARCA",
-      "Atención al cliente automatizada con WhatsApp e IA",
-      "Analizar métricas de ventas y optimizar tu tienda",
-    ],
-    whoIsItFor:
-      "Para cualquier persona que quiera vender productos online, ya sea con marca propia, revendiendo o gestionando tiendas para otros. También para comerciantes que quieran expandir su negocio físico al mundo digital.",
-    prerequisites:
-      "Tener un producto o servicio para vender (o querer aprender para gestionar tiendas de otros). Manejo básico de computadora o celular.",
-    jobOpportunities: [
-      {
-        title: "Gestor de tiendas online",
-        type: "freelance",
-        highlight: "Alta demanda · Freelance flexible",
-        description:
-          "Administrar tiendas online de clientes: carga de productos, gestión de pedidos, atención al cliente, reportes.",
-      },
-      {
-        title: "Tu propia tienda online",
-        type: "emprendimiento",
-        highlight: "Tu propio negocio · Sin techo",
-        description:
-          "Montar tu marca y vender tus propios productos o servicios en internet, con toda la operación profesionalizada.",
-      },
-      {
-        title: "Consultor de digitalización comercial",
-        type: "freelance",
-        highlight: "Creciente demanda · Local y remoto",
-        description:
-          "Ayudar a comercios físicos a dar el salto al mundo online: elegir plataforma, configurar todo y capacitar al equipo.",
-      },
-      {
-        title: "Asistente de e-commerce",
-        type: "empleo",
-        highlight: "Muy solicitado · Empresas en crecimiento",
-        description:
-          "Trabajar en empresas que venden online, gestionando el día a día de la operación: pedidos, stock, envíos, devoluciones.",
-      },
-    ],
-    complementaryCourses: [
-      {
-        slug: "marketing-digital-con-ia",
-        title: "Marketing Digital con IA",
-        reason:
-          "Tener la tienda es solo la mitad. Saber cómo llevarle clientes con publicidad paga y estrategia digital es lo que genera ventas reales.",
-      },
-      {
-        slug: "gestion-de-negocios-con-ia",
-        title: "Gestión de Negocios con IA",
-        reason:
-          "Para que tu e-commerce sea rentable necesitás saber gestionar: finanzas, stock, facturación. Este curso te da esa base.",
-      },
-    ],
-    employerValues: [
-      {
-        trait: "Orden y método",
-        description:
-          "El e-commerce tiene muchas partes móviles: stock, pedidos, envíos, pagos. Ser ordenado y metódico es fundamental para que nada se pierda.",
+          "Conectar múltiples plataformas en flujos coherentes y confiables que no se rompan.",
       },
       {
         trait: "Orientación al cliente",
         description:
-          "El cliente online no puede tocar el producto. Necesita confianza, buenas fotos, descripciones claras y respuestas rápidas. Quien entiende eso, vende más.",
-      },
-      {
-        trait: "Capacidad de análisis",
-        description:
-          "Saber leer los números de tu tienda: qué se vende, qué no, de dónde vienen los clientes, cuánto cuesta cada venta. Los datos son tu brújula.",
-      },
-      {
-        trait: "Perseverancia",
-        description:
-          "Las primeras ventas llevan su tiempo, y eso es normal. Quien mantiene la constancia, ajusta lo que no funciona y sigue adelante, es quien termina teniendo éxito.",
+          "Entender el problema real del negocio y entregar una solución que le ahorre tiempo o plata de verdad.",
       },
     ],
     freeTools: [
-      "Tienda Nube",
-      "MercadoShops",
-      "Mercado Libre",
-      "Empretienda",
-      "MercadoPago",
-      "WhatsApp Business",
-      "Photoroom (gratis)",
-      "Pebblely (gratis)",
-      "Canva (gratis)",
-      "Brevo (gratis)",
-      "Doppler (gratis)",
+      "Make (plan gratuito)",
+      "n8n (gratis / self-hosted)",
+      "Claude.ai",
+      "ChatGPT",
+      "Google Sheets",
+      "Notion (gratis)",
+      "WhatsApp Business API (sandbox)",
     ],
-    paidTools: ["Tienda Nube (plan pago)", "Shopify (exportación)"],
+    paidTools: ["Make Pro", "n8n Cloud", "Claude Pro"],
     finalProject:
-      "Tener una tienda online operativa con al menos 10 ventas reales completadas, facturación ARCA configurada y un proceso de envío funcionando.",
+      "Diseñar, construir y documentar un sistema de automatización completo para un caso real o simulado —incluyendo un agente o chatbot— junto con una propuesta comercial lista para presentar a un cliente.",
   },
 
   "analisis-de-datos-con-ia": {
     slug: "analisis-de-datos-con-ia",
     longDescription:
-      "Aprendé a convertir números y datos crudos en información útil para tomar mejores decisiones. Este curso te enseña a crear dashboards profesionales, analizar tendencias, automatizar reportes y presentar resultados de forma clara y visual. No necesitás ser matemático: la IA te ayuda con los cálculos y vos te enfocás en entender qué significan los datos y qué hacer con ellos.",
+      "Convertí montañas de datos en decisiones claras, con ayuda de la Inteligencia Artificial y sin necesidad de saber estadística avanzada ni programar. En este curso aprendés a ordenar, interpretar y presentar información para que cualquiera la entienda: crear tableros, gráficos e informes que ayudan a empresas, comercios y organizaciones a tomar mejores decisiones.",
     whatYouLearn: [
-      "Limpiar, organizar y preparar datos con Excel, Sheets y IA",
-      "Crear dashboards interactivos con Looker Studio y Metabase",
-      "Analizar datos con Python y Google Colab (asistido por IA)",
-      "Usar SQL básico para consultar bases de datos",
-      "Generar reportes automáticos con IA",
+      "Ordenar, limpiar y organizar datos con IA, Excel y Sheets",
+      "Crear tableros interactivos (Looker Studio, Metabase)",
+      "Usar IA conversacional para analizar información",
       "Visualizar datos de forma clara y profesional",
-      "Identificar tendencias y patrones en datos de negocios",
-      "Presentar insights y recomendaciones a clientes",
+      "Identificar tendencias y patrones en datos de negocio",
+      "Consultas básicas a bases de datos (SQL introductorio)",
+      "Generar informes que se entienden",
+      "Presentar hallazgos y recomendaciones",
     ],
     whoIsItFor:
-      "Para personas con gusto por los números y el orden. No necesitás ser experto en matemáticas, pero sí tener curiosidad por entender qué dicen los datos. Ideal para quienes quieren un perfil profesional altamente demandado.",
+      "Para personas con gusto por los números y el orden. No hace falta ser experto en matemáticas, pero sí tener curiosidad por entender qué dicen los datos. Ideal para quienes buscan un perfil profesional muy demandado.",
     prerequisites:
-      "Manejo básico de Excel o Google Sheets. Recomendable haber cursado IA para tu Trabajo.",
+      "Manejo básico de Excel o Google Sheets. Recomendable haber hecho un curso introductorio de IA aplicada.",
     jobOpportunities: [
       {
         title: "Analista de datos junior",
         type: "empleo",
         highlight: "Perfil escaso · Muy valorado",
         description:
-          "Trabajar en empresas analizando datos de ventas, clientes, operaciones y generando reportes para la toma de decisiones.",
+          "Analizar datos de ventas, clientes y operaciones, y generar reportes para la toma de decisiones.",
       },
       {
-        title: "Freelance de dashboards",
-        type: "freelance",
-        highlight: "Proyectos puntuales · Buen margen",
-        description:
-          "Crear tableros de control personalizados para PyMEs y comercios que quieren visualizar sus métricas clave.",
-      },
-      {
-        title: "Asistente de Business Intelligence",
+        title: "Asistente de inteligencia de negocios",
         type: "empleo",
         highlight: "Alta demanda global · Remoto",
         description:
-          "Apoyar al área de BI de empresas medianas y grandes, preparando datos y generando visualizaciones.",
+          "Apoyar el área de BI de empresas preparando datos y creando visualizaciones y tableros.",
       },
       {
-        title: "Consultor de datos para PyMEs",
+        title: "Soporte de reportes / dashboards freelance",
         type: "freelance",
-        highlight: "Entrada directa al mundo tech",
+        highlight: "Proyectos puntuales · Buen margen",
         description:
-          "Ayudar a negocios locales a entender sus números: qué productos rinden más, dónde pierden plata, cómo optimizar.",
+          "Crear tableros de control para PyMEs y comercios que quieren visualizar sus métricas clave.",
       },
     ],
     complementaryCourses: [
       {
-        slug: "ia-para-tu-trabajo",
-        title: "IA para tu Trabajo",
+        slug: "pymes-y-negocios-con-ia",
+        title: "PyMEs y Negocios con IA",
         reason:
-          "Las habilidades generales de productividad con IA potencian enormemente tu capacidad de análisis. Complementa perfecto.",
+          "Entender el negocio le da sentido a los datos: sabés qué medir y para qué.",
       },
       {
-        slug: "marketing-digital-con-ia",
-        title: "Marketing Digital con IA",
+        slug: "marketing-y-creacion-de-contenido-con-ia",
+        title: "Marketing y Creación de Contenido con IA",
         reason:
-          "El marketing genera muchos datos. Saber analizarlos te convierte en un perfil muy valioso: el marketer que entiende números.",
+          "El marketing genera muchísimos datos. Saber analizarlos te vuelve un perfil muy valioso.",
       },
     ],
     employerValues: [
       {
         trait: "Pensamiento crítico",
         description:
-          "No alcanza con mostrar números. Lo que se valora es la capacidad de preguntarse 'por qué pasa esto' y 'qué deberíamos hacer al respecto'.",
+          "No alcanza con mostrar números: se valora preguntarse 'por qué pasa esto' y 'qué deberíamos hacer'.",
       },
       {
         trait: "Claridad para comunicar",
         description:
-          "Los datos no sirven de nada si no podés explicarlos de forma simple. Saber traducir gráficos y números en lenguaje que cualquiera entienda es clave.",
+          "Traducir gráficos y números en lenguaje simple que cualquiera entienda es clave.",
       },
       {
         trait: "Rigurosidad",
         description:
-          "Un error en los datos puede llevar a malas decisiones. Las empresas buscan gente que verifique, que cruce información y que no asuma nada sin comprobarlo.",
-      },
-      {
-        trait: "Curiosidad",
-        description:
-          "Los mejores analistas son los que miran un reporte y se preguntan '¿qué más puedo descubrir acá?'. La curiosidad es el motor del buen análisis.",
+          "Verificar, cruzar información y no asumir nada sin comprobarlo. Un error en los datos lleva a malas decisiones.",
       },
     ],
     freeTools: [
       "Google Sheets + Gemini",
       "Looker Studio",
       "Excel Online",
-      "PostgreSQL / Supabase (gratis)",
-      "ChatGPT con Code Interpreter",
+      "ChatGPT",
       "Claude.ai",
-      "Python + Jupyter",
-      "Google Colab",
       "Metabase (open source)",
+      "Google Colab",
       "NotebookLM",
     ],
-    paidTools: ["Power BI Pro", "Tableau", "Microsoft Copilot 365 Excel"],
+    paidTools: ["Power BI Pro", "Microsoft Copilot 365 Excel"],
     finalProject:
-      "Crear un dashboard real para un comercio local o PyME, con datos reales, insights documentados y recomendaciones accionables.",
+      "Crear un tablero real para un comercio o PyME (con datos reales o simulados), con hallazgos documentados y recomendaciones accionables.",
   },
 
-  "vibe-coding-desarrollo-apps-ia": {
-    slug: "vibe-coding-desarrollo-apps-ia",
+  "marketing-y-creacion-de-contenido-con-ia": {
+    slug: "marketing-y-creacion-de-contenido-con-ia",
     longDescription:
-      "Este es el curso más exigente y el de mayor potencial de ingresos de toda la plataforma. Vas a aprender a construir aplicaciones web reales — el tipo de software que usan empresas y usuarios todos los días — usando IA como tu copiloto principal. No necesitás ser programador de antes: la IA escribe gran parte del código, pero vos aprendés a guiarla, corregirla y construir productos que funcionan.",
+      "Aprendé a conseguir clientes y vender online: creá contenido que atrae y armá campañas simples, todo con ayuda de la Inteligencia Artificial. Es un punto de partida claro para manejar las redes y la publicidad de una marca o negocio, sin necesidad de ser experto. La creación de las piezas visuales (imágenes y video) la profundiza el curso de Diseño Digital; acá el foco está en la estrategia, el contenido y las campañas.",
     whatYouLearn: [
-      "Construir aplicaciones web con Next.js, React y TypeScript",
-      "Usar Cursor, Claude y GitHub Copilot como copilotos de código",
-      "Diseñar bases de datos con Supabase",
-      "Crear interfaces modernas con Tailwind CSS y shadcn/ui",
-      "Generar MVPs completos con v0, Lovable y Bolt",
-      "Autenticación, pagos y funcionalidades avanzadas",
-      "Deployar aplicaciones en producción con Vercel",
-      "Integrar APIs de IA en tus aplicaciones",
+      "Estrategia simple: público, oferta y embudo (atraer y convertir)",
+      "Planificación de contenido para redes con IA (ideas, textos y guiones)",
+      "Copywriting persuasivo con IA para redes, anuncios y mensajes",
+      "Publicidad básica en Meta y Google con campañas asistidas por IA",
+      "Email y WhatsApp para vender y fidelizar",
+      "Manejo de redes sociales y calendario de contenido",
+      "Métricas básicas para saber si funciona",
+      "Cómo ofrecer estos servicios a marcas y comercios",
     ],
     whoIsItFor:
-      "Para personas ambiciosas que quieren aprender la habilidad mejor paga del mercado digital. No necesitás saber programar de antes, pero sí tener ganas de dedicarle tiempo y esfuerzo. Es el curso más largo y exigente, pero también el que abre las mejores oportunidades.",
+      "Para emprendedores que quieren vender más, futuros community managers y personas que quieren trabajar gestionando redes y publicidad para negocios. Si te interesa el mundo de las ventas digitales, este curso es para vos.",
     prerequisites:
-      "Ganas de aprender y dedicación real (10-12 horas por semana). Recomendable haber hecho Diseño Web con IA primero, pero no obligatorio.",
+      "Saber usar redes sociales a nivel básico. No se requiere experiencia previa.",
     jobOpportunities: [
       {
-        title: "Desarrollador junior en startups",
+        title: "Community manager",
         type: "empleo",
-        highlight: "El perfil más buscado · Remoto global",
+        highlight: "Demanda constante · Remoto",
         description:
-          "Trabajar en startups construyendo y manteniendo aplicaciones web. Uno de los puestos mejor pagos del mercado digital.",
+          "Gestionar las redes de marcas y comercios: contenido, calendario, respuestas y resultados medibles.",
       },
       {
-        title: "Freelance de MVPs",
+        title: "Gestor de redes y campañas freelance",
         type: "freelance",
-        highlight: "Alto valor · Proyectos globales",
+        highlight: "Muy solicitado · Flexible",
         description:
-          "Construir prototipos funcionales (MVPs) para emprendedores y empresas que quieren validar ideas de negocio.",
+          "Manejar la presencia digital y la publicidad de varios clientes, optimizando presupuesto y resultados.",
       },
       {
-        title: "Creador de tu propio SaaS",
+        title: "Creador de contenido / UGC",
         type: "emprendimiento",
-        highlight: "Tu propio producto · Ingreso recurrente",
+        highlight: "Economía de creadores · En expansión",
         description:
-          "Construir tu propio producto digital (software como servicio) y venderlo a clientes recurrentes. El sueño de muchos devs.",
+          "Producir contenido para marcas (UGC) o monetizar cuentas propias con estrategia de crecimiento.",
       },
       {
-        title: "Desarrollador de herramientas con IA",
+        title: "Marketing para PyMEs",
         type: "freelance",
-        highlight: "Nicho en auge · Freelance premium",
+        highlight: "Ideal para empezar · Local y remoto",
         description:
-          "Crear aplicaciones que integran IA para resolver problemas específicos de empresas. Un nicho en pleno crecimiento.",
+          "Ayudar a negocios locales a conseguir clientes online con campañas simples y contenido efectivo.",
       },
     ],
     complementaryCourses: [
       {
-        slug: "diseno-web-con-ia",
-        title: "Diseño Web con IA",
+        slug: "diseno-digital-con-ia",
+        title: "Diseño Digital con IA",
         reason:
-          "Tener buen ojo para el diseño además de saber programar te convierte en un perfil completo. Podés entregar productos que no solo funcionan sino que se ven increíbles.",
+          "El marketing necesita piezas visuales. Saber crearlas (imágenes y video) multiplica tu valor y tus ingresos.",
       },
       {
-        slug: "analisis-de-datos-con-ia",
-        title: "Análisis de Datos con IA",
+        slug: "pymes-y-negocios-con-ia",
+        title: "PyMEs y Negocios con IA",
         reason:
-          "Saber construir apps Y analizar datos es una combinación muy poderosa. Podés crear dashboards, herramientas de BI y productos data-driven.",
+          "Entender el negocio hace que tu marketing venda de verdad, no solo que sume likes.",
       },
     ],
     employerValues: [
       {
-        trait: "Resolución de problemas",
+        trait: "Orientación a resultados",
         description:
-          "Programar es resolver problemas todo el día. Las empresas buscan a alguien que ante un error no se frustre sino que lo investigue, pruebe soluciones y lo resuelva.",
+          "En marketing los números hablan: se valora demostrar con datos que tu trabajo genera clientes, no solo likes.",
       },
       {
-        trait: "Capacidad de aprender rápido",
+        trait: "Iniciativa y autonomía",
         description:
-          "La tecnología cambia cada semana. Lo que se valora no es saber todo, sino poder aprender cosas nuevas rápido y aplicarlas. La IA te ayuda, pero la actitud es tuya.",
+          "Proponer ideas, probar cosas nuevas y ajustar rápido cuando algo no funciona.",
       },
       {
-        trait: "Comunicación clara",
+        trait: "Empatía con el cliente",
         description:
-          "Saber explicar qué hiciste, por qué lo hiciste así y qué falta hacer. Los mejores desarrolladores son los que el resto del equipo entiende.",
-      },
-      {
-        trait: "Responsabilidad con el código",
-        description:
-          "Escribir código limpio, probarlo antes de enviarlo y hacerse cargo cuando algo falla. La confianza se construye con cada entrega bien hecha.",
+          "Entender qué necesita y qué le preocupa a la persona que va a comprar. Eso hace la diferencia entre un anuncio que vende y uno que se ignora.",
       },
     ],
     freeTools: [
-      "VS Code",
-      "GitHub Copilot Free",
+      "Meta Ads Manager",
+      "Google Ads",
       "Claude.ai",
       "ChatGPT",
-      "Bolt.new (gratis)",
-      "v0 (gratis)",
-      "Lovable (gratis)",
-      "Replit (gratis)",
-      "Supabase (gratis)",
-      "Vercel (gratis)",
-      "Next.js",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Git + GitHub",
+      "Gemini",
+      "Canva (gratis)",
+      "CapCut",
+      "Brevo (gratis)",
+      "Google Analytics 4",
+      "Metricool (gratis)",
     ],
-    paidTools: ["Claude Pro", "Cursor Pro", "Claude Code Max"],
+    paidTools: ["Meta / Google Ads (presupuesto)", "Metricool Pro"],
     finalProject:
-      "Construir un SaaS funcional con IA integrada, deployado en producción y listo para conseguir tus primeros usuarios reales.",
+      "Planificar y lanzar una campaña real o simulada para una marca o negocio: estrategia, contenido, una campaña de ads con presupuesto acotado y análisis de resultados.",
   },
 
-  "qa-testing-con-ia": {
-    slug: "qa-testing-con-ia",
+  "diseno-digital-con-ia": {
+    slug: "diseno-digital-con-ia",
     longDescription:
-      "El testing es la puerta de entrada más rápida al mundo tech. Mientras todos aprenden a programar, las empresas buscan desesperadamente gente que sepa encontrar errores antes de que lleguen a los usuarios. En este curso vas a aprender a testear aplicaciones web y mobile usando IA como tu copiloto: desde pruebas manuales profesionales hasta automatización con herramientas modernas. Vas a salir con un portfolio de bugs reportados, casos de prueba reales y la capacidad de conseguir tu primer trabajo remoto como QA Junior.",
+      "Creá las piezas visuales que toda marca y negocio necesita —logos, identidad, imágenes y también edición de video con IA para redes— produciendo más rápido y con mejor calidad, aunque no vengas del mundo del diseño. Es uno de los oficios digitales de entrada más demandados: con IA, la barrera para empezar es más baja que nunca, y el trabajo se cobra bien y de forma remota.",
     whatYouLearn: [
-      "Fundamentos de testing: tipos de prueba, ciclo de vida del bug y metodologías",
-      "Testing manual profesional: casos de prueba, matrices de cobertura y reportes",
-      "Automatización de pruebas con Playwright y asistencia de IA",
-      "Testing de APIs con Postman y validación automatizada",
-      "Uso de IA para generar casos de prueba, analizar logs y detectar patrones de error",
-      "Testing de accesibilidad, performance y seguridad básica",
-      "Gestión de bugs con Jira/Linear y comunicación efectiva con desarrolladores",
-      "Armado de portfolio QA y preparación para entrevistas técnicas",
+      "Fundamentos del diseño y de la identidad de marca",
+      "Creación de logos y paletas de color",
+      "Generación y edición de imágenes con IA (retoque, quitar y cambiar fondos)",
+      "Edición de video con IA (cortes, subtítulos y formatos verticales para Reels/Shorts)",
+      "Piezas para redes sociales (posts, historias, portadas)",
+      "Diseño de landing pages y pantallas (UX/UI)",
+      "Herramientas: Canva, Figma y modelos de imagen y video con IA",
+      "Exportación y entrega profesional a clientes",
     ],
     whoIsItFor:
-      "Para quienes quieren entrar al mundo tech con una ruta directa al empleo. Ideal si te gusta la atención al detalle, encontrar errores y tenés pensamiento analítico. No necesitás saber programar.",
+      "Para personas con gusto por lo visual que quieren generar ingresos creando contenido gráfico y audiovisual. No necesitás experiencia: las herramientas de IA hacen gran parte del trabajo pesado.",
     prerequisites:
-      "Manejo básico de computadora y navegador. Recomendado haber completado 'IA para tu Trabajo'. No se requiere experiencia en programación.",
+      "Saber navegar internet y usar aplicaciones básicas. Interés por lo visual. No se requiere experiencia en diseño.",
     jobOpportunities: [
       {
-        title: "QA Tester Junior remoto",
-        type: "empleo" as const,
-        highlight: "Puerta de entrada al mundo tech · Remoto",
+        title: "Diseñador gráfico freelance",
+        type: "freelance",
+        highlight: "Alta demanda · Freelance global",
         description:
-          "Empresas de todo el mundo contratan QA Juniors remotos. Es uno de los roles tech con menor barrera de entrada y mayor demanda.",
+          "Crear logos, identidad y piezas para marcas, comercios y emprendedores. Uno de los servicios más pedidos.",
       },
       {
-        title: "QA Freelance en plataformas",
-        type: "freelance" as const,
-        highlight: "Demanda constante · Proyectos flexibles",
+        title: "Editor de video / creador de contenido audiovisual",
+        type: "freelance",
+        highlight: "Economía de contenido · Muy demandado",
         description:
-          "Plataformas como Testlio, uTest y Upwork tienen demanda constante de testers freelance para proyectos puntuales.",
+          "Editar Reels, Shorts y videos para creadores, marcas y agencias. De los trabajos remotos mejor pagos de entrada.",
       },
       {
-        title: "QA Automation Junior",
-        type: "empleo" as const,
-        highlight: "Crecimiento profesional rápido · Remoto",
+        title: "Diseñador UX/UI junior",
+        type: "empleo",
+        highlight: "Perfil buscado · Startups y agencias",
         description:
-          "Con las bases de automatización del curso, podés evolucionar rápido a roles de QA Automation con mejores salarios.",
+          "Diseñar landing pages y pantallas de apps y sitios, cuidando la experiencia del usuario.",
+      },
+      {
+        title: "Servicios de diseño para PyMEs",
+        type: "freelance",
+        highlight: "Ideal para empezar · Local y remoto",
+        description:
+          "Ofrecer diseño y contenido visual a negocios locales que necesitan mejorar su imagen y sus redes.",
       },
     ],
     complementaryCourses: [
       {
-        slug: "vibe-coding-desarrollo-apps-ia",
-        title: "Vibe Coding: Desarrollo de Apps con IA",
+        slug: "marketing-y-creacion-de-contenido-con-ia",
+        title: "Marketing y Creación de Contenido con IA",
         reason:
-          "Entender cómo se construyen las apps te hace un tester mucho más efectivo y valioso para cualquier equipo.",
+          "Diseñar las piezas Y saber la estrategia para difundirlas te permite ofrecer el servicio completo.",
       },
       {
-        slug: "ia-para-tu-trabajo",
-        title: "IA para tu Trabajo",
+        slug: "programacion-y-desarrollo-con-ia",
+        title: "Programación y Desarrollo con IA",
         reason:
-          "Dominar las herramientas de IA base te permite automatizar reportes, documentación y análisis de bugs.",
+          "Sumar desarrollo al diseño te vuelve un perfil completo: podés diseñar y construir sitios y apps.",
       },
     ],
     employerValues: [
       {
-        trait: "Atención al detalle",
-        description: "Capacidad de encontrar errores que otros pasan por alto.",
+        trait: "Ojo para el detalle visual",
+        description:
+          "La estética y la coherencia importan. Se valora a quien cuida cada detalle de una pieza.",
       },
       {
-        trait: "Comunicación técnica",
-        description: "Reportes de bugs claros, reproducibles y accionables.",
+        trait: "Velocidad de entrega",
+        description:
+          "Con IA se puede producir rápido. Entregar bien y a tiempo es lo que fideliza clientes.",
       },
       {
-        trait: "Automatización con IA",
-        description: "Uso de herramientas modernas para multiplicar la cobertura de pruebas.",
+        trait: "Escuchar al cliente",
+        description:
+          "Traducir ideas vagas en diseño concreto. Saber preguntar lo correcto es una habilidad clave.",
       },
     ],
     freeTools: [
-      "Playwright (gratis)",
-      "Postman (gratis)",
-      "Claude (gratis)",
-      "ChatGPT (gratis)",
-      "Chrome DevTools",
-      "Linear (gratis)",
-      "GitHub",
+      "Canva (gratis)",
+      "Figma (gratis)",
+      "CapCut",
+      "Photoroom (gratis)",
+      "Krea AI",
+      "Leonardo.ai",
+      "Bing Image Creator",
+      "Claude.ai",
+      "ChatGPT",
     ],
-    paidTools: ["Claude Pro", "BrowserStack"],
+    paidTools: ["Canva Pro", "Midjourney", "Adobe (opcional)", "CapCut Pro"],
     finalProject:
-      "Realizar un audit completo de QA sobre una aplicación web real: plan de pruebas, ejecución manual y automatizada, reporte profesional de bugs y propuesta de mejoras — listo para presentar como portfolio.",
-  },
-
-  "automatizaciones-con-ia-y-no-code": {
-    slug: "automatizaciones-con-ia-y-no-code",
-    longDescription:
-      "Las empresas pierden miles de horas en tareas repetitivas que se pueden automatizar en minutos. Este curso te enseña a construir flujos de automatización profesionales usando n8n, Make y herramientas no-code, integrando modelos de IA para crear soluciones inteligentes. La diferencia clave: no vas a automatizar solo tu negocio, vas a aprender a vender automatizaciones como servicio a otros. Empresas de todo el mundo pagan muy bien por flujos que vos vas a poder armar en horas.",
-    whatYouLearn: [
-      "Fundamentos de automatización: triggers, acciones, flujos y lógica condicional",
-      "n8n desde cero: instalación, nodos, workflows complejos y deploy",
-      "Make (ex Integromat): escenarios avanzados e integraciones con 500+ apps",
-      "Integración de APIs de IA (Claude, GPT, Whisper) en flujos automatizados",
-      "Automatización de email marketing, CRM, facturación y atención al cliente",
-      "Construcción de chatbots y asistentes con IA sin código",
-      "Bubble y herramientas no-code para crear interfaces de usuario",
-      "Cómo vender servicios de automatización: pricing, propuestas y delivery",
-    ],
-    whoIsItFor:
-      "Para quienes quieren ofrecer servicios digitales de alto valor sin programar. Ideal para emprendedores, freelancers y profesionales que quieren generar ingresos en dólares resolviendo problemas reales con tecnología.",
-    prerequisites:
-      "Manejo básico de computadora. Recomendado haber completado 'IA para tu Trabajo' o 'Gestión de Negocios con IA'.",
-    jobOpportunities: [
-      {
-        title: "Freelance de automatizaciones",
-        type: "freelance" as const,
-        highlight: "Alto valor por proyecto · Freelance global",
-        description:
-          "Empresas pagan muy bien por automatizar sus procesos. Un solo flujo bien armado tiene alto valor en el mercado según la complejidad.",
-      },
-      {
-        title: "Consultor de automatización / No-Code",
-        type: "empleo" as const,
-        highlight: "Perfil muy buscado · Empresas tech",
-        description:
-          "Agencias y empresas tech buscan especialistas en automatización para optimizar operaciones internas y de clientes.",
-      },
-      {
-        title: "Emprendimiento de servicios digitales",
-        type: "emprendimiento" as const,
-        highlight: "Tu propia agencia · Escalable",
-        description:
-          "Montá tu propia agencia de automatización ofreciendo soluciones a PyMEs y startups de toda Latinoamérica y el mundo.",
-      },
-    ],
-    complementaryCourses: [
-      {
-        slug: "gestion-de-negocios-con-ia",
-        title: "Gestión de Negocios con IA",
-        reason:
-          "Entender los procesos de negocio te permite identificar qué automatizar y vender soluciones más completas.",
-      },
-      {
-        slug: "marketing-digital-con-ia",
-        title: "Marketing Digital con IA",
-        reason:
-          "Muchas automatizaciones de alto valor están en marketing: email sequences, lead scoring, reportes automáticos.",
-      },
-    ],
-    employerValues: [
-      {
-        trait: "Pensamiento sistémico",
-        description: "Capacidad de mapear procesos completos y encontrar oportunidades de automatización.",
-      },
-      {
-        trait: "Integración de herramientas",
-        description: "Conectar múltiples plataformas en flujos coherentes y confiables.",
-      },
-      {
-        trait: "IA aplicada",
-        description: "Integrar modelos de lenguaje en flujos de trabajo para crear soluciones inteligentes.",
-      },
-    ],
-    freeTools: [
-      "n8n (gratis / self-hosted)",
-      "Make (plan gratuito)",
-      "Claude (gratis)",
-      "ChatGPT (gratis)",
-      "Bubble (plan gratuito)",
-      "Notion (gratis)",
-      "Google Sheets",
-    ],
-    paidTools: ["n8n Cloud", "Make Pro", "Claude Pro"],
-    finalProject:
-      "Diseñar, construir y documentar un sistema de automatización completo para un caso de negocio real: desde el relevamiento del proceso hasta el deploy, incluyendo una propuesta comercial profesional lista para presentar a un cliente.",
+      "Armar un mini-portafolio: la identidad visual completa de una marca (logo, paleta y piezas para redes) más un video corto editado con IA, listo para mostrar a clientes.",
   },
 };

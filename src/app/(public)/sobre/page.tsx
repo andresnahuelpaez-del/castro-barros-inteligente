@@ -16,8 +16,8 @@ export default function SobrePage() {
           Sobre Castro Barros Inteligente<sup>&reg;</sup>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground-secondary">
-          Una iniciativa estatal para democratizar la educación digital en el
-          Departamento Castro Barros, La Rioja.
+          Una iniciativa estatal para democratizar la educación digital en toda
+          la Provincia de La Rioja.
         </p>
       </div>
 
@@ -27,8 +27,9 @@ export default function SobrePage() {
           <h2 className="mt-4 text-xl font-bold">Misión</h2>
           <p className="mt-2 text-foreground-secondary leading-relaxed">
             Brindar capacitación digital profesional, gratuita y certificada a
-            cada habitante del Departamento Castro Barros, utilizando
-            Inteligencia Artificial como herramienta central de aprendizaje,
+            cada habitante de la Provincia de La Rioja —con especial foco en las
+            localidades del interior—, utilizando Inteligencia Artificial como
+            herramienta central de aprendizaje,
             para que puedan acceder a nuevas oportunidades laborales y
             productivas en la economía digital.
           </p>
@@ -38,8 +39,8 @@ export default function SobrePage() {
           <Eye className="h-10 w-10 text-neon-violet-bright" />
           <h2 className="mt-4 text-xl font-bold">Visión</h2>
           <p className="mt-2 text-foreground-secondary leading-relaxed">
-            Convertir al Departamento Castro Barros en un referente nacional de
-            transformación digital comunitaria, donde cada ciudadano tenga las
+            Convertir a La Rioja en un referente de transformación digital
+            comunitaria, donde cada ciudadano tenga las
             herramientas para competir profesionalmente en el mercado global,
             sin importar su ubicación geográfica ni su punto de partida
             educativo.

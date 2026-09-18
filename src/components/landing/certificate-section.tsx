@@ -40,8 +40,8 @@ export function CertificateSection() {
             <p className="mt-4 text-sm text-foreground-secondary leading-relaxed sm:text-base">
               Cada certificado emitido por Castro Barros Inteligente&reg; incluye
               un código único de verificación que cualquier empleador puede
-              consultar en línea. Es válido, oficial y está respaldado por el
-              Departamento Castro Barros.
+              consultar en línea. Es válido, oficial y está respaldado por la
+              Provincia de La Rioja.
             </p>
             <ul className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
               {features.map((feature) => (

@@ -1,40 +1,39 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Video,
-  Briefcase,
-  Megaphone,
-  Store,
-  Globe,
-  ShoppingCart,
-  BarChart3,
+  Boxes,
+  Mountain,
   Code,
-  ShieldCheck,
-  Workflow,
+  Store,
+  Scale,
+  Bot,
+  BarChart3,
+  Megaphone,
+  Palette,
+  Briefcase,
 } from "lucide-react";
 import { COURSES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Cursos",
   description:
-    "Explorá los 10 cursos de capacitación digital gratuita con IA del Departamento Castro Barros.",
+    "Explorá los 9 cursos de capacitación digital gratuita con Inteligencia Artificial aplicada, para toda la Provincia de La Rioja.",
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  Video, Briefcase, Megaphone, Store, Globe, ShoppingCart, BarChart3, Code, ShieldCheck, Workflow,
+  Boxes, Mountain, Code, Store, Scale, Bot, BarChart3, Megaphone, Palette,
 };
 
 const courseColors: Record<string, { accent: string; bg: string; border: string }> = {
-  "creacion-de-contenido-con-ia": { accent: "#FF6B6B", bg: "bg-[#FF6B6B]/10", border: "border-[#FF6B6B]/20 hover:border-[#FF6B6B]/40" },
-  "ia-para-tu-trabajo": { accent: "#39FF14", bg: "bg-neon-green/10", border: "border-neon-green/20 hover:border-neon-green/40" },
-  "marketing-digital-con-ia": { accent: "#F59E0B", bg: "bg-[#F59E0B]/10", border: "border-[#F59E0B]/20 hover:border-[#F59E0B]/40" },
-  "gestion-de-negocios-con-ia": { accent: "#A855F7", bg: "bg-[#A855F7]/10", border: "border-[#A855F7]/20 hover:border-[#A855F7]/40" },
-  "diseno-web-con-ia": { accent: "#06B6D4", bg: "bg-[#06B6D4]/10", border: "border-[#06B6D4]/20 hover:border-[#06B6D4]/40" },
-  "ecommerce-con-ia": { accent: "#10B981", bg: "bg-[#10B981]/10", border: "border-[#10B981]/20 hover:border-[#10B981]/40" },
-  "analisis-de-datos-con-ia": { accent: "#3B82F6", bg: "bg-[#3B82F6]/10", border: "border-[#3B82F6]/20 hover:border-[#3B82F6]/40" },
-  "vibe-coding-desarrollo-apps-ia": { accent: "#EC4899", bg: "bg-[#EC4899]/10", border: "border-[#EC4899]/20 hover:border-[#EC4899]/40" },
-  "qa-testing-con-ia": { accent: "#8B5CF6", bg: "bg-[#8B5CF6]/10", border: "border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40" },
-  "automatizaciones-con-ia-y-no-code": { accent: "#F97316", bg: "bg-[#F97316]/10", border: "border-[#F97316]/20 hover:border-[#F97316]/40" },
+  "gemelos-digitales-con-ia": { accent: "#39FF14", bg: "bg-neon-green/10", border: "border-neon-green/20 hover:border-neon-green/40" },
+  "mineria-con-ia": { accent: "#F59E0B", bg: "bg-[#F59E0B]/10", border: "border-[#F59E0B]/20 hover:border-[#F59E0B]/40" },
+  "programacion-y-desarrollo-con-ia": { accent: "#EC4899", bg: "bg-[#EC4899]/10", border: "border-[#EC4899]/20 hover:border-[#EC4899]/40" },
+  "pymes-y-negocios-con-ia": { accent: "#A855F7", bg: "bg-[#A855F7]/10", border: "border-[#A855F7]/20 hover:border-[#A855F7]/40" },
+  "practica-juridica-con-ia": { accent: "#3B82F6", bg: "bg-[#3B82F6]/10", border: "border-[#3B82F6]/20 hover:border-[#3B82F6]/40" },
+  "automatizacion-y-agentes-con-ia": { accent: "#F97316", bg: "bg-[#F97316]/10", border: "border-[#F97316]/20 hover:border-[#F97316]/40" },
+  "analisis-de-datos-con-ia": { accent: "#06B6D4", bg: "bg-[#06B6D4]/10", border: "border-[#06B6D4]/20 hover:border-[#06B6D4]/40" },
+  "marketing-y-creacion-de-contenido-con-ia": { accent: "#FF6B6B", bg: "bg-[#FF6B6B]/10", border: "border-[#FF6B6B]/20 hover:border-[#FF6B6B]/40" },
+  "diseno-digital-con-ia": { accent: "#8B5CF6", bg: "bg-[#8B5CF6]/10", border: "border-[#8B5CF6]/20 hover:border-[#8B5CF6]/40" },
 };
 
 const defaultColor = { accent: "#39FF14", bg: "bg-neon-green/10", border: "border-border hover:border-border-bright" };
@@ -45,8 +44,9 @@ export default function CursosPage() {
       <div className="text-center">
         <h1 className="text-4xl font-bold sm:text-5xl">Nuestros cursos</h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-foreground-secondary">
-          Diez programas profesionales diseñados para construir tu futuro
-          digital. Todos 100% gratuitos y con certificación oficial.
+          Nueve programas profesionales, todos con Inteligencia Artificial
+          aplicada, diseñados para construir tu futuro digital. Todos 100%
+          gratuitos y con certificación oficial.
         </p>
       </div>
 

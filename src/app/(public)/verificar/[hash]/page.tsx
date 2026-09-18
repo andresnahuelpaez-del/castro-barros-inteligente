@@ -177,8 +177,8 @@ export default async function VerificarPage({ params }: PageProps) {
                   Este certificado es auténtico y de emisión oficial
                 </p>
                 <p className="mt-0.5 text-xs text-foreground-secondary">
-                  Registrado en la base oficial del Departamento Castro Barros,
-                  La Rioja, Argentina.
+                  Registrado en la base oficial de la Provincia de La Rioja,
+                  Argentina.
                 </p>
               </div>
             </div>

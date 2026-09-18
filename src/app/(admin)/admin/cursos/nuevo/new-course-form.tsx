@@ -75,7 +75,7 @@ export function NewCourseForm() {
             setTitle(e.target.value);
             setSlug(generateSlug(e.target.value));
           }}
-          placeholder="Ej: Marketing Digital con IA"
+          placeholder="Ej: Gemelos Digitales con IA"
           className="mt-1"
         />
       </div>
@@ -85,7 +85,7 @@ export function NewCourseForm() {
         <Input
           value={slug}
           onChange={(e) => setSlug(e.target.value)}
-          placeholder="marketing-digital-con-ia"
+          placeholder="gemelos-digitales-con-ia"
           className="mt-1"
         />
         <p className="mt-1 text-xs text-foreground-muted">

@@ -41,8 +41,8 @@ export function CtaSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          Sumate a los habitantes de Castro Barros que ya están construyendo su
-          futuro con Inteligencia Artificial.
+          Sumate a los riojanos que ya están construyendo su futuro con
+          Inteligencia Artificial.
         </motion.p>
 
         <motion.div
