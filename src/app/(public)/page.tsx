@@ -6,7 +6,6 @@ import { CoursesSection } from "@/components/landing/courses-section";
 import { ToolsSection } from "@/components/landing/tools-section";
 import { DocentesSection } from "@/components/landing/docentes-section";
 import { HowItWorksSection } from "@/components/landing/how-it-works-section";
-import { MetricsSection } from "@/components/landing/metrics-section";
 import { AudienceSection } from "@/components/landing/audience-section";
 import { EmployabilitySection } from "@/components/landing/employability-section";
 import { CvSection } from "@/components/landing/cv-section";
@@ -24,19 +23,18 @@ export default function Home() {
       <DiputadoSection />
       <SectionDivider color="green" />
       <WhySection />
+      <AudienceSection />
       <CoursesSection />
       <CrearEmpresaSection />
       <SectionDivider color="mixed" />
       <HowItWorksSection />
-      <AudienceSection />
-      <SectionDivider color="violet" />
       <ToolsSection />
       <DocentesSection />
-      <MetricsSection />
-      <SectionDivider color="cyan" />
+      <SectionDivider color="violet" />
+      <CertificateSection />
       <EmployabilitySection />
       <CvSection />
-      <CertificateSection />
+      <SectionDivider color="cyan" />
       <FaqSection />
       <CtaSection />
     </>

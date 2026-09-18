@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Check, Shield, QrCode, ExternalLink } from "lucide-react";
+import { Shield, QrCode, ExternalLink } from "lucide-react";
 import { NeonButton } from "@/components/common/neon-button";
 
 const features = [
@@ -69,63 +69,102 @@ export function CertificateSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            {/* Certificate mockup - responsive */}
-            <div className="relative h-64 w-full max-w-sm sm:h-80 sm:max-w-md">
-              {[0, 1, 2].map((i) => (
-                <motion.div
-                  key={i}
-                  className="absolute rounded-xl border border-neon-green/20 bg-card p-4 sm:p-6"
-                  style={{
-                    width: "min(260px, 75vw)",
-                    height: "min(180px, 50vw)",
-                    left: `${i * 15}px`,
-                    top: `${i * 15}px`,
-                    zIndex: 3 - i,
-                    rotate: `${(i - 1) * 3}deg`,
-                  }}
-                  animate={{
-                    y: [0, -5, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: i * 0.5,
-                  }}
-                >
-                  {/* Header */}
+            {/* Mockup liviano del certificado - varios apilados (responsive) */}
+            <div className="relative w-full max-w-md">
+              {/* Cartas de fondo: dan la sensación de varios certificados */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 rounded-2xl border border-neon-green/10 bg-card"
+                style={{ transform: "rotate(6deg) translate(14px, 14px)" }}
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 rounded-2xl border border-neon-green/15 bg-card"
+                style={{ transform: "rotate(3deg) translate(7px, 7px)" }}
+              />
+
+              <motion.div
+                className="relative z-10 overflow-hidden rounded-2xl border border-neon-green/25 bg-card p-5 sm:p-7"
+                style={{
+                  rotate: -1.5,
+                  backgroundImage:
+                    "radial-gradient(120% 100% at 0% 0%, rgba(57,255,20,0.06), transparent 55%)",
+                }}
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              >
+                {/* Marco interior */}
+                <div className="rounded-xl border border-neon-green/15 p-4 sm:p-5">
+                  {/* Encabezado */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
-                      <div className="h-4 w-4 rounded bg-neon-green/20 flex items-center justify-center sm:h-5 sm:w-5">
-                        <Check className="h-2.5 w-2.5 text-neon-green sm:h-3 sm:w-3" />
+                      <div className="flex h-6 w-6 items-center justify-center rounded-md bg-neon-green/15">
+                        <span className="text-[9px] font-bold text-white">
+                          CB
+                          <span className="text-neon-green">I</span>
+                        </span>
                       </div>
-                      <span className="text-[8px] font-bold text-neon-green sm:text-[10px]">
-                        CB Inteligente&reg;
+                      <span className="text-[9px] font-semibold uppercase tracking-wider text-neon-green sm:text-[10px]">
+                        Certificado Oficial
                       </span>
                     </div>
-                    <span className="text-[7px] text-foreground-muted sm:text-[8px]">
-                      CERTIFICADO
+                    <span className="text-[8px] text-foreground-muted sm:text-[9px]">
+                      N.&deg; CBI-2026-000142
                     </span>
                   </div>
-                  {/* Body */}
-                  <div className="mt-3 space-y-1.5 sm:mt-5 sm:space-y-2">
-                    <div className="h-1.5 w-3/4 rounded bg-foreground-muted/10 sm:h-2" />
-                    <div className="h-1.5 w-1/2 rounded bg-foreground-muted/10 sm:h-2" />
-                    <div className="h-1.5 w-2/3 rounded bg-foreground-muted/10 sm:h-2" />
+
+                  {/* Cuerpo */}
+                  <div className="mt-4 text-center sm:mt-5">
+                    <p className="text-[8px] uppercase tracking-widest text-foreground-muted sm:text-[9px]">
+                      Certifica que
+                    </p>
+                    <p className="mt-1.5 font-semibold text-white text-base sm:text-lg">
+                      Nombre y Apellido
+                    </p>
+                    <div className="mx-auto mt-1 h-px w-32 bg-neon-green/20" />
+                    <p className="mt-3 text-[9px] text-foreground-secondary sm:text-[10px]">
+                      completó y aprobó el curso
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-neon-green sm:text-sm">
+                      Minería con Inteligencia Artificial
+                    </p>
+                    <p className="mt-2 text-[8px] text-foreground-muted sm:text-[9px]">
+                      Escuela Online de Oficios Digitales
+                      <br />
+                      Provincia de La Rioja
+                    </p>
                   </div>
-                  {/* Footer */}
-                  <div className="mt-3 flex items-end justify-between sm:mt-6">
-                    <div className="space-y-1">
-                      <div className="h-1 w-12 rounded bg-foreground-muted/10 sm:h-1.5 sm:w-16" />
-                      <div className="h-1 w-8 rounded bg-foreground-muted/10 sm:h-1.5 sm:w-12" />
+
+                  {/* Pie: firma + QR */}
+                  <div className="mt-4 flex items-end justify-between sm:mt-5">
+                    <div>
+                      <div className="h-px w-16 bg-foreground-muted/30 sm:w-20" />
+                      <p className="mt-1 text-[7px] text-foreground-muted sm:text-[8px]">
+                        Autoridad certificante
+                      </p>
                     </div>
-                    <div className="h-7 w-7 rounded border border-foreground-muted/10 flex items-center justify-center sm:h-10 sm:w-10">
-                      <QrCode className="h-4 w-4 text-foreground-muted/20 sm:h-6 sm:w-6" />
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-md border border-neon-green/20 bg-neon-green/5 sm:h-11 sm:w-11">
+                        <QrCode className="h-5 w-5 text-neon-green sm:h-7 sm:w-7" />
+                      </div>
+                      <span className="text-[6px] text-foreground-muted sm:text-[7px]">
+                        Verificable online
+                      </span>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-              {/* Glow behind */}
-              <div className="absolute inset-0 -z-10 rounded-2xl bg-neon-green/5 blur-2xl" />
+                </div>
+
+                {/* Sello */}
+                <div className="absolute right-4 top-16 hidden h-14 w-14 rotate-[-12deg] items-center justify-center rounded-full border-2 border-neon-green/25 sm:flex">
+                  <Shield className="h-6 w-6 text-neon-green/40" />
+                </div>
+              </motion.div>
+
+              {/* Glow */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 rounded-2xl bg-neon-green/5 blur-2xl"
+              />
             </div>
           </motion.div>
         </div>
