@@ -108,6 +108,25 @@ export const EXTRA_COURSE = {
 // Los 9 cursos + el curso extra. Usar para buscar por slug y rutas de detalle.
 export const ALL_COURSES = [...COURSES, EXTRA_COURSE];
 
+// Color identitario de cada curso (fuente única). Todos dentro de la paleta
+// neón/futurista de la marca, pero variando para diferenciarse.
+export const COURSE_ACCENTS: Record<string, string> = {
+  "gemelos-digitales-con-ia": "#39FF14",
+  "mineria-con-ia": "#F59E0B",
+  "programacion-y-desarrollo-con-ia": "#EC4899",
+  "pymes-y-negocios-con-ia": "#A855F7",
+  "practica-juridica-con-ia": "#3B82F6",
+  "automatizacion-y-agentes-con-ia": "#F97316",
+  "analisis-de-datos-con-ia": "#06B6D4",
+  "marketing-y-creacion-de-contenido-con-ia": "#FF6B6B",
+  "diseno-digital-con-ia": "#8B5CF6",
+  "crea-tu-empresa-de-servicios-digitales": "#2DD4BF",
+};
+
+export function courseAccent(slug: string): string {
+  return COURSE_ACCENTS[slug] || "#39FF14";
+}
+
 export const COURSE_COMPETENCIES: Record<string, string> = {
   "crea-tu-empresa-de-servicios-digitales":
     "creación y gestión de una empresa de servicios digitales: definición de la propuesta de servicios, precios, captación y atención de clientes a nivel local, nacional e internacional, y herramientas de cobro, formalización y organización del trabajo",

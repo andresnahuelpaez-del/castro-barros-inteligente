@@ -9,7 +9,6 @@ import {
   Briefcase,
   MapPin,
   UserCircle,
-  ExternalLink,
   ChevronRight,
   Search,
   Rocket,
@@ -29,6 +28,12 @@ import {
 } from "@/lib/employability-data";
 import { GlassCard } from "@/components/common/glass-card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
 const platformTypeLabels = {
@@ -241,55 +246,52 @@ export function EmployabilityContent() {
           Como postularte (5 caminos distintos)
         </h2>
         <p className="mt-2 text-foreground-secondary">
-          No hay una sola forma de conseguir trabajo online. Estos son los 5
-          caminos mas efectivos, y podes usar varios al mismo tiempo.
+          Los 5 caminos mas efectivos. Toca cada uno para ver los pasos.
         </p>
 
-        <div className="mt-6 space-y-6">
+        <Accordion className="mt-6 space-y-3">
           {APPLICATION_METHODS.map((method, i) => {
             const Icon = methodIcons[i];
             return (
-              <div
+              <AccordionItem
                 key={method.title}
-                className="rounded-2xl border border-border bg-card p-6 sm:p-8"
+                value={`metodo-${i}`}
+                className="rounded-xl border border-border bg-card px-6 data-[state=open]:border-border-bright"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-neon-cyan/10">
-                    <Icon className="h-5 w-5 text-neon-cyan" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 shrink-0 text-neon-cyan" />
+                    <span className="text-base font-semibold text-white">
                       {method.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-foreground-secondary">
-                      {method.description}
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm leading-relaxed text-foreground-secondary">
+                    {method.description}
+                  </p>
+                  <div className="mt-4 space-y-3">
+                    {method.steps.map((step, j) => (
+                      <div key={j} className="flex items-start gap-3">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-background-tertiary text-xs font-bold text-foreground-secondary">
+                          {j + 1}
+                        </span>
+                        <p className="text-sm text-foreground-secondary pt-0.5">
+                          {step}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-4 rounded-lg bg-secondary/5 border border-secondary/20 p-4">
+                    <p className="text-sm text-secondary">
+                      <span className="font-semibold">Pro tip:</span> {method.proTip}
                     </p>
                   </div>
-                </div>
-
-                <div className="mt-6 space-y-3">
-                  {method.steps.map((step, j) => (
-                    <div key={j} className="flex items-start gap-3">
-                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-background-tertiary text-xs font-bold text-foreground-secondary">
-                        {j + 1}
-                      </span>
-                      <p className="text-sm text-foreground-secondary pt-0.5">
-                        {step}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-5 rounded-lg bg-secondary/5 border border-secondary/20 p-4">
-                  <p className="text-sm text-secondary">
-                    <span className="font-semibold">Pro tip:</span>{" "}
-                    {method.proTip}
-                  </p>
-                </div>
-              </div>
+                </AccordionContent>
+              </AccordionItem>
             );
           })}
-        </div>
+        </Accordion>
       </section>
 
       {/* ============================================ */}
@@ -301,42 +303,46 @@ export function EmployabilityContent() {
           Construi tu perfil profesional
         </h2>
         <p className="mt-2 text-foreground-secondary">
-          Antes de postularte a cualquier cosa, asegurate de tener estas bases
-          cubiertas. Un buen perfil hace que el trabajo te busque a vos.
+          Las bases que hacen que el trabajo te busque a vos. Toca para abrir.
         </p>
 
-        <div className="mt-6 space-y-6">
+        <Accordion className="mt-6 space-y-3">
           {PROFILE_TIPS.map((section, i) => {
             const Icon = tipIcons[i];
             return (
-              <div
+              <AccordionItem
                 key={section.title}
-                className="rounded-2xl border border-border bg-card p-6 sm:p-8"
+                value={`perfil-${i}`}
+                className="rounded-xl border border-border bg-card px-6 data-[state=open]:border-border-bright"
               >
-                <div className="flex items-center gap-3">
-                  <Icon className="h-5 w-5 text-secondary" />
-                  <h3 className="text-lg font-semibold text-white">
-                    {section.title}
-                  </h3>
-                </div>
-                <p className="mt-2 text-sm text-foreground-secondary">
-                  {section.description}
-                </p>
-                <ul className="mt-4 space-y-2">
-                  {section.items.map((item, j) => (
-                    <li
-                      key={j}
-                      className="flex items-start gap-3 text-sm text-foreground-secondary"
-                    >
-                      <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-neon-green" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 shrink-0 text-secondary" />
+                    <span className="text-base font-semibold text-white">
+                      {section.title}
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm text-foreground-secondary">
+                    {section.description}
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    {section.items.map((item, j) => (
+                      <li
+                        key={j}
+                        className="flex items-start gap-3 text-sm text-foreground-secondary"
+                      >
+                        <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-neon-green" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
             );
           })}
-        </div>
+        </Accordion>
       </section>
 
       {/* ============================================ */}
