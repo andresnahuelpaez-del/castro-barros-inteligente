@@ -92,7 +92,25 @@ export const COURSES = [
   },
 ];
 
+// Curso EXTRA (bonus), aparte de los 9 del proyecto de ley.
+export const EXTRA_COURSE = {
+  slug: "crea-tu-empresa-de-servicios-digitales",
+  title: "Creá tu Empresa de Servicios Digitales",
+  shortDescription:
+    "El paso siguiente: convertí lo que sabés en un negocio propio. Cómo armar tu empresa de servicios digitales y conseguir clientes a nivel local, provincial, nacional e internacional.",
+  durationMonths: 3,
+  hoursPerWeek: "5-6",
+  order: 10,
+  icon: "Rocket",
+  extra: true,
+};
+
+// Los 9 cursos + el curso extra. Usar para buscar por slug y rutas de detalle.
+export const ALL_COURSES = [...COURSES, EXTRA_COURSE];
+
 export const COURSE_COMPETENCIES: Record<string, string> = {
+  "crea-tu-empresa-de-servicios-digitales":
+    "creación y gestión de una empresa de servicios digitales: definición de la propuesta de servicios, precios, captación y atención de clientes a nivel local, nacional e internacional, y herramientas de cobro, formalización y organización del trabajo",
   "gemelos-digitales-con-ia":
     "creación y uso de gemelos digitales con Inteligencia Artificial para simular, optimizar y anticipar fallas en procesos productivos de minería, agro, energía e industria",
   "mineria-con-ia":

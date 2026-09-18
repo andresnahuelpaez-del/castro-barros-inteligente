@@ -17,7 +17,7 @@ import {
   CheckCircle2,
   Target,
 } from "lucide-react";
-import { COURSES } from "@/lib/constants";
+import { COURSES, ALL_COURSES } from "@/lib/constants";
 import { COURSES_DETAIL } from "@/lib/courses-data";
 import { NeonButton } from "@/components/common/neon-button";
 import { GlassCard } from "@/components/common/glass-card";
@@ -32,7 +32,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const course = COURSES.find((c) => c.slug === slug);
+  const course = ALL_COURSES.find((c) => c.slug === slug);
   if (!course) return { title: "Curso no encontrado" };
   return {
     title: course.title,
@@ -41,7 +41,7 @@ export async function generateMetadata({
 }
 
 export function generateStaticParams() {
-  return COURSES.map((course) => ({ slug: course.slug }));
+  return ALL_COURSES.map((course) => ({ slug: course.slug }));
 }
 
 const typeLabels = {
@@ -58,7 +58,7 @@ const typeColors = {
 
 export default async function CourseDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const course = COURSES.find((c) => c.slug === slug);
+  const course = ALL_COURSES.find((c) => c.slug === slug);
   const detail = COURSES_DETAIL[slug];
 
   if (!course) notFound();

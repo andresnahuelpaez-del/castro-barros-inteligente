@@ -34,6 +34,92 @@ export interface CourseDetail {
 }
 
 export const COURSES_DETAIL: Record<string, CourseDetail> = {
+  "crea-tu-empresa-de-servicios-digitales": {
+    slug: "crea-tu-empresa-de-servicios-digitales",
+    longDescription:
+      "Aprender una habilidad digital es la mitad del camino; la otra mitad es saber convertirla en un negocio. Este curso extra te enseña, paso a paso y en lenguaje simple, cómo armar tu propia empresa de servicios digitales: definir qué servicios ofrecés, ponerles precio, conseguir tus primeros clientes y crecer hasta trabajar con empresas de todo el país e incluso del exterior. No necesitás título ni conocimientos previos de negocios: se explica todo desde cero, pensado para alguien de La Rioja que quiere generar sus propios ingresos. Es el complemento ideal de cualquier curso de la plataforma.",
+    whatYouLearn: [
+      "Qué es una empresa de servicios digitales y qué podés ofrecer",
+      "Cómo elegir tu servicio y tu nicho según lo que ya sabés hacer",
+      "Cómo ponerle precio a tu trabajo (por hora, por proyecto o por abono)",
+      "Cómo conseguir tus primeros clientes: local, provincial, nacional e internacional",
+      "Cómo presentar tu servicio: propuesta, portfolio y presencia online",
+      "Cómo cobrar dentro y fuera del país (MercadoPago, transferencias, cobros del exterior)",
+      "Primeros pasos para formalizarte (monotributo) y organizar tus finanzas",
+      "Cómo atender clientes, organizar tu tiempo y hacer crecer tu marca",
+    ],
+    whoIsItFor:
+      "Para cualquier persona que ya tenga (o esté aprendiendo) una habilidad digital y quiera dejar de depender de un solo empleo para generar ingresos propios. Ideal para quienes quieren emprender desde La Rioja y venderle servicios al resto del país o del mundo, sin importar dónde vivan.",
+    prerequisites:
+      "Ninguno. No hace falta saber de negocios ni tener experiencia previa. Ayuda estar haciendo alguno de los otros cursos para tener un servicio concreto que ofrecer, pero no es obligatorio.",
+    jobOpportunities: [
+      {
+        title: "Tu propia empresa de servicios digitales",
+        type: "emprendimiento",
+        highlight: "Ingresos propios · Desde tu casa",
+        description:
+          "Ofrecé servicios (diseño, marketing, automatización, desarrollo, datos y más) con tu marca, eligiendo tus clientes y tus horarios.",
+      },
+      {
+        title: "Freelancer para clientes de todo el mundo",
+        type: "freelance",
+        highlight: "Cobrás en pesos o en dólares",
+        description:
+          "Trabajá de forma remota para empresas de otras provincias o del exterior, aprovechando la ventaja de cobrar en moneda extranjera.",
+      },
+      {
+        title: "Agencia digital local",
+        type: "emprendimiento",
+        highlight: "Escalable · Sumás gente",
+        description:
+          "Empezá solo y crecé hasta armar un equipo que le da servicios a comercios, PyMEs y organismos de La Rioja y la región.",
+      },
+    ],
+    complementaryCourses: [
+      {
+        slug: "marketing-y-creacion-de-contenido-con-ia",
+        title: "Marketing y Creación de Contenido con IA",
+        reason:
+          "Para conseguir clientes necesitás mostrarte. Marketing te da las herramientas para atraer y vender tus servicios.",
+      },
+      {
+        slug: "automatizacion-y-agentes-con-ia",
+        title: "Automatización y Agentes con IA",
+        reason:
+          "Uno de los servicios más demandados y mejor pagos. Combinado con este curso, tenés servicio para vender y negocio para venderlo.",
+      },
+    ],
+    employerValues: [
+      {
+        trait: "Iniciativa",
+        description:
+          "Animarse a ofrecer, a escribirle a un cliente y a cerrar un trato. El que emprende no espera a que le den permiso: propone.",
+      },
+      {
+        trait: "Cumplimiento y confianza",
+        description:
+          "Entregar a tiempo y hacer lo que se prometió. La mayoría de los clientes de servicios digitales vuelven y recomiendan por eso.",
+      },
+      {
+        trait: "Comunicación clara",
+        description:
+          "Explicar qué hacés, cuánto cuesta y qué va a recibir el cliente, sin vueltas. Es lo que separa a un profesional de un improvisado.",
+      },
+    ],
+    freeTools: [
+      "Claude.ai",
+      "ChatGPT",
+      "Canva",
+      "Google Workspace",
+      "MercadoPago",
+      "WhatsApp Business",
+      "Notion",
+      "LinkedIn",
+    ],
+    paidTools: ["Payoneer / Wise (cobros del exterior)", "Dominio y hosting propios"],
+    finalProject:
+      "Armás el plan completo de tu empresa de servicios digitales: qué servicio ofrecés, a qué clientes, con qué precios, una propuesta lista para enviar y un plan concreto para conseguir tus primeros tres clientes. Salís del curso con tu negocio listo para arrancar.",
+  },
   "gemelos-digitales-con-ia": {
     slug: "gemelos-digitales-con-ia",
     longDescription:

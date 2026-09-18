@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 
 const publicLinks = [
   { href: "/cursos", label: "Cursos" },
+  { href: "/app/cv", label: "Mejorá tu CV" },
   { href: "/empleabilidad", label: "Conseguí trabajo" },
   { href: "/preguntas", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
@@ -25,6 +26,7 @@ const publicLinks = [
 const dashboardLinks = [
   { href: "/app", label: "Mi panel" },
   { href: "/app/cursos", label: "Mis cursos" },
+  { href: "/app/cv", label: "Mejora tu CV" },
   { href: "/app/empleabilidad", label: "Empleabilidad" },
   { href: "/cursos", label: "Explorar" },
 ];

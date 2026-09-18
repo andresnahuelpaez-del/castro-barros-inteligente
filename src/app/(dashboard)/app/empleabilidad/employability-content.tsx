@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
+  Sparkles,
   Globe,
   Briefcase,
   MapPin,
@@ -86,6 +88,26 @@ export function EmployabilityContent() {
           Es informacion abierta para todos los usuarios registrados.
         </p>
       </div>
+
+      {/* Herramienta: Mejora tu CV */}
+      <Link
+        href="/app/cv"
+        className="mt-6 flex items-center gap-4 rounded-2xl border border-neon-green/30 bg-neon-green/5 p-6 transition-all hover:border-neon-green hover:glow-green sm:p-8"
+      >
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-green/10">
+          <Sparkles className="h-6 w-6 text-neon-green" />
+        </div>
+        <div className="flex-1">
+          <h2 className="text-lg font-bold text-white sm:text-xl">
+            Mejora tu CV con IA
+          </h2>
+          <p className="mt-1 text-sm text-foreground-secondary">
+            Analiza tu curriculum, obtene un puntaje ATS y descubri como mejorarlo
+            para conseguir empleo. Gratis.
+          </p>
+        </div>
+        <ArrowUpRight className="hidden h-6 w-6 shrink-0 text-neon-green sm:block" />
+      </Link>
 
       {/* Stats */}
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

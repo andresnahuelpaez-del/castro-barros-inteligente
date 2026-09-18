@@ -11,8 +11,11 @@ import {
   Megaphone,
   Palette,
   Briefcase,
+  Rocket,
+  ArrowRight,
+  Star,
 } from "lucide-react";
-import { COURSES } from "@/lib/constants";
+import { COURSES, EXTRA_COURSE } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Cursos",
@@ -103,8 +106,34 @@ export default function CursosPage() {
         })}
       </div>
 
-      {/* Banner de empleabilidad */}
+      {/* Curso extra: Creá tu empresa de servicios digitales */}
       <div className="mt-12">
+        <Link href={`/cursos/${EXTRA_COURSE.slug}`}>
+          <div className="group relative flex flex-col items-center gap-5 overflow-hidden rounded-2xl border border-secondary/25 bg-secondary/5 p-8 text-center transition-all hover:border-secondary/50 hover:bg-secondary/10 sm:flex-row sm:text-left">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-secondary/15">
+              <Rocket className="h-8 w-8 text-secondary" />
+            </div>
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-0.5 text-[11px] font-medium text-neon-violet-bright">
+                <Star className="h-3 w-3" />
+                Curso extra
+              </div>
+              <p className="mt-2 text-lg font-semibold text-white group-hover:text-secondary transition-colors">
+                {EXTRA_COURSE.title}
+              </p>
+              <p className="mt-1 text-sm text-foreground-secondary">
+                {EXTRA_COURSE.shortDescription}
+              </p>
+            </div>
+            <span className="flex items-center gap-1 text-sm font-medium text-secondary whitespace-nowrap">
+              Ver curso <ArrowRight className="h-4 w-4" />
+            </span>
+          </div>
+        </Link>
+      </div>
+
+      {/* Banner de empleabilidad */}
+      <div className="mt-8">
         <Link href="/registro">
           <div className="group flex flex-col items-center gap-4 rounded-2xl border border-neon-cyan/20 bg-neon-cyan/5 p-8 text-center transition-all hover:border-neon-cyan/40 hover:bg-neon-cyan/10 sm:flex-row sm:text-left">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-neon-cyan/20">
