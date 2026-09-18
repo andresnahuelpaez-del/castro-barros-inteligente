@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   Sparkles,
+  MessageSquare,
   Globe,
   Briefcase,
   MapPin,
@@ -107,6 +108,26 @@ export function EmployabilityContent() {
           </p>
         </div>
         <ArrowUpRight className="hidden h-6 w-6 shrink-0 text-neon-green sm:block" />
+      </Link>
+
+      {/* Herramienta: Simulador de entrevistas */}
+      <Link
+        href="/app/entrevistas"
+        className="mt-4 flex items-center gap-4 rounded-2xl border border-neon-cyan/30 bg-neon-cyan/5 p-6 transition-all hover:border-neon-cyan hover:glow-cyan sm:p-8"
+      >
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-cyan/10">
+          <MessageSquare className="h-6 w-6 text-neon-cyan" />
+        </div>
+        <div className="flex-1">
+          <h2 className="text-lg font-bold text-white sm:text-xl">
+            Simulador de Entrevistas con IA
+          </h2>
+          <p className="mt-1 text-sm text-foreground-secondary">
+            Practica una entrevista realista con IA y recibi un informe con tu
+            puntaje y como mejorar. Gratis.
+          </p>
+        </div>
+        <ArrowUpRight className="hidden h-6 w-6 shrink-0 text-neon-cyan sm:block" />
       </Link>
 
       {/* Stats */}
