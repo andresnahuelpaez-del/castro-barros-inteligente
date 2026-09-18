@@ -19,7 +19,6 @@ const publicLinks = [
   { href: "/cursos", label: "Cursos" },
   { href: "/app/cv", label: "Mejorá tu CV" },
   { href: "/empleabilidad", label: "Conseguí trabajo" },
-  { href: "/preguntas", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
 ];
 

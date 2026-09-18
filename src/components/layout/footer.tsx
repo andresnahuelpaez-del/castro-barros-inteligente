@@ -1,10 +1,12 @@
 import Link from "next/link";
 
 const platformLinks = [
+  { href: "/sobre", label: "Qué es" },
   { href: "/cursos", label: "Cursos" },
+  { href: "/app/cv", label: "Mejorá tu CV" },
+  { href: "/empleabilidad", label: "Conseguí trabajo" },
   { href: "/preguntas", label: "Preguntas frecuentes" },
   { href: "/contacto", label: "Contacto" },
-  { href: "/sobre", label: "Sobre nosotros" },
 ];
 
 const legalLinks = [
