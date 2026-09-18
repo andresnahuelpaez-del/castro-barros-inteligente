@@ -24,7 +24,6 @@ import {
   JOB_PLATFORMS,
   APPLICATION_METHODS,
   PROFILE_TIPS,
-  EMPLOYABILITY_STATS,
 } from "@/lib/employability-data";
 import { GlassCard } from "@/components/common/glass-card";
 import { Badge } from "@/components/ui/badge";
@@ -78,77 +77,96 @@ export function EmployabilityContent() {
       {/* Header */}
       <div className="rounded-2xl border border-border bg-card p-6 sm:p-10">
         <Badge className="mb-4 bg-neon-green/20 text-neon-green" variant="secondary">
-          Guia gratuita
+          Centro de empleo
         </Badge>
         <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
-          Como encontrar trabajo en internet
+          Convertí lo que aprendés en trabajo
         </h1>
         <p className="mt-4 text-lg text-foreground-secondary leading-relaxed">
-          Esta guia te muestra todas las formas reales de generar ingresos con
-          las habilidades que aprendes en Castro Barros Inteligente. Plataformas,
-          estrategias, como armar tu perfil y como postularte de forma
-          efectiva.
-        </p>
-        <p className="mt-3 text-sm text-foreground-muted">
-          No necesitas estar inscrito en ningun curso para leer esta guia.
-          Es informacion abierta para todos los usuarios registrados.
+          Herramientas con IA y una guia para generar ingresos con tus
+          habilidades digitales: como empleado, freelance o con tu propia
+          empresa.
         </p>
       </div>
 
-      {/* Herramienta: Mejora tu CV */}
-      <Link
-        href="/app/cv"
-        className="mt-6 flex items-center gap-4 rounded-2xl border border-neon-green/30 bg-neon-green/5 p-6 transition-all hover:border-neon-green hover:glow-green sm:p-8"
-      >
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-green/10">
-          <Sparkles className="h-6 w-6 text-neon-green" />
+      {/* Dato clave: crecimiento del empleo remoto (con fuente) */}
+      <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-neon-green/20 bg-neon-green/5 p-6 sm:flex-row sm:items-center sm:p-8">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-neon-green/10">
+          <TrendingUp className="h-7 w-7 text-neon-green" />
         </div>
-        <div className="flex-1">
-          <h2 className="text-lg font-bold text-white sm:text-xl">
-            Mejora tu CV con IA
-          </h2>
-          <p className="mt-1 text-sm text-foreground-secondary">
-            Analiza tu curriculum, obtene un puntaje ATS y descubri como mejorarlo
-            para conseguir empleo. Gratis.
+        <div>
+          <p className="text-xl font-bold text-white sm:text-2xl">
+            +25%: hasta 92 millones de empleos digitales remotos para 2030
+          </p>
+          <p className="mt-1 text-sm text-foreground-secondary leading-relaxed">
+            El trabajo remoto crece rapido y sin fronteras. Aprender habilidades
+            digitales hoy es tu oportunidad de insertarte desde La Rioja y
+            trabajar para cualquier parte del mundo.
+          </p>
+          <p className="mt-2 text-xs text-foreground-muted">
+            Fuente: Foro Economico Mundial, &ldquo;The Rise of Global Digital
+            Jobs&rdquo; (2024).
           </p>
         </div>
-        <ArrowUpRight className="hidden h-6 w-6 shrink-0 text-neon-green sm:block" />
-      </Link>
-
-      {/* Herramienta: Simulador de entrevistas */}
-      <Link
-        href="/app/entrevistas"
-        className="mt-4 flex items-center gap-4 rounded-2xl border border-neon-cyan/30 bg-neon-cyan/5 p-6 transition-all hover:border-neon-cyan hover:glow-cyan sm:p-8"
-      >
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neon-cyan/10">
-          <MessageSquare className="h-6 w-6 text-neon-cyan" />
-        </div>
-        <div className="flex-1">
-          <h2 className="text-lg font-bold text-white sm:text-xl">
-            Simulador de Entrevistas con IA
-          </h2>
-          <p className="mt-1 text-sm text-foreground-secondary">
-            Practica una entrevista realista con IA y recibi un informe con tu
-            puntaje y como mejorar. Gratis.
-          </p>
-        </div>
-        <ArrowUpRight className="hidden h-6 w-6 shrink-0 text-neon-cyan sm:block" />
-      </Link>
-
-      {/* Stats */}
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {EMPLOYABILITY_STATS.map((stat) => (
-          <div
-            key={stat.label}
-            className="rounded-xl border border-border bg-card p-5 text-center"
-          >
-            <p className="text-3xl font-bold text-neon-green">{stat.value}</p>
-            <p className="mt-2 text-xs text-foreground-secondary leading-relaxed">
-              {stat.label}
-            </p>
-          </div>
-        ))}
       </div>
+
+      {/* Herramientas / caminos */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-bold">Por donde empezar</h2>
+        <p className="mt-2 text-foreground-secondary">
+          Tres herramientas gratis con IA para dar el proximo paso.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              href: "/app/cv",
+              icon: Sparkles,
+              color: "#39FF14",
+              title: "Optimiza tu CV",
+              desc: "La IA lo analiza, te da un puntaje ATS y lo reescribe para postular.",
+            },
+            {
+              href: "/app/entrevistas",
+              icon: MessageSquare,
+              color: "#06B6D4",
+              title: "Practica entrevistas",
+              desc: "Entrevista simulada con IA e informe con tu puntaje y como mejorar.",
+            },
+            {
+              href: "/cursos/crea-tu-empresa-de-servicios-digitales",
+              icon: Rocket,
+              color: "#2DD4BF",
+              title: "Crea tu empresa",
+              desc: "Curso para ofrecer servicios digitales y conseguir clientes en todo el mundo.",
+            },
+          ].map((tool) => (
+            <Link
+              key={tool.href}
+              href={tool.href}
+              className="group flex h-full flex-col rounded-2xl border bg-card p-6 transition-all hover:-translate-y-1"
+              style={{ borderColor: `${tool.color}40` }}
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ backgroundColor: `${tool.color}1a` }}
+              >
+                <tool.icon className="h-6 w-6" style={{ color: tool.color }} />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">{tool.title}</h3>
+              <p className="mt-1 flex-1 text-sm text-foreground-secondary">
+                {tool.desc}
+              </p>
+              <span
+                className="mt-4 flex items-center gap-1 text-sm font-medium"
+                style={{ color: tool.color }}
+              >
+                Entrar
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* ============================================ */}
       {/* SECCION 1: DONDE BUSCAR */}

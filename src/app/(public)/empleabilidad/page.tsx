@@ -13,17 +13,24 @@ import {
   DollarSign,
   ExternalLink,
   ArrowRight,
+  ArrowUpRight,
   CheckCircle2,
   Lightbulb,
-  Users,
+  Sparkles,
+  TrendingUp,
 } from "lucide-react";
 import {
   JOB_PLATFORMS,
   APPLICATION_METHODS,
   PROFILE_TIPS,
-  EMPLOYABILITY_STATS,
 } from "@/lib/employability-data";
 import { NeonButton } from "@/components/common/neon-button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "Conseguí Trabajo — Guía de Empleabilidad Digital",
@@ -166,22 +173,84 @@ export default function EmpleabilidadPage() {
         </p>
       </div>
 
-      {/* Stats */}
-      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {EMPLOYABILITY_STATS.map((stat) => (
-          <div
-            key={stat.value}
-            className="rounded-xl border border-border bg-card p-4 text-center"
-          >
-            <div className="text-2xl font-bold text-neon-green sm:text-3xl">
-              {stat.value}
-            </div>
-            <p className="mt-1 text-xs text-foreground-secondary leading-snug">
-              {stat.label}
-            </p>
-          </div>
-        ))}
+      {/* Dato clave: crecimiento del empleo remoto (con fuente) */}
+      <div className="mt-10 flex flex-col gap-4 rounded-2xl border border-neon-green/20 bg-neon-green/5 p-6 sm:flex-row sm:items-center sm:p-8">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-neon-green/10">
+          <TrendingUp className="h-7 w-7 text-neon-green" />
+        </div>
+        <div>
+          <p className="text-xl font-bold text-white sm:text-2xl">
+            +25%: hasta 92 millones de empleos digitales remotos para 2030
+          </p>
+          <p className="mt-1 text-sm text-foreground-secondary leading-relaxed">
+            El trabajo remoto crece rápido y sin fronteras. Aprender habilidades
+            digitales hoy es tu oportunidad de insertarte desde La Rioja y
+            trabajar para cualquier parte del mundo.
+          </p>
+          <p className="mt-2 text-xs text-foreground-muted">
+            Fuente: Foro Económico Mundial, &ldquo;The Rise of Global Digital
+            Jobs&rdquo; (2024).
+          </p>
+        </div>
       </div>
+
+      {/* Herramientas con IA */}
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold sm:text-3xl">Herramientas para conseguir trabajo</h2>
+        <p className="mt-2 text-foreground-secondary">
+          Tres herramientas gratis con IA para dar el próximo paso.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              href: "/app/cv",
+              icon: Sparkles,
+              color: "#39FF14",
+              title: "Optimizá tu CV",
+              desc: "La IA lo analiza, te da un puntaje ATS y lo reescribe para postular.",
+            },
+            {
+              href: "/app/entrevistas",
+              icon: MessageSquare,
+              color: "#06B6D4",
+              title: "Practicá entrevistas",
+              desc: "Entrevista simulada con IA e informe con tu puntaje y cómo mejorar.",
+            },
+            {
+              href: "/cursos/crea-tu-empresa-de-servicios-digitales",
+              icon: Rocket,
+              color: "#2DD4BF",
+              title: "Creá tu empresa",
+              desc: "Curso para ofrecer servicios digitales y conseguir clientes en todo el mundo.",
+            },
+          ].map((tool) => (
+            <Link
+              key={tool.href}
+              href={tool.href}
+              className="group flex h-full flex-col rounded-2xl border bg-card p-6 transition-all hover:-translate-y-1"
+              style={{ borderColor: `${tool.color}40` }}
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ backgroundColor: `${tool.color}1a` }}
+              >
+                <tool.icon className="h-6 w-6" style={{ color: tool.color }} />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">{tool.title}</h3>
+              <p className="mt-1 flex-1 text-sm text-foreground-secondary">
+                {tool.desc}
+              </p>
+              <span
+                className="mt-4 flex items-center gap-1 text-sm font-medium"
+                style={{ color: tool.color }}
+              >
+                Entrar
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* ═══════════════════════════════════ */}
       {/* SECCIÓN 1: Dónde buscar */}
@@ -310,52 +379,49 @@ export default function EmpleabilidadPage() {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <Accordion className="space-y-3">
           {APPLICATION_METHODS.map((method, i) => {
             const Icon = methodIcons[i];
             return (
-              <div
+              <AccordionItem
                 key={method.title}
-                className="rounded-2xl border border-border bg-card p-6 sm:p-8"
+                value={`metodo-${i}`}
+                className="rounded-xl border border-border bg-card px-6 data-[state=open]:border-border-bright"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-neon-green/10">
-                    <Icon className="h-5 w-5 text-neon-green" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 shrink-0 text-neon-green" />
+                    <span className="text-base font-semibold text-white">
                       {method.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-foreground-secondary leading-relaxed">
-                      {method.description}
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm text-foreground-secondary leading-relaxed">
+                    {method.description}
+                  </p>
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {method.steps.map((step, j) => (
+                      <div key={j} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-neon-green/70" />
+                        <p className="text-sm text-foreground-secondary leading-relaxed">
+                          {step}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-start gap-2 rounded-lg bg-[#A855F7]/5 border border-[#A855F7]/15 p-4">
+                    <Lightbulb className="h-4 w-4 shrink-0 mt-0.5 text-[#A855F7]" />
+                    <p className="text-sm text-foreground-secondary leading-relaxed">
+                      <span className="font-medium text-[#A855F7]">Pro tip:</span>{" "}
+                      {method.proTip}
                     </p>
                   </div>
-                </div>
-
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {method.steps.map((step, j) => (
-                    <div key={j} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-neon-green/70" />
-                      <p className="text-sm text-foreground-secondary leading-relaxed">
-                        {step}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-5 flex items-start gap-2 rounded-lg bg-[#A855F7]/5 border border-[#A855F7]/15 p-4">
-                  <Lightbulb className="h-4 w-4 shrink-0 mt-0.5 text-[#A855F7]" />
-                  <p className="text-sm text-foreground-secondary leading-relaxed">
-                    <span className="font-medium text-[#A855F7]">
-                      Pro tip:
-                    </span>{" "}
-                    {method.proTip}
-                  </p>
-                </div>
-              </div>
+                </AccordionContent>
+              </AccordionItem>
             );
           })}
-        </div>
+        </Accordion>
       </section>
 
       {/* ═══════════════════════════════════ */}
@@ -373,37 +439,42 @@ export default function EmpleabilidadPage() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <Accordion className="space-y-3">
           {PROFILE_TIPS.map((section, i) => {
             const Icon = tipIcons[i];
             return (
-              <div
+              <AccordionItem
                 key={section.title}
-                className="rounded-2xl border border-border bg-card p-6"
+                value={`perfil-${i}`}
+                className="rounded-xl border border-border bg-card px-6 data-[state=open]:border-border-bright"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#06B6D4]/10">
-                    <Icon className="h-4 w-4 text-[#06B6D4]" />
-                  </div>
-                  <h3 className="font-semibold text-white">{section.title}</h3>
-                </div>
-                <p className="text-sm text-foreground-secondary leading-relaxed mb-4">
-                  {section.description}
-                </p>
-                <ul className="space-y-2.5">
-                  {section.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-3.5 w-3.5 shrink-0 mt-0.5 text-[#06B6D4]/70" />
-                      <span className="text-xs text-foreground-secondary leading-relaxed">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <AccordionTrigger className="text-left hover:no-underline">
+                  <span className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 shrink-0 text-[#06B6D4]" />
+                    <span className="text-base font-semibold text-white">
+                      {section.title}
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm text-foreground-secondary leading-relaxed">
+                    {section.description}
+                  </p>
+                  <ul className="mt-4 space-y-2.5">
+                    {section.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="h-3.5 w-3.5 shrink-0 mt-0.5 text-[#06B6D4]/70" />
+                        <span className="text-sm text-foreground-secondary leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
             );
           })}
-        </div>
+        </Accordion>
       </section>
 
       {/* CTA final */}
